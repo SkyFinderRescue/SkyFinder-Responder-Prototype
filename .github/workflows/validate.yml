@@ -1,0 +1,29 @@
+name: Validate responder prototype
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check JavaScript syntax
+        run: |
+          node --check app.mjs
+          node --check core.mjs
+          node --check firebase-backend.mjs
+          node --check firebase-config.js
+          node --check mock-backend.mjs
+      - name: Run core tests
+        run: node --test tests/core.test.mjs
+      - name: Guard production separation
+        run: |
+          test ! -e scripts/build_live_snapshot.py
+          test ! -e data-live
+          grep -q "NOT connected to production SkyFinder" README.md
