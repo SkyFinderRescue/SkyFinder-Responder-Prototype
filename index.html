@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Responder Live Sharing Prototype</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQ3ynP9Wg5yI8ayffojEGODRk0h+SmI=" crossorigin="">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Responder Live Sharing Prototype</h1>
+      <p>Isolated test layer — not connected to production SkyFinder</p>
+    </div>
+    <span id="modeBadge" class="badge">STARTING</span>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Responder controls">
+      <label>
+        Call sign
+        <input id="callsign" maxlength="32" autocomplete="off" placeholder="e.g. Rescue 1">
+      </label>
+      <div class="button-row">
+        <button id="startBtn" type="button">Go Live</button>
+        <button id="stopBtn" type="button" disabled>Stop Sharing</button>
+      </div>
+      <div class="status-grid">
+        <div><span class="label">My status</span><strong id="myStatus">OFFLINE</strong></div>
+        <div><span class="label">Last GPS</span><strong id="gpsAge">—</strong></div>
+        <div><span class="label">Accuracy</span><strong id="gpsAccuracy">—</strong></div>
+        <div><span class="label">Backend</span><strong id="backendName">—</strong></div>
+      </div>
+      <p id="message" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="map-wrap">
+      <div id="map" role="application" aria-label="Responder map"></div>
+    </section>
+
+    <section class="roster-wrap">
+      <div class="section-heading">
+        <h2>Active responders</h2>
+        <span id="responderCount">0</span>
+      </div>
+      <div id="roster" class="roster"></div>
+    </section>
+
+    <section class="safety-note">
+      <strong>Prototype only.</strong> Positions shown here are for development testing and must not be relied on for an actual emergency until the system has completed multi-phone, poor-connectivity, stale-data, and background-location validation.
+    </section>
+  </main>
+
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>
