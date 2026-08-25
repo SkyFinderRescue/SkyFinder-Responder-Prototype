@@ -1,0 +1,494 @@
+{
+  "generated_at_utc": "2026-08-25T15:12:19.137300+00:00",
+  "feeds": [
+    {
+      "id": "calipaddler",
+      "label": "Cali Paddler",
+      "california_relevance": "90-mile California paddle test including Santa Barbara coastline; SUP/OC/kayak/surfski community",
+      "public_kml_validated": true,
+      "best": {
+        "url": "https://share.garmin.com/Feed/Share/calipaddler",
+        "status": 200,
+        "final_url": "https://share.garmin.com/Feed/Share/calipaddler",
+        "content_type": "application/vnd.google-earth.kml+xml",
+        "bytes": 8212,
+        "looks_like_kml": true,
+        "parsed": {
+          "xml_parse_ok": true,
+          "placemark_count": 2,
+          "fields": [
+            "Course",
+            "Device Identifier",
+            "Device Type",
+            "Elevation",
+            "Event",
+            "IMEI",
+            "Id",
+            "In Emergency",
+            "Incident Id",
+            "Latitude",
+            "Longitude",
+            "Map Display Name",
+            "Name",
+            "Note",
+            "SpatialRefSystem",
+            "Text",
+            "Time",
+            "Time UTC",
+            "Valid GPS Fix",
+            "Velocity"
+          ],
+          "sample": {
+            "Map Display Name": "Clarke Graves",
+            "Device Type": "GPSMAP 86i",
+            "Latitude": "present (numeric; 41.06 rounded)",
+            "Longitude": "present (numeric; -124.15 rounded)",
+            "Elevation": "-9.81 m from MSL",
+            "Velocity": "0.0 km/h",
+            "Course": "0.00 \u00b0 True",
+            "Valid GPS Fix": "True",
+            "In Emergency": "False",
+            "Event": "Tracking turned off from device.",
+            "Time UTC": "10/3/2025 11:46:45 PM"
+          },
+          "latest_timestamp": "2025-10-03T23:46:45Z",
+          "coordinate_elements": 2
+        }
+      },
+      "attempts": [
+        {
+          "url": "https://share.garmin.com/Feed/Share/calipaddler",
+          "status": 200,
+          "final_url": "https://share.garmin.com/Feed/Share/calipaddler",
+          "content_type": "application/vnd.google-earth.kml+xml",
+          "bytes": 8212,
+          "looks_like_kml": true,
+          "parsed": {
+            "xml_parse_ok": true,
+            "placemark_count": 2,
+            "fields": [
+              "Course",
+              "Device Identifier",
+              "Device Type",
+              "Elevation",
+              "Event",
+              "IMEI",
+              "Id",
+              "In Emergency",
+              "Incident Id",
+              "Latitude",
+              "Longitude",
+              "Map Display Name",
+              "Name",
+              "Note",
+              "SpatialRefSystem",
+              "Text",
+              "Time",
+              "Time UTC",
+              "Valid GPS Fix",
+              "Velocity"
+            ],
+            "sample": {
+              "Map Display Name": "Clarke Graves",
+              "Device Type": "GPSMAP 86i",
+              "Latitude": "present (numeric; 41.06 rounded)",
+              "Longitude": "present (numeric; -124.15 rounded)",
+              "Elevation": "-9.81 m from MSL",
+              "Velocity": "0.0 km/h",
+              "Course": "0.00 \u00b0 True",
+              "Valid GPS Fix": "True",
+              "In Emergency": "False",
+              "Event": "Tracking turned off from device.",
+              "Time UTC": "10/3/2025 11:46:45 PM"
+            },
+            "latest_timestamp": "2025-10-03T23:46:45Z",
+            "coordinate_elements": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "teamoceanlive",
+      "label": "Team Ocean",
+      "california_relevance": "Human-powered ocean row departed Monterey, California for Kauai in 2025",
+      "public_kml_validated": true,
+      "best": {
+        "url": "https://share.garmin.com/Feed/Share/teamoceanlive",
+        "status": 200,
+        "final_url": "https://share.garmin.com/Feed/Share/teamoceanlive",
+        "content_type": "application/vnd.google-earth.kml+xml",
+        "bytes": 2308,
+        "looks_like_kml": true,
+        "parsed": {
+          "xml_parse_ok": true,
+          "placemark_count": 0,
+          "fields": [],
+          "sample": {},
+          "latest_timestamp": null,
+          "coordinate_elements": 0
+        }
+      },
+      "attempts": [
+        {
+          "url": "https://share.garmin.com/Feed/Share/teamoceanlive",
+          "status": 200,
+          "final_url": "https://share.garmin.com/Feed/Share/teamoceanlive",
+          "content_type": "application/vnd.google-earth.kml+xml",
+          "bytes": 2308,
+          "looks_like_kml": true,
+          "parsed": {
+            "xml_parse_ok": true,
+            "placemark_count": 0,
+            "fields": [],
+            "sample": {},
+            "latest_timestamp": null,
+            "coordinate_elements": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "KURSIS",
+      "label": "KURSIS / Aurimas Mockus",
+      "california_relevance": "Solo human-powered ocean row departed San Diego, California toward Brisbane",
+      "public_kml_validated": true,
+      "best": {
+        "url": "https://share.garmin.com/Feed/Share/KURSIS",
+        "status": 200,
+        "final_url": "https://share.garmin.com/Feed/Share/KURSIS",
+        "content_type": "application/vnd.google-earth.kml+xml",
+        "bytes": 8213,
+        "looks_like_kml": true,
+        "parsed": {
+          "xml_parse_ok": true,
+          "placemark_count": 2,
+          "fields": [
+            "Course",
+            "Device Identifier",
+            "Device Type",
+            "Elevation",
+            "Event",
+            "IMEI",
+            "Id",
+            "In Emergency",
+            "Incident Id",
+            "Latitude",
+            "Longitude",
+            "Map Display Name",
+            "Name",
+            "Note",
+            "SpatialRefSystem",
+            "Text",
+            "Time",
+            "Time UTC",
+            "Valid GPS Fix",
+            "Velocity"
+          ],
+          "sample": {
+            "Map Display Name": "Aurimas Mockus",
+            "Device Type": "GPSMAP 86i",
+            "Latitude": "present (numeric; -20.39 rounded)",
+            "Longitude": "present (numeric; 156.87 rounded)",
+            "Elevation": "2.34 m from MSL",
+            "Velocity": "8.0 km/h",
+            "Course": "202.50 \u00b0 True",
+            "Valid GPS Fix": "True",
+            "In Emergency": "False",
+            "Event": "Tracking turned on from device.",
+            "Time UTC": "2/28/2025 5:28:30 AM"
+          },
+          "latest_timestamp": "2025-02-28T05:28:30Z",
+          "coordinate_elements": 2
+        }
+      },
+      "attempts": [
+        {
+          "url": "https://share.garmin.com/Feed/Share/KURSIS",
+          "status": 200,
+          "final_url": "https://share.garmin.com/Feed/Share/KURSIS",
+          "content_type": "application/vnd.google-earth.kml+xml",
+          "bytes": 8213,
+          "looks_like_kml": true,
+          "parsed": {
+            "xml_parse_ok": true,
+            "placemark_count": 2,
+            "fields": [
+              "Course",
+              "Device Identifier",
+              "Device Type",
+              "Elevation",
+              "Event",
+              "IMEI",
+              "Id",
+              "In Emergency",
+              "Incident Id",
+              "Latitude",
+              "Longitude",
+              "Map Display Name",
+              "Name",
+              "Note",
+              "SpatialRefSystem",
+              "Text",
+              "Time",
+              "Time UTC",
+              "Valid GPS Fix",
+              "Velocity"
+            ],
+            "sample": {
+              "Map Display Name": "Aurimas Mockus",
+              "Device Type": "GPSMAP 86i",
+              "Latitude": "present (numeric; -20.39 rounded)",
+              "Longitude": "present (numeric; 156.87 rounded)",
+              "Elevation": "2.34 m from MSL",
+              "Velocity": "8.0 km/h",
+              "Course": "202.50 \u00b0 True",
+              "Valid GPS Fix": "True",
+              "In Emergency": "False",
+              "Event": "Tracking turned on from device.",
+              "Time UTC": "2/28/2025 5:28:30 AM"
+            },
+            "latest_timestamp": "2025-02-28T05:28:30Z",
+            "coordinate_elements": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "YCMPS",
+      "label": "Mike Ward SUP",
+      "california_relevance": "Non-California control: verified stand-up paddle expedition feed",
+      "public_kml_validated": true,
+      "best": {
+        "url": "https://share.garmin.com/Feed/Share/YCMPS",
+        "status": 200,
+        "final_url": "https://share.garmin.com/Feed/Share/YCMPS",
+        "content_type": "application/vnd.google-earth.kml+xml",
+        "bytes": 8184,
+        "looks_like_kml": true,
+        "parsed": {
+          "xml_parse_ok": true,
+          "placemark_count": 2,
+          "fields": [
+            "Course",
+            "Device Identifier",
+            "Device Type",
+            "Elevation",
+            "Event",
+            "IMEI",
+            "Id",
+            "In Emergency",
+            "Incident Id",
+            "Latitude",
+            "Longitude",
+            "Map Display Name",
+            "Name",
+            "Note",
+            "SpatialRefSystem",
+            "Text",
+            "Time",
+            "Time UTC",
+            "Valid GPS Fix",
+            "Velocity"
+          ],
+          "sample": {
+            "Map Display Name": "Mike Ward",
+            "Device Type": "inReach Mini 2",
+            "Latitude": "present (numeric; 44.57 rounded)",
+            "Longitude": "present (numeric; -92.54 rounded)",
+            "Elevation": "231.12 m from MSL",
+            "Velocity": "4.0 km/h",
+            "Course": "0.00 \u00b0 True",
+            "Valid GPS Fix": "True",
+            "In Emergency": "False",
+            "Event": "Tracking interval received.",
+            "Time UTC": "8/10/2024 8:57:00 PM"
+          },
+          "latest_timestamp": "2024-08-10T20:57:00Z",
+          "coordinate_elements": 2
+        }
+      },
+      "attempts": [
+        {
+          "url": "https://share.garmin.com/Feed/Share/YCMPS",
+          "status": 200,
+          "final_url": "https://share.garmin.com/Feed/Share/YCMPS",
+          "content_type": "application/vnd.google-earth.kml+xml",
+          "bytes": 8184,
+          "looks_like_kml": true,
+          "parsed": {
+            "xml_parse_ok": true,
+            "placemark_count": 2,
+            "fields": [
+              "Course",
+              "Device Identifier",
+              "Device Type",
+              "Elevation",
+              "Event",
+              "IMEI",
+              "Id",
+              "In Emergency",
+              "Incident Id",
+              "Latitude",
+              "Longitude",
+              "Map Display Name",
+              "Name",
+              "Note",
+              "SpatialRefSystem",
+              "Text",
+              "Time",
+              "Time UTC",
+              "Valid GPS Fix",
+              "Velocity"
+            ],
+            "sample": {
+              "Map Display Name": "Mike Ward",
+              "Device Type": "inReach Mini 2",
+              "Latitude": "present (numeric; 44.57 rounded)",
+              "Longitude": "present (numeric; -92.54 rounded)",
+              "Elevation": "231.12 m from MSL",
+              "Velocity": "4.0 km/h",
+              "Course": "0.00 \u00b0 True",
+              "Valid GPS Fix": "True",
+              "In Emergency": "False",
+              "Event": "Tracking interval received.",
+              "Time UTC": "8/10/2024 8:57:00 PM"
+            },
+            "latest_timestamp": "2024-08-10T20:57:00Z",
+            "coordinate_elements": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "BartdeZwartSUPCrossing",
+      "label": "Bart de Zwart SUP",
+      "california_relevance": "Non-California control: verified stand-up paddle expedition feed",
+      "public_kml_validated": true,
+      "best": {
+        "url": "https://share.garmin.com/Feed/Share/BartdeZwartSUPCrossing",
+        "status": 200,
+        "final_url": "https://share.garmin.com/Feed/Share/BartdeZwartSUPCrossing",
+        "content_type": "application/vnd.google-earth.kml+xml",
+        "bytes": 8197,
+        "looks_like_kml": true,
+        "parsed": {
+          "xml_parse_ok": true,
+          "placemark_count": 2,
+          "fields": [
+            "Course",
+            "Device Identifier",
+            "Device Type",
+            "Elevation",
+            "Event",
+            "IMEI",
+            "Id",
+            "In Emergency",
+            "Incident Id",
+            "Latitude",
+            "Longitude",
+            "Map Display Name",
+            "Name",
+            "Note",
+            "SpatialRefSystem",
+            "Text",
+            "Time",
+            "Time UTC",
+            "Valid GPS Fix",
+            "Velocity"
+          ],
+          "sample": {
+            "Map Display Name": "Bart de Zwart",
+            "Device Type": "InReach BT V1",
+            "Latitude": "present (numeric; -15.86 rounded)",
+            "Longitude": "present (numeric; 168.17 rounded)",
+            "Elevation": "10.46 m from MSL",
+            "Velocity": "0.0 km/h",
+            "Course": "90.00 \u00b0 True",
+            "Valid GPS Fix": "True",
+            "In Emergency": "False",
+            "Event": "Tracking message received.",
+            "Time UTC": "3/17/2019 2:08:00 AM"
+          },
+          "latest_timestamp": "2019-03-17T02:08:00Z",
+          "coordinate_elements": 2
+        }
+      },
+      "attempts": [
+        {
+          "url": "https://share.garmin.com/Feed/Share/BartdeZwartSUPCrossing",
+          "status": 200,
+          "final_url": "https://share.garmin.com/Feed/Share/BartdeZwartSUPCrossing",
+          "content_type": "application/vnd.google-earth.kml+xml",
+          "bytes": 8197,
+          "looks_like_kml": true,
+          "parsed": {
+            "xml_parse_ok": true,
+            "placemark_count": 2,
+            "fields": [
+              "Course",
+              "Device Identifier",
+              "Device Type",
+              "Elevation",
+              "Event",
+              "IMEI",
+              "Id",
+              "In Emergency",
+              "Incident Id",
+              "Latitude",
+              "Longitude",
+              "Map Display Name",
+              "Name",
+              "Note",
+              "SpatialRefSystem",
+              "Text",
+              "Time",
+              "Time UTC",
+              "Valid GPS Fix",
+              "Velocity"
+            ],
+            "sample": {
+              "Map Display Name": "Bart de Zwart",
+              "Device Type": "InReach BT V1",
+              "Latitude": "present (numeric; -15.86 rounded)",
+              "Longitude": "present (numeric; 168.17 rounded)",
+              "Elevation": "10.46 m from MSL",
+              "Velocity": "0.0 km/h",
+              "Course": "90.00 \u00b0 True",
+              "Valid GPS Fix": "True",
+              "In Emergency": "False",
+              "Event": "Tracking message received.",
+              "Time UTC": "3/17/2019 2:08:00 AM"
+            },
+            "latest_timestamp": "2019-03-17T02:08:00Z",
+            "coordinate_elements": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "LouAnneHarris",
+      "label": "LouAnne Harris",
+      "california_relevance": "SUP endurance paddler with California River Quest history; published MapShare is known password-protected",
+      "public_kml_validated": false,
+      "best": null,
+      "attempts": [
+        {
+          "url": "https://share.garmin.com/Feed/Share/LouAnneHarris",
+          "status": 401,
+          "final_url": "https://share.garmin.com/Feed/Share/LouAnneHarris",
+          "content_type": "text/html",
+          "bytes": 58,
+          "looks_like_kml": false
+        },
+        {
+          "url": "https://inreach.garmin.com/feed/share/LouAnneHarris",
+          "status": 401,
+          "final_url": "https://explore.garmin.com/feed/share/LouAnneHarris",
+          "content_type": "text/html",
+          "bytes": 58,
+          "looks_like_kml": false
+        }
+      ]
+    }
+  ]
+}
