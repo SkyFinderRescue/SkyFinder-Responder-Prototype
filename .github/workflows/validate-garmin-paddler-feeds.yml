@@ -1,0 +1,165 @@
+name: Validate public Garmin paddler KML feeds
+
+on:
+  push:
+    branches:
+      - research/garmin-paddler-feeds-20260825
+    paths-ignore:
+      - research/garmin-validation-report.json
+      - research/garmin-validation-report.md
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/garmin-paddler-feeds-20260825
+      - name: Fetch and parse public KML feeds
+        shell: bash
+        run: |
+          mkdir -p research
+          python3 - <<'PY'
+          import json, urllib.request, urllib.error, xml.etree.ElementTree as ET, datetime, re
+
+          feeds = [
+            {"id":"calipaddler","label":"Cali Paddler","california_relevance":"90-mile California paddle test including Santa Barbara coastline; SUP/OC/kayak/surfski community"},
+            {"id":"teamoceanlive","label":"Team Ocean","california_relevance":"Human-powered ocean row departed Monterey, California for Kauai in 2025"},
+            {"id":"KURSIS","label":"KURSIS / Aurimas Mockus","california_relevance":"Solo human-powered ocean row departed San Diego, California toward Brisbane"},
+            {"id":"YCMPS","label":"Mike Ward SUP","california_relevance":"Non-California control: verified stand-up paddle expedition feed"},
+            {"id":"BartdeZwartSUPCrossing","label":"Bart de Zwart SUP","california_relevance":"Non-California control: verified stand-up paddle expedition feed"},
+            {"id":"LouAnneHarris","label":"LouAnne Harris","california_relevance":"SUP endurance paddler with California River Quest history; published MapShare is known password-protected"},
+          ]
+
+          def local(tag):
+            return tag.rsplit('}',1)[-1]
+
+          def get_text(node):
+            return (node.text or '').strip() if node is not None else ''
+
+          def fetch(url):
+            req=urllib.request.Request(url, headers={
+              'User-Agent':'SkyFinderRescue research validation (+https://github.com/SkyFinderRescue/SkyFinder-Responder-Prototype)',
+              'Accept':'application/vnd.google-earth.kml+xml,application/xml,text/xml,*/*'
+            })
+            try:
+              with urllib.request.urlopen(req, timeout=25) as r:
+                return r.status, r.geturl(), r.headers.get('Content-Type',''), r.read(5_000_000)
+            except urllib.error.HTTPError as e:
+              body=e.read(200000)
+              return e.code, e.geturl(), e.headers.get('Content-Type',''), body
+            except Exception as e:
+              return None, url, '', (str(e)).encode()
+
+          def parse_kml(body):
+            result={'xml_parse_ok':False,'placemark_count':0,'fields':[], 'sample':{}}
+            try:
+              root=ET.fromstring(body)
+            except Exception as e:
+              result['parse_error']=str(e)
+              return result
+            result['xml_parse_ok']=True
+            placemarks=[x for x in root.iter() if local(x.tag)=='Placemark']
+            result['placemark_count']=len(placemarks)
+            fields=set()
+            samples={}
+            latest_time=None
+            point_count=0
+            for pm in placemarks:
+              vals={}
+              for node in pm.iter():
+                ln=local(node.tag)
+                if ln=='Data':
+                  name=node.attrib.get('name','').strip()
+                  val=''
+                  for child in node:
+                    if local(child.tag)=='value': val=get_text(child)
+                  if name:
+                    fields.add(name); vals[name]=val
+                elif ln=='SimpleData':
+                  name=node.attrib.get('name','').strip()
+                  val=get_text(node)
+                  if name:
+                    fields.add(name); vals[name]=val
+                elif ln=='when':
+                  t=get_text(node)
+                  if t and (latest_time is None or t>latest_time): latest_time=t
+                elif ln=='coordinates':
+                  c=get_text(node)
+                  if c: point_count += 1
+              for k,v in vals.items():
+                kl=k.lower().replace(' ','')
+                if kl in ('imei','id','incidentid','text'): continue
+                if v and k not in samples:
+                  samples[k]=v[:120]
+            result['fields']=sorted(fields)
+            result['latest_timestamp']=latest_time
+            result['coordinate_elements']=point_count
+            # keep only operationally useful, non-sensitive examples
+            preferred=['Map Display Name','Device Type','Latitude','Longitude','Elevation','Velocity','Course','Valid GPS Fix','In Emergency','Event','Time UTC']
+            result['sample']={k:samples[k] for k in preferred if k in samples}
+            # redact exact coordinates while still proving parseability
+            for key in ('Latitude','Longitude'):
+              if key in result['sample']:
+                try:
+                  result['sample'][key]=f"present (numeric; {float(result['sample'][key]):.2f} rounded)"
+                except: result['sample'][key]='present'
+            return result
+
+          results=[]
+          for item in feeds:
+            candidates=[
+              f"https://share.garmin.com/Feed/Share/{item['id']}",
+              f"https://inreach.garmin.com/feed/share/{item['id']}",
+            ]
+            best=None
+            attempts=[]
+            for url in candidates:
+              status,final_url,ctype,body=fetch(url)
+              attempt={'url':url,'status':status,'final_url':final_url,'content_type':ctype,'bytes':len(body)}
+              looks_xml=body.lstrip().startswith(b'<?xml') or b'<kml' in body[:2000].lower()
+              attempt['looks_like_kml']=bool(looks_xml)
+              if looks_xml:
+                attempt['parsed']=parse_kml(body)
+              attempts.append(attempt)
+              if looks_xml and attempt.get('parsed',{}).get('xml_parse_ok'):
+                best=attempt; break
+            results.append({**item,'public_kml_validated':bool(best),'best':best,'attempts':attempts})
+
+          report={'generated_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'feeds':results}
+          with open('research/garmin-validation-report.json','w') as f: json.dump(report,f,indent=2)
+
+          lines=['# Garmin public paddler KML validation','',f"Generated: {report['generated_at_utc']}",'',
+                 '| Feed | California relevance | Public KML | HTTP | Placemarks | Operational fields |',
+                 '|---|---|---:|---:|---:|---|']
+          for r in results:
+            b=r['best']
+            if b:
+              p=b['parsed']; flds=', '.join(p.get('fields',[]))
+              lines.append(f"| {r['label']} (`{r['id']}`) | {r['california_relevance']} | YES | {b['status']} | {p.get('placemark_count',0)} | {flds} |")
+            else:
+              st=', '.join(str(a.get('status')) for a in r['attempts'])
+              lines.append(f"| {r['label']} (`{r['id']}`) | {r['california_relevance']} | NO / protected / unavailable | {st} | — | — |")
+          lines += ['', '## Parsed non-sensitive samples', '']
+          for r in results:
+            if r['best']:
+              lines.append(f"### {r['label']}")
+              lines.append('```json')
+              lines.append(json.dumps(r['best']['parsed'].get('sample',{}),indent=2))
+              lines.append('```')
+          lines += ['', 'Notes: exact coordinates, IMEIs, Garmin internal IDs, and message text are intentionally not retained in this research report.']
+          open('research/garmin-validation-report.md','w').write('\n'.join(lines)+'\n')
+          PY
+      - name: Commit validation report
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/garmin-validation-report.json research/garmin-validation-report.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Record Garmin paddler KML validation [skip ci]"
+          git push origin HEAD:research/garmin-paddler-feeds-20260825
