@@ -3,7 +3,9 @@
 
 This intentionally excludes live GPS and private contact information. It is an
 identity/source coverage index used to measure California discovery progress and
-prioritize later matching to public/permissioned live trackers.
+prioritize later matching to public/permissioned live trackers. Displayed race
+identities are conservatively classified so obvious teams/crews are not counted
+as verified individual people.
 """
 from __future__ import annotations
 
@@ -35,6 +37,25 @@ def normalize_craft(value: str) -> str | None:
     if "kayak" in n or n == "k1" or n == "k 1":
         return "KAYAK"
     return raw
+
+
+def classify_identity(name: str) -> str:
+    """Conservative display-identity classification; never claims verified residency/personhood."""
+    cleaned = " ".join((name or "").split())
+    n = norm(cleaned)
+    if not n:
+        return "UNKNOWN"
+    group_markers = (
+        " team ", " crew ", " canoe club ", " paddling club ", " paddle club ",
+        " outrigger club ", " yacht club ", " racing team ", " relay team ",
+    )
+    padded = f" {n} "
+    if any(marker in padded for marker in group_markers) or n.startswith("team ") or n.endswith(" team"):
+        return "TEAM_OR_CREW"
+    tokens = cleaned.split()
+    if 2 <= len(tokens) <= 5 and all(re.fullmatch(r"[A-Za-z][A-Za-z'’.-]*", token) for token in tokens):
+        return "LIKELY_PERSON"
+    return "UNKNOWN"
 
 
 def load(path: Path):
@@ -173,8 +194,16 @@ def main():
     people = []
     craft_counts = defaultdict(int)
     source_overlap = defaultdict(int)
+    identity_counts = defaultdict(int)
     for _, p in sorted(master.items()):
-        out = {"name": p["name"], "crafts": sorted(p["crafts"]), "source_count": len(p["sources"]), "sources": sorted(p["sources"])}
+        identity_type = classify_identity(p["name"])
+        out = {
+            "name": p["name"],
+            "identity_type": identity_type,
+            "crafts": sorted(p["crafts"]),
+            "source_count": len(p["sources"]),
+            "sources": sorted(p["sources"]),
+        }
         if p["years"]:
             out["years"] = sorted(p["years"])
         if p["public_handles"]:
@@ -184,20 +213,23 @@ def main():
         if p["evidence"]:
             out["california_evidence"] = p["evidence"]
         people.append(out)
+        identity_counts[identity_type] += 1
         source_overlap[str(len(p["sources"]))] += 1
         for c in p["crafts"]:
             craft_counts[c] += 1
 
     out = {
-        "schema_version": 2,
+        "schema_version": 3,
         "generated_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "scope": "California only",
         "purpose": "Deduplicated California public paddler identity/source coverage index for SkyFinder research. Not an operational live-location feed.",
         "privacy": "Public race/event identity, craft, year, public handle/profile and source evidence only. No private contact data or exact live GPS.",
+        "identity_note": "LIKELY_PERSON is a conservative name-shape classification, not verified identity or California residency. TEAM_OR_CREW is only applied to obvious group labels.",
         "summary": {
             "sources_configured": len(definitions),
             "sources_available": sum(1 for a in audit if a["status"] == "OK"),
-            "unique_california_paddlers": len(people),
+            "unique_california_paddler_identities": len(people),
+            "identity_type_counts": dict(sorted(identity_counts.items())),
             "craft_counts": dict(sorted(craft_counts.items())),
             "source_overlap_counts": dict(sorted(source_overlap.items(), key=lambda kv: int(kv[0]))),
             "multi_source_confirmed": sum(1 for p in people if p["source_count"] >= 2),
