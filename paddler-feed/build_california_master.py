@@ -19,6 +19,24 @@ def norm(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", (value or "").lower()).strip()
 
 
+def normalize_craft(value: str) -> str | None:
+    raw = " ".join(str(value or "").split()).upper()
+    n = norm(raw)
+    if not n:
+        return None
+    if n in {"oc 1", "oc 2", "oc 3", "oc 4", "oc 6", "v 1", "v 3", "v 6"} or "outrigger" in n:
+        return "OUTRIGGER"
+    if n in {"ss 1", "ss 2"} or "surfski" in n or "surf ski" in n:
+        return "SURFSKI"
+    if "prone" in n or "paddleboard" in n or "paddle board" in n:
+        return "PRONE/PADDLEBOARD"
+    if n == "sup" or "stand up paddle" in n or "standup paddle" in n or n.startswith("sup "):
+        return "SUP"
+    if "kayak" in n or n == "k1" or n == "k 1":
+        return "KAYAK"
+    return raw
+
+
 def load(path: Path):
     if not path.exists():
         return None
@@ -42,13 +60,13 @@ def add_person(master, name, source, crafts=None, years=None, handles=None, prof
         "public_profiles": set(),
         "evidence": [],
     })
-    # Prefer a better-cased display name when the first one is all lower-case.
     if item["name"].islower() and not name.islower():
         item["name"] = name
     item["sources"].add(source)
     for c in crafts or []:
+        c = normalize_craft(c)
         if c:
-            item["crafts"].add(str(c))
+            item["crafts"].add(c)
     for y in years or []:
         try:
             y = int(y)
@@ -71,8 +89,7 @@ def source_summary(data):
 
 
 def ingest_discovered(master, data):
-    included = 0
-    excluded = 0
+    included = excluded = 0
     for p in (data or {}).get("paddlers", []):
         if int(p.get("california_event_count") or 0) <= 0:
             excluded += 1
@@ -88,8 +105,7 @@ def ingest_discovered(master, data):
 
 
 def ingest_paddleguru_graph(master, data):
-    included = 0
-    excluded = 0
+    included = excluded = 0
     for p in (data or {}).get("athletes", []):
         if int(p.get("california_event_count") or 0) <= 0:
             excluded += 1
@@ -100,8 +116,7 @@ def ingest_paddleguru_graph(master, data):
 
 
 def ingest_webscorer(master, data):
-    included = 0
-    excluded = 0
+    included = excluded = 0
     for p in (data or {}).get("paddlers", []):
         if int(p.get("california_race_count") or 0) <= 0:
             excluded += 1
@@ -153,25 +168,13 @@ def main():
             included, excluded = ingest_simple(master, data, label, craft_override=["PRONE/PADDLEBOARD"])
         else:
             included, excluded = ingest_simple(master, data, label)
-        audit.append({
-            "file": filename,
-            "source": label,
-            "status": "OK",
-            "included": included,
-            "excluded_non_california": excluded,
-            "source_summary": source_summary(data),
-        })
+        audit.append({"file": filename, "source": label, "status": "OK", "included": included, "excluded_non_california": excluded, "source_summary": source_summary(data)})
 
     people = []
     craft_counts = defaultdict(int)
     source_overlap = defaultdict(int)
     for _, p in sorted(master.items()):
-        out = {
-            "name": p["name"],
-            "crafts": sorted(p["crafts"]),
-            "source_count": len(p["sources"]),
-            "sources": sorted(p["sources"]),
-        }
+        out = {"name": p["name"], "crafts": sorted(p["crafts"]), "source_count": len(p["sources"]), "sources": sorted(p["sources"])}
         if p["years"]:
             out["years"] = sorted(p["years"])
         if p["public_handles"]:
@@ -186,11 +189,11 @@ def main():
             craft_counts[c] += 1
 
     out = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "scope": "California only",
         "purpose": "Deduplicated California public paddler identity/source coverage index for SkyFinder research. Not an operational live-location feed.",
-        "privacy": "Public race/event identity, craft, year, public handle/profile and source evidence only. No email, phone, street address, IMEI or exact live GPS.",
+        "privacy": "Public race/event identity, craft, year, public handle/profile and source evidence only. No private contact data or exact live GPS.",
         "summary": {
             "sources_configured": len(definitions),
             "sources_available": sum(1 for a in audit if a["status"] == "OK"),
