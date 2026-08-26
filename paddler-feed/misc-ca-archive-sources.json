@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "purpose": "Independent public California paddle result archives outside primary PaddleGuru/Webscorer indexes.",
+  "sources": [
+    {"name":"Santa Barbara Yacht Club Biltmore Cup archive","url":"https://www.sbyc.org/biltmore-cup","region":"Santa Barbara, California","kind":"index"},
+    {"name":"Paddle Laguna Beach results archive","url":"https://paddlelagunabeach.com/results","region":"Laguna Beach, California","kind":"index"},
+    {"name":"Capitola Beach Festival 2023 Paddleboard Results","url":"https://capitolabeachfestival.com/wp-content/uploads/2023/10/CBF-Paddleboard-Race-Results.pdf","region":"Capitola, California","kind":"pdf"},
+    {"name":"Santa Cruz PaddleFest 2018 Paddleboard Results","url":"https://santacruzpaddlefest.wordpress.com/wp-content/uploads/2018/12/scpf-2018-race-results.pdf","region":"Santa Cruz, California","kind":"pdf"},
+    {"name":"101 Surf Sports Charity Paddle Race Results 2022","url":"https://101surfsports.com/blogs/about-us/607-generous-paddle-racers-helping-the-community-with-their-paddles","region":"San Rafael, California","kind":"html-results"},
+    {"name":"USA Surfing 2025 SUP and Prone Championship Results","url":"https://www.usasurfing.org/usa-surfing-news/racers-battle-heavy-surf-at-2025-usa-surfing-championship-sup-prone-finals-in-oceanside","region":"Oceanside, California","kind":"html-results"}
+  ]
+}
