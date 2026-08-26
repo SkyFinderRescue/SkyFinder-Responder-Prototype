@@ -19,6 +19,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -44,12 +46,23 @@ jobs:
               assert forbidden not in raw, forbidden
           print(json.dumps(s,indent=2))
           PY
-      - name: Publish archive index
+      - name: Publish archive index safely
         run: |
           git config user.name "skyfinder-catalina-bot"
           git config user.email "actions@users.noreply.github.com"
           git add paddler-feed/data/catalina-classic-archive.json
-          if git diff --cached --quiet; then echo "No change"; else
+          if git diff --cached --quiet; then
+            echo "No change"
+          else
             git commit -m "Update Catalina Classic public archive index [catalina-bot]"
-            git push
+            for attempt in 1 2 3 4; do
+              git fetch origin prototype/paddler-source-discovery-v2
+              if git rebase origin/prototype/paddler-source-discovery-v2 && git push origin HEAD:prototype/paddler-source-discovery-v2; then
+                exit 0
+              fi
+              git rebase --abort || true
+              sleep $((attempt * 3))
+            done
+            echo "Failed to publish after retries" >&2
+            exit 1
           fi
