@@ -25,6 +25,7 @@ jobs:
           node --check mock-backend.mjs
           node --check paddler-feed/app.js
           node --check paddler-feed/drift/app.js
+          node --check unified/app.js
       - name: Run responder core tests
         run: node --test tests/core.test.mjs
       - name: Run Garmin paddler collector tests
