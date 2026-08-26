@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "notes": "Public Garmin MapShare feeds used only to validate the isolated SkyFinder paddler-feed prototype. Exact locations are not republished unless a paddler explicitly opts in.",
+  "paddlers": [
+    {
+      "id": "calipaddler",
+      "name": "Cali Paddler",
+      "activity": "SUP / OC / kayak / surfski",
+      "feed_id": "calipaddler",
+      "california_relevance": "California paddling community; documented 90-mile Garmin test including Santa Barbara coastline.",
+      "enabled": true,
+      "test_only": true,
+      "opt_in_exact": false
+    },
+    {
+      "id": "teamoceanlive",
+      "name": "Team Ocean",
+      "activity": "human-powered ocean row",
+      "feed_id": "teamoceanlive",
+      "california_relevance": "Departed Monterey, California for Kauai.",
+      "enabled": true,
+      "test_only": true,
+      "opt_in_exact": false
+    },
+    {
+      "id": "kursis",
+      "name": "KURSIS / Aurimas Mockus",
+      "activity": "human-powered ocean row",
+      "feed_id": "KURSIS",
+      "california_relevance": "Departed San Diego, California on a Pacific crossing.",
+      "enabled": true,
+      "test_only": true,
+      "opt_in_exact": false
+    },
+    {
+      "id": "mike-ward-sup",
+      "name": "Mike Ward SUP",
+      "activity": "stand-up paddleboard",
+      "feed_id": "YCMPS",
+      "california_relevance": "Non-California SUP control feed.",
+      "enabled": true,
+      "test_only": true,
+      "opt_in_exact": false
+    },
+    {
+      "id": "bart-de-zwart-sup",
+      "name": "Bart de Zwart SUP",
+      "activity": "stand-up paddleboard",
+      "feed_id": "BartdeZwartSUPCrossing",
+      "california_relevance": "Non-California SUP control feed.",
+      "enabled": true,
+      "test_only": true,
+      "opt_in_exact": false
+    },
+    {
+      "id": "louanne-harris",
+      "name": "LouAnne Harris",
+      "activity": "stand-up paddleboard",
+      "feed_id": "LouAnneHarris",
+      "california_relevance": "SUP endurance paddler with California River Quest history; protected feed control.",
+      "enabled": true,
+      "test_only": true,
+      "opt_in_exact": false
+    }
+  ]
+}
