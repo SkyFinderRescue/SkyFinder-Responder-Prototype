@@ -1,0 +1,60 @@
+name: Webscorer Paddler Discovery Prototype
+
+on:
+  push:
+    branches:
+      - prototype/paddler-source-discovery-v2
+    paths:
+      - "paddler-feed/discover_webscorer.py"
+      - "paddler-feed/webscorer-sources.json"
+      - ".github/workflows/webscorer-discovery.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[webscorer-bot]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile check
+        run: python -m py_compile paddler-feed/discover_webscorer.py
+      - name: Crawl public Webscorer results
+        run: |
+          python paddler-feed/discover_webscorer.py \
+            --sources paddler-feed/webscorer-sources.json \
+            --output paddler-feed/data/webscorer-paddlers.json \
+            --timeout 20 \
+            --sleep 0.02 \
+            --max-races 400
+      - name: Validate output and privacy
+        run: |
+          python - <<'PY'
+          import json
+          p='paddler-feed/data/webscorer-paddlers.json'
+          d=json.load(open(p))
+          s=d['summary']
+          assert s['race_ids_discovered'] >= 4, s
+          assert s['unique_paddlers'] >= 1, s
+          raw=open(p,encoding='utf-8').read().lower()
+          for forbidden in ['"email"', '"phone"', '"street"', 'imei']:
+              assert forbidden not in raw, forbidden
+          print(json.dumps(s, indent=2))
+          PY
+      - name: Publish public results index
+        run: |
+          git config user.name "skyfinder-webscorer-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add paddler-feed/data/webscorer-paddlers.json
+          if git diff --cached --quiet; then
+            echo "No Webscorer-index change."
+          else
+            git commit -m "Update Webscorer public paddler index [webscorer-bot]"
+            git push
+          fi
