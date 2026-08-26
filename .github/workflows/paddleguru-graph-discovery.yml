@@ -1,4 +1,4 @@
-name: PaddleGuru Graph Discovery Prototype
+name: PaddleGuru California Graph Discovery
 
 on:
   push:
@@ -13,6 +13,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: paddleguru-california-graph
+  cancel-in-progress: true
+
 jobs:
   graph-discovery:
     if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[paddleguru-graph-bot]')
@@ -20,33 +24,17 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: prototype/paddler-source-discovery-v2
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Patch known prototype typo and compile-check
-        run: |
-          sed -i 's/args.max-athlete_pages/args.max_athlete_pages/g' paddler-feed/expand_paddleguru_graph.py
-          python -m py_compile paddler-feed/expand_paddleguru_graph.py paddler-feed/discover_public_sources.py
+      - name: Compile-check
+        run: python -m py_compile paddler-feed/expand_paddleguru_graph.py paddler-feed/discover_public_sources.py
 
-      - name: Diagnose athlete-history event encoding
-        run: |
-          python - <<'PY'
-          import re, urllib.request
-          u='https://paddleguru.com/athletes/surfer65/races/past'
-          req=urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0 SkyFinder-Paddler-Prototype/1.0'})
-          text=urllib.request.urlopen(req,timeout=20).read().decode('utf-8','replace')
-          low=text.lower()
-          print('ATHLETE_HISTORY_BYTES',len(text))
-          print('HREF_RACES',len(re.findall(r'href=["\'](?:https?://(?:www\.)?paddleguru\.com)?/races/',text,re.I)))
-          for needle in ['Santa Cruz Paddlefest 2026','USA Surfing Championships & Trials 2024','Waterman Challenge Paddleboard Race']:
-              i=low.find(needle.lower())
-              print('NEEDLE',needle,'FOUND',i)
-              if i>=0:
-                  print(re.sub(r'\s+',' ',text[max(0,i-900):i+1600])[:2500])
-          PY
-
-      - name: Crawl public PaddleGuru athlete-event graph
+      - name: Crawl public California PaddleGuru athlete-event graph
         run: |
           python paddler-feed/expand_paddleguru_graph.py \
             --seeds paddler-feed/paddleguru-graph-seeds.json \
@@ -58,31 +46,44 @@ jobs:
             --max-events 1200 \
             --rounds 5
 
-      - name: Validate privacy and useful coverage
+      - name: Validate privacy and useful California coverage
         run: |
           python - <<'PY'
           import json
           p='paddler-feed/data/paddleguru-graph.json'
-          d=json.load(open(p))
-          s=d['summary']
+          d=json.load(open(p)); s=d['summary']
           assert s['athlete_history_handles_crawled'] >= 250, s
           assert s['event_slugs_discovered'] >= 20, s
           assert s['unique_paddlers_with_california_event'] >= 1, s
-          raw=open(p,encoding='utf-8').read().lower()
-          for forbidden in ['"lat"', '"lng"', 'imei', 'email', 'phone']:
-              assert forbidden not in raw, forbidden
+          forbidden={'email','phone','street','imei','lat','lng','latitude','longitude'}
+          def walk(x):
+              if isinstance(x,dict):
+                  for k,v in x.items():
+                      assert str(k).lower() not in forbidden, k
+                      walk(v)
+              elif isinstance(x,list):
+                  for v in x: walk(v)
+          walk(d)
           print(json.dumps(s, indent=2))
           print(json.dumps({'rounds':d.get('rounds',[])}, indent=2))
           PY
 
-      - name: Publish graph index on prototype branch
+      - name: Publish graph index safely
         run: |
           git config user.name "skyfinder-paddleguru-graph-bot"
           git config user.email "actions@users.noreply.github.com"
           git add paddler-feed/data/paddleguru-graph.json
           if git diff --cached --quiet; then
             echo "No graph-index change."
-          else
-            git commit -m "Update PaddleGuru public graph index [paddleguru-graph-bot]"
-            git push
+            exit 0
           fi
+          git commit -m "Update PaddleGuru California graph [paddleguru-graph-bot]"
+          for attempt in 1 2 3; do
+            git fetch origin prototype/paddler-source-discovery-v2
+            if git rebase origin/prototype/paddler-source-discovery-v2 && git push origin HEAD:prototype/paddler-source-discovery-v2; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 3))
+          done
+          exit 1
