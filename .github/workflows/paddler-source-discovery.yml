@@ -1,0 +1,60 @@
+name: Paddler Source Discovery Prototype
+
+on:
+  push:
+    branches:
+      - prototype/paddler-source-discovery-v2
+    paths:
+      - "paddler-feed/discover_public_sources.py"
+      - "paddler-feed/discovery-sources.json"
+      - ".github/workflows/paddler-source-discovery.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Discover public paddler rosters and results
+        run: |
+          python paddler-feed/discover_public_sources.py \
+            --sources paddler-feed/discovery-sources.json \
+            --output paddler-feed/data/discovered-paddlers.json \
+            --timeout 20 \
+            --sleep 0.2
+
+      - name: Validate discovery output
+        run: |
+          python - <<'PY'
+          import json
+          p='paddler-feed/data/discovered-paddlers.json'
+          d=json.load(open(p))
+          s=d['summary']
+          assert s['source_count'] >= 10
+          assert s['unique_paddlers'] >= 1, s
+          assert s['unique_paddlers_with_california_event'] >= 1, s
+          for person in d['paddlers']:
+              assert 'lat' not in person and 'lng' not in person
+          print(json.dumps(s, indent=2))
+          PY
+
+      - name: Publish discovery index on prototype branch
+        run: |
+          git config user.name "skyfinder-paddler-discovery-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add paddler-feed/data/discovered-paddlers.json
+          if git diff --cached --quiet; then
+            echo "No discovery-index change."
+          else
+            git commit -m "Update public paddler discovery index [paddler-discovery-bot]"
+            git push
+          fi
