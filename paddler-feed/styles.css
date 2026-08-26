@@ -1,0 +1,30 @@
+:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#142033;background:#eef3f7}
+*{box-sizing:border-box}
+body{margin:0}
+header{display:flex;gap:24px;justify-content:space-between;align-items:flex-end;padding:22px 28px;background:#fff;border-bottom:1px solid #d8e0e8}
+h1{font-size:24px;margin:3px 0 4px}
+header p{margin:0;color:#5d6a78}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;color:#9c3a20}
+.generated{font-size:13px;color:#667585;white-space:nowrap}
+main{padding:18px}
+.summary{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;max-width:1200px;margin:0 auto 12px}
+.summary div{background:#fff;border:1px solid #dbe3eb;border-radius:10px;padding:12px}
+.summary strong{font-size:24px;display:block}.summary span{font-size:12px;color:#667585}
+.layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);gap:14px;max-width:1200px;margin:auto}
+#map{height:68vh;min-height:520px;border-radius:12px;border:1px solid #cad5df;background:#dbe5ec}
+aside{max-height:68vh;min-height:520px;overflow:auto}
+.notice,.card{background:#fff;border:1px solid #dbe3eb;border-radius:10px;padding:13px;margin-bottom:10px}
+.notice p{font-size:13px;line-height:1.45;color:#586675;margin:6px 0 0}
+.card-top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.card h2{font-size:16px;margin:0}.activity{font-size:13px;color:#617080;margin:4px 0 10px}
+.status{font-size:11px;font-weight:800;padding:4px 7px;border-radius:999px;background:#e7edf3}
+.status[data-status="LIVE"]{background:#dff3e5;color:#1b6937}
+.status[data-status="AGING"]{background:#fff0c5;color:#7a5710}
+.status[data-status="STALE"],.status[data-status="STOPPED"]{background:#e5e8ec;color:#59636d}
+.status[data-status="PROTECTED"],.status[data-status="NO_DATA"],.status[data-status="UNAVAILABLE"]{background:#fde2dc;color:#8d3626}
+dl{margin:0;font-size:12px}
+dl div{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
+dt{color:#71808f}dd{margin:0;text-align:right;font-weight:600}
+.mapshare{display:inline-block;margin-top:10px;font-size:12px}
+.marker-dot{border-radius:50%;border:2px solid white;box-shadow:0 0 0 1px rgba(0,0,0,.35)}
+@media(max-width:760px){header{align-items:flex-start;flex-direction:column}.generated{white-space:normal}.summary{grid-template-columns:repeat(2,1fr)}.layout{grid-template-columns:1fr}#map{height:52vh;min-height:360px}aside{max-height:none;min-height:0}}
