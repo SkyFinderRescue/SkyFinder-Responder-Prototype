@@ -31,6 +31,29 @@ SAMPLE = b"""<?xml version="1.0" encoding="UTF-8"?>
 <Placemark><name>track line</name><LineString><coordinates>-119.7,34.4,0</coordinates></LineString></Placemark>
 </Folder></Document></kml>"""
 
+SAMPLE_TRACK = b"""<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><Folder>
+<Placemark><ExtendedData>
+<Data name="Time UTC"><value>8/25/2026 11:35:00 PM</value></Data>
+<Data name="Latitude"><value>34.410001</value></Data><Data name="Longitude"><value>-119.710001</value></Data>
+<Data name="Velocity"><value>4.0 km/h</value></Data><Data name="Course"><value>250 True</value></Data>
+<Data name="Valid GPS Fix"><value>True</value></Data><Data name="Text"><value>do not retain</value></Data>
+</ExtendedData><Point><coordinates>-119.710001,34.410001,0</coordinates></Point></Placemark>
+<Placemark><ExtendedData>
+<Data name="Time UTC"><value>8/25/2026 11:45:00 PM</value></Data>
+<Data name="Latitude"><value>34.415002</value></Data><Data name="Longitude"><value>-119.704002</value></Data>
+<Data name="Velocity"><value>4.5 km/h</value></Data><Data name="Course"><value>260 True</value></Data>
+<Data name="Valid GPS Fix"><value>True</value></Data>
+</ExtendedData><Point><coordinates>-119.704002,34.415002,0</coordinates></Point></Placemark>
+<Placemark><ExtendedData>
+<Data name="Time UTC"><value>8/25/2026 11:50:00 PM</value></Data>
+<Data name="Latitude"><value>34.420123</value></Data><Data name="Longitude"><value>-119.698456</value></Data>
+<Data name="Velocity"><value>5.0 km/h</value></Data><Data name="Course"><value>270 True</value></Data>
+<Data name="Valid GPS Fix"><value>True</value></Data>
+</ExtendedData><Point><coordinates>-119.698456,34.420123,0</coordinates></Point></Placemark>
+</Folder></Document></kml>"""
+
+
 class CollectorTests(unittest.TestCase):
     def setUp(self):
         self.entry = {
@@ -70,6 +93,30 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(item["lng"], -119.698456)
         self.assertEqual(item["position_precision"], "exact-opt-in")
 
+    def test_breadcrumbs_require_separate_explicit_opt_in(self):
+        points = collector.parse_kml(SAMPLE_TRACK)
+        no_consent = collector.normalized_breadcrumbs(dict(self.entry, opt_in_exact=True), points, self.now)
+        self.assertEqual(no_consent, [])
+        consented = collector.normalized_breadcrumbs(
+            dict(self.entry, opt_in_exact=True, opt_in_breadcrumbs=True), points, self.now
+        )
+        self.assertEqual(len(consented), 3)
+        self.assertEqual(consented[0]["lat"], 34.410001)
+        self.assertEqual(consented[-1]["lng"], -119.698456)
+        for breadcrumb in consented:
+            self.assertNotIn("Text", breadcrumb)
+            self.assertNotIn("IMEI", breadcrumb)
+            self.assertNotIn("event", breadcrumb)
+
+    def test_breadcrumbs_are_chronological_and_limited_to_recent_window(self):
+        points = collector.parse_kml(SAMPLE_TRACK)
+        consented = collector.normalized_breadcrumbs(
+            dict(self.entry, opt_in_exact=True, opt_in_breadcrumbs=True), points, self.now,
+            max_points=2, max_age_hours=12
+        )
+        self.assertEqual(len(consented), 2)
+        self.assertLess(consented[0]["time_utc"], consented[1]["time_utc"])
+
     def test_tracking_off_overrides_freshness(self):
         point = collector.parse_kml(SAMPLE)[0]
         point["Event"] = "Tracking turned off from device."
@@ -83,6 +130,7 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(status, "AGING")
         status, _ = collector.freshness_status(point, datetime(2026, 8, 26, 1, 0, tzinfo=timezone.utc))
         self.assertEqual(status, "STALE")
+
 
 if __name__ == "__main__":
     unittest.main()
