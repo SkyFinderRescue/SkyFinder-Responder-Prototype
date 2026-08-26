@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SkyFinder Unified Rescue Prototype</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <div>
+      <div class="eyebrow">ISOLATED UNIFIED PROTOTYPE — NOT PRODUCTION</div>
+      <h1>SkyFinder Rescue</h1>
+      <p>One map for paraglider and paddler rescue targets. Drone/responder layers will plug into the same target model after field validation.</p>
+    </div>
+    <div id="updated" class="updated">Loading feeds…</div>
+  </header>
+
+  <main>
+    <section class="toolbar" aria-label="Map filters and search">
+      <label class="search-label">Find by name
+        <input id="search" type="search" autocomplete="off" placeholder="Paraglider or paddler name">
+      </label>
+      <label class="check"><input id="showParagliders" type="checkbox" checked> 🪂 Paragliders</label>
+      <label class="check"><input id="showPaddlers" type="checkbox" checked> 🛶 Paddlers / kayaks</label>
+      <button id="showAll" type="button">Show All</button>
+    </section>
+
+    <section class="rescue-target" id="targetPanel" aria-live="polite">
+      <div>
+        <div class="target-label">ACTIVE RESCUE TARGET</div>
+        <strong id="targetName">None selected</strong>
+        <span id="targetMeta">Tap a marker or choose a search result.</span>
+      </div>
+      <button id="clearTarget" type="button" disabled>Clear Target</button>
+    </section>
+
+    <section class="layout">
+      <div>
+        <div id="map" aria-label="Unified SkyFinder prototype map"></div>
+        <div class="legend">
+          <span>🪂 Paraglider</span>
+          <span>🛶 Paddler / kayak</span>
+          <span><i class="target-key"></i> Active rescue target</span>
+        </div>
+      </div>
+      <aside>
+        <div class="notice">
+          <strong>Prototype boundary</strong>
+          <p>This combines read-only SkyFinder paraglider data with the isolated Garmin paddler test feed. Selecting a target does not send commands to a drone and does not modify the production app.</p>
+        </div>
+        <div id="results" class="results"></div>
+      </aside>
+    </section>
+  </main>
+
+  <template id="result-template">
+    <article class="result-card">
+      <div class="result-title"><span class="kind"></span><strong class="name"></strong><span class="status"></span></div>
+      <div class="detail"></div>
+      <button type="button" class="select-target">Set as Rescue Target</button>
+    </article>
+  </template>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
