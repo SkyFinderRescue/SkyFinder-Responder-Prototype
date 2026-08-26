@@ -24,8 +24,19 @@ CRAFT_FILTER = [
     "paddle board", "surfski", "surf ski", "oc-1", "oc1", "outrigger", "kayak"
 ]
 
+# PaddleGuru athlete histories are largely rendered from embedded application data,
+# not ordinary anchor tags. Support both forms so we can discover the full public
+# California event graph without storing any embedded private registration fields.
 EVENT_LINK_RE = re.compile(
     r'href=["\'](?:https?://(?:www\.)?paddleguru\.com)?/races/([^/"\'?#]+)',
+    re.I,
+)
+EMBEDDED_EVENT_RE = re.compile(
+    r'https?://(?:www\.)?paddleguru\.com/races/([^/"\'?#\\\s]+)',
+    re.I,
+)
+RELATIVE_EMBEDDED_RE = re.compile(
+    r'(?:[:=]\s*["\']|["\'])/races/([^/"\'?#\\\s]+)',
     re.I,
 )
 
@@ -33,8 +44,6 @@ EVENT_LINK_RE = re.compile(
 def california_page(text: str) -> bool:
     if not text:
         return False
-    # Event pages expose the venue in rendered text. These patterns are narrow
-    # enough to avoid treating arbitrary lowercase "ca" strings as California.
     return bool(
         re.search(r"\bCalifornia\b", text, re.I)
         or re.search(r",\s*CA(?:\s+\d{5}(?:-\d{4})?)?(?:\s*,|\s+USA\b|\s+United States\b|\s*<)", text)
@@ -42,8 +51,6 @@ def california_page(text: str) -> bool:
 
 
 def display_title(text: str, slug: str) -> str:
-    # PaddleGuru event pages typically expose the race name in an h4/h3. Keep
-    # this best-effort; the stable slug is retained regardless.
     for tag in ("h4", "h3", "h2"):
         m = re.search(rf"<{tag}[^>]*>(.*?)</{tag}>", text or "", re.I | re.S)
         if m:
@@ -54,15 +61,26 @@ def display_title(text: str, slug: str) -> str:
     return slug
 
 
+def event_slugs_from_text(text: str) -> set[str]:
+    text = text or ""
+    found = set(EVENT_LINK_RE.findall(text))
+    found.update(EMBEDDED_EVENT_RE.findall(text))
+    found.update(RELATIVE_EMBEDDED_RE.findall(text))
+    cleaned = set()
+    for slug in found:
+        slug = html.unescape(slug).strip().strip("\\")
+        if slug and slug.lower() not in {"past", "upcoming", "results", "startlist"}:
+            cleaned.add(slug)
+    return cleaned
+
+
 def discover_events_for_handle(handle: str, timeout: int) -> tuple[set[str], list[dict]]:
     slugs: set[str] = set()
     audit = []
     for section in ("past", "upcoming"):
         url = f"{BASE}/athletes/{handle}/races/{section}"
         status, text = fetch(url, timeout)
-        found = set(EVENT_LINK_RE.findall(text or "")) if status == 200 else set()
-        # Ignore nested action-like routes if any appear.
-        found = {s for s in found if s and s.lower() not in {"past", "upcoming"}}
+        found = event_slugs_from_text(text) if status == 200 else set()
         slugs.update(found)
         audit.append({
             "handle": handle,
@@ -103,8 +121,6 @@ def fetch_event_records(slug: str, timeout: int) -> tuple[list[dict], dict]:
                 continue
             seen.add(key)
             all_records.append(rec)
-        # If results already exposes racers, a second startlist fetch is usually
-        # redundant. We still fetch the base page only when no racer data exists.
         if suffix == "results" and all_records:
             break
         if suffix == "startlist" and all_records:
@@ -205,9 +221,7 @@ def main():
         handles_before = len(crawled_handles)
         events_before = len(event_slugs)
 
-        # Crawl a bounded number of public athlete history pages. Seed handles are
-        # queued first; new public handles discovered in race pages feed later rounds.
-        while queue and len(crawled_handles) < args.max-athlete_pages:
+        while queue and len(crawled_handles) < args.max_athlete_pages:
             handle = queue.popleft()
             if handle in crawled_handles:
                 continue
@@ -220,8 +234,6 @@ def main():
                 athlete_page_audit.append({"handle": handle, "error": f"{type(exc).__name__}: {exc}"})
             if args.sleep:
                 time.sleep(args.sleep)
-            # In the first round, prioritize event expansion rather than spending
-            # the full athlete-page budget before processing newly found races.
             if round_no == 1 and len(crawled_handles) >= max(20, len(seeds.get("athlete_handles", []))):
                 break
 
@@ -274,9 +286,9 @@ def main():
     ca_successful_events = [a for a in successful_events if a.get("california")]
 
     out = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
-        "purpose": "Broad public PaddleGuru paddle-racer graph discovery for SkyFinder coverage research; not a live-location feed.",
+        "purpose": "Broad public PaddleGuru paddle-racer graph discovery for SkyFinder California coverage research; not a live-location feed.",
         "privacy": "Public athlete names, public PaddleGuru handles, craft categories, event slugs and source audit only. No private contact data or exact live GPS.",
         "summary": {
             "athlete_history_handles_crawled": len(crawled_handles),
