@@ -15,6 +15,7 @@ import csv
 import io
 import json
 import math
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
@@ -39,10 +40,20 @@ def iso(dt: datetime | None):
     return dt.astimezone(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z") if dt else None
 
 
-def fetch_text(url: str, timeout: int = 25) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/csv,text/plain,*/*"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read().decode(r.headers.get_content_charset() or "utf-8", "replace")
+def fetch_text(url: str, timeout: int = 25, attempts: int = 4) -> str:
+    last = None
+    for attempt in range(1, attempts + 1):
+        req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/csv,text/plain,*/*", "Connection": "close"})
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read().decode(r.headers.get_content_charset() or "utf-8", "replace")
+        except Exception as exc:
+            last = exc
+            if isinstance(exc, urllib.error.HTTPError) and 400 <= exc.code < 500 and exc.code != 429:
+                raise
+            if attempt < attempts:
+                time.sleep(attempt * 1.5)
+    raise last
 
 
 def age_hours(dt: datetime | None) -> float | None:
