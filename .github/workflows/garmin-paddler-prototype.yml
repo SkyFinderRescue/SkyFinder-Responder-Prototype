@@ -1,0 +1,77 @@
+name: Garmin Paddler Feed Prototype
+
+on:
+  push:
+    branches:
+      - prototype/garmin-paddler-feed-v1
+    paths:
+      - "paddler-feed/**"
+      - ".github/workflows/garmin-paddler-prototype.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "*/10 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  validate-and-collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit tests
+        run: python -m unittest discover -s paddler-feed/tests -v
+
+      - name: Fetch and normalize public Garmin test feeds
+        run: |
+          python paddler-feed/collector.py \
+            --registry paddler-feed/registry.json \
+            --output paddler-feed/data/paddlers-live.json \
+            --timeout 20 \
+            --print-summary
+
+      - name: Validate normalized output and privacy guard
+        run: python paddler-feed/validate_output.py paddler-feed/data/paddlers-live.json
+
+      - name: Show privacy-minimized validation result
+        run: |
+          python - <<'PY'
+          import json
+          p="paddler-feed/data/paddlers-live.json"
+          data=json.load(open(p))
+          print(json.dumps({
+            "generated_at_utc": data["generated_at_utc"],
+            "counts": data["counts"],
+            "paddlers": [
+              {
+                "id": x["id"],
+                "status": x["status"],
+                "http_status": x.get("http_status"),
+                "last_update_utc": x.get("last_update_utc"),
+                "age_minutes": x.get("age_minutes"),
+                "speed_mph": x.get("speed_mph"),
+                "device_type": x.get("device_type"),
+                "position_precision": x.get("position_precision")
+              } for x in data["paddlers"]
+            ]
+          }, indent=2))
+          PY
+
+      - name: Publish normalized feed on default branch
+        if: github.ref == 'refs/heads/main' && github.event_name == 'schedule'
+        run: |
+          git config user.name "skyfinder-paddler-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add paddler-feed/data/paddlers-live.json
+          if git diff --cached --quiet; then
+            echo "No feed change."
+          else
+            git commit -m "Update Garmin paddler prototype feed"
+            git push
+          fi
