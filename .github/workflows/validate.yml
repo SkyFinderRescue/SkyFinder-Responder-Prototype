@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - name: Check JavaScript syntax
         run: |
           node --check app.mjs
@@ -20,8 +23,12 @@ jobs:
           node --check firebase-backend.mjs
           node --check firebase-config.js
           node --check mock-backend.mjs
-      - name: Run core tests
+          node --check paddler-feed/app.js
+          node --check paddler-feed/drift/app.js
+      - name: Run responder core tests
         run: node --test tests/core.test.mjs
+      - name: Run Garmin paddler collector tests
+        run: python -m unittest discover -s paddler-feed/tests -v
       - name: Guard production separation
         run: |
           test ! -e scripts/build_live_snapshot.py
