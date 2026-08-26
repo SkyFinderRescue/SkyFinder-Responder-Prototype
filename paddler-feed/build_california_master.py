@@ -218,6 +218,7 @@ def main():
         for c in p["crafts"]:
             craft_counts[c] += 1
 
+    identity_total = len(people)
     out = {
         "schema_version": 3,
         "generated_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
@@ -228,7 +229,8 @@ def main():
         "summary": {
             "sources_configured": len(definitions),
             "sources_available": sum(1 for a in audit if a["status"] == "OK"),
-            "unique_california_paddler_identities": len(people),
+            "unique_california_paddlers": identity_total,
+            "unique_california_paddler_identities": identity_total,
             "identity_type_counts": dict(sorted(identity_counts.items())),
             "craft_counts": dict(sorted(craft_counts.items())),
             "source_overlap_counts": dict(sorted(source_overlap.items(), key=lambda kv: int(kv[0]))),
