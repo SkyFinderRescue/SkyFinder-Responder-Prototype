@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-26T17:41:14Z",
+  "generated_at_utc": "2026-08-26T17:49:45Z",
   "operational_use": false,
   "warning": "Research prototype only. Estimated drift is not a confirmed GPS position and is not Coast Guard SAROPS.",
   "method": {
@@ -1185,12 +1185,11 @@
       }
     ]
   },
-  "source_snapshot_generated_at_utc": "2026-08-26T17:41:14Z",
+  "source_snapshot_generated_at_utc": "2026-08-26T17:49:45Z",
   "source_metadata": {
     "hf_radar": {
-      "name": "NOAA/IOOS HF Radar US West Coast near-real-time 2 km",
-      "dataset": "ucsdHfrW2",
-      "official_upstream": "NOAA IOOS HF Radar Network / NDBC THREDDS"
+      "name": "NOAA/IOOS HF Radar Network",
+      "dataset": "NDBC THREDDS hfradar_uswc_2km"
     },
     "wind_wave": {
       "name": "NOAA NDBC real-time standard meteorological data",

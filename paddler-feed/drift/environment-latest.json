@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-26T17:41:14Z",
+  "generated_at_utc": "2026-08-26T17:49:45Z",
   "operational_use": false,
   "scope": "Santa Barbara / U.S. West Coast research prototype",
   "query_point": {
@@ -8,14 +8,14 @@
     "lon": -119.842
   },
   "surface_current": {
-    "provider": "NOAA/IOOS HF Radar Network via NOAA CoastWatch ERDDAP",
-    "dataset": "ucsdHfrW2 \u2014 US West Coast hourly 2 km near-real-time surface currents",
+    "provider": "NOAA CoastWatch ERDDAP fallback",
+    "dataset": "US West Coast hourly 2 km near-real-time HF-radar surface currents",
     "query_url": "https://coastwatch.pfeg.noaa.gov/erddap/griddap/ucsdHfrW2.csv?water_u[(last)][(34.24600)][(-119.84200)],water_v[(last)][(34.24600)][(-119.84200)],number_of_sites[(last)][(34.24600)][(-119.84200)],number_of_radials[(last)][(34.24600)][(-119.84200)],hdop[(last)][(34.24600)][(-119.84200)]",
-    "info_url": "https://coastwatch.pfeg.noaa.gov/erddap/info/ucsdHfrW2/index.html",
+    "catalog_url": "https://dods.ndbc.noaa.gov/thredds/catalog/hfradar.html?dataset=hfradar_uswc_2km",
     "usable": true,
     "quality": "CURRENT",
     "observation_time_utc": "2026-08-26T13:00:00Z",
-    "age_hours": 4.687217448888889,
+    "age_hours": 4.829237414722222,
     "grid_lat": 34.24156,
     "grid_lon": -119.84499,
     "u_mps": 0.03,
@@ -37,13 +37,13 @@
     "usable": true,
     "quality": "CURRENT",
     "observation_time_utc": "2026-08-26T17:10:00Z",
-    "age_hours": 0.5206169361111112,
+    "age_hours": 0.6626434313888889,
     "wind_from_deg_true": 280.0,
     "wind_speed_mps": 3.0,
     "wind_speed_kts": 5.831533477321814,
     "wind_speed_mph": 6.710808876163199,
     "wave_observation_time_utc": "2026-08-26T16:50:00Z",
-    "wave_age_hours": 0.8539502736111111,
+    "wave_age_hours": 0.9959767675000001,
     "wave_height_ft": 3.2808398950131,
     "dominant_period_sec": 7.0,
     "average_period_sec": 5.8,
@@ -51,9 +51,8 @@
   },
   "sources": {
     "hf_radar": {
-      "name": "NOAA/IOOS HF Radar US West Coast near-real-time 2 km",
-      "dataset": "ucsdHfrW2",
-      "official_upstream": "NOAA IOOS HF Radar Network / NDBC THREDDS"
+      "name": "NOAA/IOOS HF Radar Network",
+      "dataset": "NDBC THREDDS hfradar_uswc_2km"
     },
     "wind_wave": {
       "name": "NOAA NDBC real-time standard meteorological data",
