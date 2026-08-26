@@ -1,11 +1,13 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "purpose": "Independent public California paddle result archives outside primary PaddleGuru/Webscorer indexes.",
   "sources": [
     {"name":"Santa Barbara Yacht Club Biltmore Cup archive","url":"https://www.sbyc.org/biltmore-cup","region":"Santa Barbara, California","kind":"index"},
     {"name":"Paddle Laguna Beach results archive","url":"https://paddlelagunabeach.com/results","region":"Laguna Beach, California","kind":"index"},
     {"name":"Capitola Beach Festival 2023 Paddleboard Results","url":"https://capitolabeachfestival.com/wp-content/uploads/2023/10/CBF-Paddleboard-Race-Results.pdf","region":"Capitola, California","kind":"pdf"},
     {"name":"Santa Cruz PaddleFest 2018 Paddleboard Results","url":"https://santacruzpaddlefest.wordpress.com/wp-content/uploads/2018/12/scpf-2018-race-results.pdf","region":"Santa Cruz, California","kind":"pdf"},
+    {"name":"Tahoe Nalu 2011 Results","url":"https://www.tahoenalu.com/wp-content/uploads/2011/03/2011-Ta-Hoe-Nalu-Results-Aug-13-14.pdf","region":"Lake Tahoe, California","kind":"pdf"},
+    {"name":"Tahoe Nalu 2012 4 Mile Results","url":"https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf","region":"Lake Tahoe, California","kind":"pdf"},
     {"name":"USA Surfing 2025 SUP and Prone Championship Results","url":"https://www.usasurfing.org/usa-surfing-news/racers-battle-heavy-surf-at-2025-usa-surfing-championship-sup-prone-finals-in-oceanside","region":"Oceanside, California","kind":"html-results"},
 
     {"name":"101 Surf Sports 2013-14 Whole Foods Paddle Series","url":"https://101surfsports.com/blogs/about-us/163-the-2013-14-whole-foods-paddle-racing-series-kicked-off-the-season-with-a-polka","region":"San Rafael, California","kind":"html-results"},
