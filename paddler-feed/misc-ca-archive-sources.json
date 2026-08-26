@@ -1,12 +1,31 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "purpose": "Independent public California paddle result archives outside primary PaddleGuru/Webscorer indexes.",
   "sources": [
     {"name":"Santa Barbara Yacht Club Biltmore Cup archive","url":"https://www.sbyc.org/biltmore-cup","region":"Santa Barbara, California","kind":"index"},
     {"name":"Paddle Laguna Beach results archive","url":"https://paddlelagunabeach.com/results","region":"Laguna Beach, California","kind":"index"},
     {"name":"Capitola Beach Festival 2023 Paddleboard Results","url":"https://capitolabeachfestival.com/wp-content/uploads/2023/10/CBF-Paddleboard-Race-Results.pdf","region":"Capitola, California","kind":"pdf"},
     {"name":"Santa Cruz PaddleFest 2018 Paddleboard Results","url":"https://santacruzpaddlefest.wordpress.com/wp-content/uploads/2018/12/scpf-2018-race-results.pdf","region":"Santa Cruz, California","kind":"pdf"},
-    {"name":"101 Surf Sports Charity Paddle Race Results 2022","url":"https://101surfsports.com/blogs/about-us/607-generous-paddle-racers-helping-the-community-with-their-paddles","region":"San Rafael, California","kind":"html-results"},
-    {"name":"USA Surfing 2025 SUP and Prone Championship Results","url":"https://www.usasurfing.org/usa-surfing-news/racers-battle-heavy-surf-at-2025-usa-surfing-championship-sup-prone-finals-in-oceanside","region":"Oceanside, California","kind":"html-results"}
+    {"name":"USA Surfing 2025 SUP and Prone Championship Results","url":"https://www.usasurfing.org/usa-surfing-news/racers-battle-heavy-surf-at-2025-usa-surfing-championship-sup-prone-finals-in-oceanside","region":"Oceanside, California","kind":"html-results"},
+
+    {"name":"101 Surf Sports 2013-14 Whole Foods Paddle Series","url":"https://101surfsports.com/blogs/about-us/163-the-2013-14-whole-foods-paddle-racing-series-kicked-off-the-season-with-a-polka","region":"San Rafael, California","kind":"html-results"},
+    {"name":"101 Surf Sports Whole Foods Paddle Race 5","url":"https://101surfsports.com/blogs/about-us/228-gorgeous-weather-blesses-whole-foods-market-paddle-rac-5","region":"San Rafael, California","kind":"html-results"},
+    {"name":"101 Surf Sports San Quentin Breakout","url":"https://101surfsports.com/blogs/about-us/231-paddlers-escape-san-quentin-under-epic-conditions","region":"San Francisco Bay, California","kind":"html-results"},
+    {"name":"101 Surf Sports Redwood City Rain or Shine","url":"https://101surfsports.com/blogs/about-us/358-rain-or-shine-we-are-on-the-line-paddle-race-report-redwood-city","region":"Redwood City, California","kind":"html-results"},
+    {"name":"101 Surf Sports Winter Season Wrap","url":"https://101surfsports.com/blogs/about-us/397-winter-paddle-racing-season-wraps-up-in-fine-style","region":"San Francisco Bay, California","kind":"html-results"},
+    {"name":"101 Surf Sports Napa Sonoma Benefit Race","url":"https://101surfsports.com/blogs/about-us/460-paddlers-in-the-rain-raise-1865-for-our-napa-sonoma-friends","region":"San Rafael, California","kind":"html-results"},
+    {"name":"101 Surf Sports Redwood City Race 2","url":"https://101surfsports.com/blogs/about-us/463-glorius-day-for-paddle-crew-at-redwood-city-race-number-2","region":"Redwood City, California","kind":"html-results"},
+    {"name":"101 Surf Sports San Rafael Hail Race","url":"https://101surfsports.com/blogs/about-us/476-hail-of-a-time-at-san-rafael-paddle-race","region":"San Rafael, California","kind":"html-results"},
+    {"name":"101 Surf Sports 2018 Winter Season Wrap","url":"https://101surfsports.com/blogs/about-us/478-2018-winter-paddle-racing-season-wraps-up-at-redwood-city","region":"Redwood City, California","kind":"html-results"},
+    {"name":"101 Surf Sports Cancer Benefit Paddle Race","url":"https://101surfsports.com/blogs/about-us/504-paddle-race-season-kicks-off-with-over-40k-raised-to-fight-cancer","region":"San Francisco Bay, California","kind":"html-results"},
+    {"name":"101 Surf Sports Spectacular Weather Race","url":"https://101surfsports.com/blogs/about-us/508-spectacular-weather-blesses-paddle-racers","region":"San Rafael, California","kind":"html-results"},
+    {"name":"101 Surf Sports Long Strange Trip","url":"https://101surfsports.com/blogs/about-us/511-13-miles-of-riding-the-bumpy-tide-on-san-francisco-bay","region":"San Francisco Bay, California","kind":"html-results"},
+    {"name":"101 Surf Sports Redwood City Race 3","url":"https://101surfsports.com/blogs/about-us/517-snowy-mountains-frame-sun-dappled-skies-at-redwood-city-paddle-race-3","region":"Redwood City, California","kind":"html-results"},
+    {"name":"California River Quest 2019 Results","url":"https://101surfsports.com/blogs/about-us/532-california-river-quest-race-report-and-results","region":"Redding to Sacramento River, California","kind":"html-results"},
+    {"name":"101 Surf Sports Rainy Day Season Wrap","url":"https://101surfsports.com/blogs/about-us/569-rainy-day-paddle-race-wraps-up-winter-race-season","region":"San Francisco Bay, California","kind":"html-results"},
+    {"name":"101 Surf Sports Discharge Challenged Charity Race","url":"https://101surfsports.com/blogs/about-us/598-blue-skies-and-good-times-at-discharge-challenged-second-charity-paddle","region":"San Rafael, California","kind":"html-results"},
+    {"name":"101 Surf Sports Charity Paddle Race 2022","url":"https://101surfsports.com/blogs/about-us/607-generous-paddle-racers-helping-the-community-with-their-paddles","region":"San Rafael, California","kind":"html-results"},
+    {"name":"101 Surf Sports Mardi Gras Paddle Race","url":"https://101surfsports.com/blogs/about-us/672-mardis-gras-paddle-race-starts-cold-finishes-hot","region":"San Francisco Bay, California","kind":"html-results"},
+    {"name":"101 Surf Sports Elves and Grinches Race","url":"https://101surfsports.com/blogs/about-us/759-blazing-fast-times-for-our-elves-and-grinches-race","region":"San Rafael, California","kind":"html-results"}
   ]
 }
