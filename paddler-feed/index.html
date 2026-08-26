@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SkyFinder Paddler Feed Prototype</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <div>
+      <div class="eyebrow">ISOLATED TEST BUILD</div>
+      <h1>SkyFinder Paddler Feed Prototype</h1>
+      <p>Garmin MapShare KML ingestion test. Public test feeds only. Not for operational rescue use.</p>
+    </div>
+    <div id="generated" class="generated">Waiting for feed…</div>
+  </header>
+
+  <main>
+    <section class="summary">
+      <div><strong id="total">0</strong><span>feeds</span></div>
+      <div><strong id="live">0</strong><span>live</span></div>
+      <div><strong id="aging">0</strong><span>aging</span></div>
+      <div><strong id="stale">0</strong><span>stale/stopped</span></div>
+      <div><strong id="other">0</strong><span>no data/protected</span></div>
+    </section>
+
+    <section class="layout">
+      <div id="map" aria-label="Paddler test map"></div>
+      <aside>
+        <div class="notice">
+          <strong>Prototype privacy guard</strong>
+          <p>Non-opted-in public feeds are rounded to roughly 3 decimal places. Garmin IMEI, internal IDs and message text are discarded.</p>
+        </div>
+        <div id="cards"></div>
+      </aside>
+    </section>
+  </main>
+
+  <template id="card-template">
+    <article class="card">
+      <div class="card-top">
+        <h2></h2>
+        <span class="status"></span>
+      </div>
+      <p class="activity"></p>
+      <dl>
+        <div><dt>Last update</dt><dd class="updated"></dd></div>
+        <div><dt>Speed</dt><dd class="speed"></dd></div>
+        <div><dt>Heading</dt><dd class="heading"></dd></div>
+        <div><dt>Device</dt><dd class="device"></dd></div>
+      </dl>
+      <a class="mapshare" target="_blank" rel="noopener noreferrer">Open Garmin MapShare</a>
+    </article>
+  </template>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
