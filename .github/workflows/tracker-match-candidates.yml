@@ -1,0 +1,78 @@
+name: California Paddler Tracker Match Candidates
+
+on:
+  push:
+    branches:
+      - prototype/paddler-source-discovery-v2
+    paths:
+      - "paddler-feed/build_tracker_match_candidates.py"
+      - "paddler-feed/data/california-paddlers-master.json"
+      - ".github/workflows/tracker-match-candidates.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "47 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: california-paddler-tracker-match-candidates
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[tracker-candidate-bot]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prototype/paddler-source-discovery-v2
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build tracker-match candidate queue
+        run: |
+          python -m py_compile paddler-feed/build_tracker_match_candidates.py
+          python paddler-feed/build_tracker_match_candidates.py \
+            --master paddler-feed/data/california-paddlers-master.json \
+            --output paddler-feed/data/tracker-match-candidates.json
+      - name: Validate privacy and verification boundary
+        run: |
+          python - <<'PY'
+          import json
+          p='paddler-feed/data/tracker-match-candidates.json'
+          d=json.load(open(p,encoding='utf-8'))
+          assert d['summary']['candidates_with_public_reference'] > 0, d['summary']
+          forbidden={'email','phone','street','imei','lat','lng','latitude','longitude','password','access_code'}
+          def walk(x):
+              if isinstance(x,dict):
+                  for k,v in x.items():
+                      assert str(k).lower() not in forbidden, k
+                      walk(v)
+              elif isinstance(x,list):
+                  for v in x: walk(v)
+          walk(d)
+          assert all(c['tracker_match_status']=='UNMATCHED_CANDIDATE' for c in d['candidates'])
+          print(json.dumps(d['summary'],indent=2))
+          PY
+      - name: Publish candidate queue safely
+        run: |
+          git config user.name "skyfinder-tracker-candidate-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add paddler-feed/data/tracker-match-candidates.json
+          if git diff --cached --quiet; then
+            echo "No tracker candidate change."
+            exit 0
+          fi
+          git commit -m "Update California paddler tracker candidate queue [tracker-candidate-bot]"
+          for attempt in 1 2 3; do
+            git fetch origin prototype/paddler-source-discovery-v2
+            if git rebase origin/prototype/paddler-source-discovery-v2 && git push origin HEAD:prototype/paddler-source-discovery-v2; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 3))
+          done
+          exit 1
