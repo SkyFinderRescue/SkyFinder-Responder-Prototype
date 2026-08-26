@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-26T17:39:14Z",
+  "operational_use": false,
+  "scope": "Santa Barbara / U.S. West Coast research prototype",
+  "query_point": {
+    "lat": 34.246,
+    "lon": -119.842
+  },
+  "surface_current": {
+    "provider": "NOAA/IOOS HF Radar Network via NOAA CoastWatch ERDDAP",
+    "dataset": "ucsdHfrW2 \u2014 US West Coast hourly 2 km near-real-time surface currents",
+    "query_url": "https://coastwatch.pfeg.noaa.gov/erddap/griddap/ucsdHfrW2.csv?water_u[(last)][(34.24600)][(-119.84200)],water_v[(last)][(34.24600)][(-119.84200)],number_of_sites[(last)][(34.24600)][(-119.84200)],number_of_radials[(last)][(34.24600)][(-119.84200)],hdop[(last)][(34.24600)][(-119.84200)]",
+    "info_url": "https://coastwatch.pfeg.noaa.gov/erddap/info/ucsdHfrW2/index.html",
+    "usable": true,
+    "quality": "CURRENT",
+    "observation_time_utc": "2026-08-26T13:00:00Z",
+    "age_hours": 4.6538940194444445,
+    "grid_lat": 34.24156,
+    "grid_lon": -119.84499,
+    "u_mps": 0.03,
+    "v_mps": 0.06,
+    "speed_kts": 0.13039705268357307,
+    "toward_deg_true": 26.565051177077976,
+    "number_of_sites": 2,
+    "number_of_radials": 11,
+    "hdop": 0.63
+  },
+  "wind_wave": {
+    "provider": "NOAA National Data Buoy Center",
+    "station": "46053",
+    "station_name": "EAST SANTA BARBARA",
+    "station_lat": 34.246,
+    "station_lon": -119.842,
+    "distance_from_query_nm": 0.0,
+    "query_url": "https://www.ndbc.noaa.gov/data/realtime2/46053.txt",
+    "usable": true,
+    "quality": "CURRENT",
+    "observation_time_utc": "2026-08-26T17:00:00Z",
+    "age_hours": 0.6539334936111112,
+    "wind_from_deg_true": 290.0,
+    "wind_speed_mps": 2.0,
+    "wind_speed_kts": 3.8876889848812097,
+    "wind_speed_mph": 4.4738725841088,
+    "wave_height_ft": null,
+    "dominant_period_sec": null,
+    "average_period_sec": null,
+    "mean_wave_direction_deg_true": null
+  },
+  "sources": {
+    "hf_radar": {
+      "name": "NOAA/IOOS HF Radar US West Coast near-real-time 2 km",
+      "dataset": "ucsdHfrW2",
+      "official_upstream": "NOAA IOOS HF Radar Network / NDBC THREDDS"
+    },
+    "wind_wave": {
+      "name": "NOAA NDBC real-time standard meteorological data",
+      "station": "46053"
+    }
+  },
+  "warning": "Environmental source ages must be checked. This prototype is not Coast Guard SAROPS and is not approved for operational SAR decisions."
+}
