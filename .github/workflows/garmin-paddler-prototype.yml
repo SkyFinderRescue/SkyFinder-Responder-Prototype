@@ -16,6 +16,7 @@ permissions:
 
 jobs:
   validate-and-collect:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[paddler-feed-bot]')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -63,8 +64,8 @@ jobs:
           }, indent=2))
           PY
 
-      - name: Publish normalized feed on default branch
-        if: github.ref == 'refs/heads/main' && github.event_name == 'schedule'
+      - name: Publish normalized feed
+        if: success() && ((github.ref == 'refs/heads/prototype/garmin-paddler-feed-v1' && github.event_name == 'push') || (github.ref == 'refs/heads/main' && github.event_name == 'schedule'))
         run: |
           git config user.name "skyfinder-paddler-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -72,6 +73,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No feed change."
           else
-            git commit -m "Update Garmin paddler prototype feed"
+            git commit -m "Update Garmin paddler prototype feed [paddler-feed-bot]"
             git push
           fi
