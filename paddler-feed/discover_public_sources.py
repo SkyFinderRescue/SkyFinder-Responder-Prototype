@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Discover publicly listed SUP/prone paddlers from event roster/result pages.
 
-This is a coverage index, not a live-location republisher. It intentionally stores
-public event identity/category metadata and source URLs only. Precise live GPS is
-handled separately by explicitly supported tracker feeds and privacy rules.
+Coverage index only: public event identity/category metadata and public handles are
+stored. Precise live GPS is handled separately by tracker ingestion and privacy
+rules.
 """
 
 from __future__ import annotations
@@ -22,7 +22,7 @@ from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
-UA = "SkyFinder-Paddler-Prototype/1.0 (+public event discovery; rescue research)"
+UA = "SkyFinder-Paddler-Prototype/1.1 (+public event discovery; rescue research)"
 
 
 class TableParser(HTMLParser):
@@ -83,8 +83,14 @@ def fetch(url: str, timeout: int) -> tuple[int, str]:
 def norm(s: str) -> str:
     s = unicodedata.normalize("NFKD", s or "")
     s = "".join(ch for ch in s if not unicodedata.combining(ch))
-    s = re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
-    return s
+    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+
+
+def unescape_clj(s: str) -> str:
+    if not s:
+        return ""
+    s = html.unescape(s)
+    return s.replace('\\"', '"').replace('\\\\', '\\').strip()
 
 
 def classify_craft(text: str) -> str | None:
@@ -104,10 +110,13 @@ def classify_craft(text: str) -> str | None:
     return None
 
 
-def row_matches(row, filters) -> bool:
-    joined = " | ".join(c["text"] for c in row)
-    n = norm(joined)
+def filter_matches(category: str, filters) -> bool:
+    n = norm(category)
     return any(norm(f) in n for f in filters)
+
+
+def row_matches(row, filters) -> bool:
+    return filter_matches(" | ".join(c["text"] for c in row), filters)
 
 
 def absolute(base: str, href: str) -> str:
@@ -122,22 +131,86 @@ def absolute(base: str, href: str) -> str:
     return base.rsplit("/", 1)[0] + "/" + href
 
 
-def extract_record(source, row):
-    provider = source["provider"]
-    cells = [c["text"] for c in row]
-    if not cells:
-        return None
-
-    record = {
-        "provider": provider,
+def base_record(source):
+    return {
+        "provider": source["provider"],
         "event": source["event"],
         "region": source.get("region"),
         "california": bool(source.get("california")),
         "source_url": source["url"],
     }
 
-    # PaddleGuru results: Overall, Division, Name, Number, Age, Gender, Category, Time
-    # PaddleGuru startlist: Name, Number, Age, Gender, Category
+
+def extract_paddleguru_embedded(source, text):
+    """Parse PaddleGuru's server-rendered Clojure/EDN-like race data.
+
+    PaddleGuru does not render result rows as HTML <tr>. The page contains public
+    entries such as {:athletes (...), :racer-number ..., :division {:category ...}}.
+    Parse only the fields needed for identity/category matching and discard
+    internal user IDs.
+    """
+    records = []
+    # Each race entry starts with :athletes, followed by pending-athletes,
+    # racer-number and division/category. DOTALL is required because minified
+    # pages can still contain incidental line breaks.
+    entry_re = re.compile(
+        r"\{:athletes\s+(?P<athletes>\(.*?\)|nil),\s*"
+        r":pending-athletes\s+.*?,\s*"
+        r":racer-number\s+(?P<number>\d+),\s*"
+        r":division\s+\{:category\s+\{.*?:name\s+\"(?P<category>(?:\\.|[^\"])*)\"\}",
+        re.S,
+    )
+    athlete_re = re.compile(
+        r":full-name\s+\"(?P<name>(?:\\.|[^\"])*)\""
+        r"(?:.*?:username\s+\"(?P<username>(?:\\.|[^\"])*)\")?",
+        re.S,
+    )
+
+    for match in entry_re.finditer(text):
+        category = unescape_clj(match.group("category"))
+        if not filter_matches(category, source.get("craft_filter", [])):
+            continue
+        craft = classify_craft(category)
+        if not craft:
+            continue
+        athlete_blob = match.group("athletes")
+        if athlete_blob == "nil":
+            continue
+
+        # A relay/team entry can contain more than one public athlete. Preserve
+        # each person as a separate discovery record tied to the same race number.
+        found = list(athlete_re.finditer(athlete_blob))
+        if not found:
+            # Fallback for entries without username ordering/field.
+            names = re.findall(r':full-name\s+\"((?:\\.|[^\"])*)\"', athlete_blob, flags=re.S)
+            found_data = [(unescape_clj(n), None) for n in names]
+        else:
+            found_data = [(unescape_clj(m.group("name")), unescape_clj(m.group("username") or "")) for m in found]
+
+        for name, username in found_data:
+            if not name:
+                continue
+            rec = base_record(source)
+            rec.update({
+                "name": name,
+                "number": match.group("number"),
+                "category": category,
+                "craft": craft,
+            })
+            if username:
+                rec["public_handle"] = username
+            records.append(rec)
+    return records
+
+
+def extract_table_record(source, row):
+    provider = source["provider"]
+    cells = [c["text"] for c in row]
+    if not cells:
+        return None
+    record = base_record(source)
+
+    # Legacy/table fallback for PaddleGuru pages that may still expose HTML rows.
     if provider.lower() == "paddleguru":
         if len(cells) >= 7 and re.match(r"^\d+$", cells[0]):
             name, number, category = cells[2], cells[3], cells[6]
@@ -149,13 +222,11 @@ def extract_record(source, row):
             return None
         record.update({"name": name.strip(), "number": number.strip(), "category": category.strip()})
 
-    # RaceOwl roster commonly exposes: boat number, team/boat, racers, division, ...
+    # RaceOwl roster commonly exposes boat number, team/boat, racers, division.
     elif provider.lower() == "raceowl":
         if len(cells) < 4:
             return None
-        number = cells[0]
-        team = cells[1]
-        racers = cells[2]
+        number, team, racers = cells[0], cells[1], cells[2]
         category = next((c for c in cells[3:] if classify_craft(c) == "SUP"), cells[3])
         name = racers or team
         if not name or norm(name) in {"racers", "name"}:
@@ -202,20 +273,33 @@ def main():
 
         parsed = 0
         matched = 0
+        parser_mode = None
         if status == 200 and text:
-            parser = TableParser()
-            try:
-                parser.feed(text)
-            except Exception as exc:
-                error = f"HTML parse error: {exc}"
-            for row in parser.rows:
-                parsed += 1
-                if not row_matches(row, source.get("craft_filter", [])):
-                    continue
-                rec = extract_record(source, row)
-                if rec:
-                    records.append(rec)
-                    matched += 1
+            if source["provider"].lower() == "paddleguru":
+                pg_records = extract_paddleguru_embedded(source, text)
+                if pg_records:
+                    records.extend(pg_records)
+                    matched += len(pg_records)
+                    parsed += len(pg_records)
+                    parser_mode = "paddleguru-embedded"
+
+            # Table parser remains useful for RaceOwl and as a fallback.
+            if source["provider"].lower() != "paddleguru" or matched == 0:
+                parser = TableParser()
+                try:
+                    parser.feed(text)
+                except Exception as exc:
+                    error = f"HTML parse error: {exc}"
+                for row in parser.rows:
+                    parsed += 1
+                    if not row_matches(row, source.get("craft_filter", [])):
+                        continue
+                    rec = extract_table_record(source, row)
+                    if rec:
+                        records.append(rec)
+                        matched += 1
+                if parser.rows:
+                    parser_mode = parser_mode or "html-table"
 
         source_results.append({
             "provider": source["provider"],
@@ -224,6 +308,7 @@ def main():
             "region": source.get("region"),
             "california": bool(source.get("california")),
             "http_status": status,
+            "parser_mode": parser_mode,
             "rows_parsed": parsed,
             "paddler_rows": matched,
             "error": error,
@@ -231,7 +316,8 @@ def main():
         if args.sleep:
             time.sleep(args.sleep)
 
-    # Remove exact duplicates from the same event while preserving all event appearances.
+    # Remove exact duplicates from the same event while preserving appearances
+    # across different events. Public handles improve later tracker matching.
     seen = set()
     deduped = []
     for rec in records:
@@ -249,10 +335,13 @@ def main():
         a = athletes.setdefault(k, {
             "name": rec["name"],
             "crafts": set(),
+            "public_handles": set(),
             "california_events": set(),
             "events": [],
         })
         a["crafts"].add(rec["craft"])
+        if rec.get("public_handle"):
+            a["public_handles"].add(rec["public_handle"])
         if rec.get("california"):
             a["california_events"].add(rec["event"])
         a["events"].append({
@@ -270,12 +359,15 @@ def main():
 
     athlete_list = []
     for _, a in sorted(athletes.items(), key=lambda kv: kv[0]):
-        athlete_list.append({
+        item = {
             "name": a["name"],
             "crafts": sorted(a["crafts"]),
             "california_event_count": len(a["california_events"]),
             "events": a["events"],
-        })
+        }
+        if a["public_handles"]:
+            item["public_handles"] = sorted(a["public_handles"])
+        athlete_list.append(item)
 
     craft_counts = defaultdict(int)
     for a in athlete_list:
@@ -283,10 +375,10 @@ def main():
             craft_counts[craft] += 1
 
     out = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "purpose": "Public paddler discovery index for source coverage. Not an operational live-location feed.",
-        "privacy": "Stores public event roster/result metadata and source links only. Exact live GPS remains in the separate tracker ingestion path with opt-in/privacy controls.",
+        "privacy": "Stores public event roster/result metadata, public handles and source links only. Exact live GPS remains in the separate tracker ingestion path with opt-in/privacy controls.",
         "summary": {
             "source_count": len(source_results),
             "sources_http_200": sum(1 for x in source_results if x["http_status"] == 200),
