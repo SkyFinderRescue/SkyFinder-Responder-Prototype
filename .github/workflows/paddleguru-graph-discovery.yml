@@ -1,0 +1,65 @@
+name: PaddleGuru Graph Discovery Prototype
+
+on:
+  push:
+    branches:
+      - prototype/paddler-source-discovery-v2
+    paths:
+      - "paddler-feed/expand_paddleguru_graph.py"
+      - "paddler-feed/paddleguru-graph-seeds.json"
+      - ".github/workflows/paddleguru-graph-discovery.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  graph-discovery:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[paddleguru-graph-bot]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Crawl public PaddleGuru athlete-event graph
+        run: |
+          python paddler-feed/expand_paddleguru_graph.py \
+            --seeds paddler-feed/paddleguru-graph-seeds.json \
+            --prior-index paddler-feed/data/discovered-paddlers.json \
+            --output paddler-feed/data/paddleguru-graph.json \
+            --timeout 20 \
+            --sleep 0.03 \
+            --max-athlete-pages 250 \
+            --max-events 600 \
+            --rounds 3
+
+      - name: Validate privacy and useful coverage
+        run: |
+          python - <<'PY'
+          import json
+          p='paddler-feed/data/paddleguru-graph.json'
+          d=json.load(open(p))
+          s=d['summary']
+          assert s['athlete_history_handles_crawled'] >= 7, s
+          assert s['event_slugs_discovered'] >= 20, s
+          assert s['unique_paddlers_with_california_event'] >= 1, s
+          raw=open(p,encoding='utf-8').read().lower()
+          for forbidden in ['"lat"', '"lng"', 'imei', 'email', 'phone']:
+              assert forbidden not in raw, forbidden
+          print(json.dumps(s, indent=2))
+          PY
+
+      - name: Publish graph index on prototype branch
+        run: |
+          git config user.name "skyfinder-paddleguru-graph-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add paddler-feed/data/paddleguru-graph.json
+          if git diff --cached --quiet; then
+            echo "No graph-index change."
+          else
+            git commit -m "Update PaddleGuru public graph index [paddleguru-graph-bot]"
+            git push
+          fi
