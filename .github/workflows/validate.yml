@@ -29,6 +29,8 @@ jobs:
         run: node --test tests/core.test.mjs
       - name: Run Garmin paddler collector tests
         run: python -m unittest discover -s paddler-feed/tests -v
+      - name: Validate paddler field-test registry consent rules
+        run: python paddler-feed/validate_registry.py paddler-feed/registry.json
       - name: Guard production separation
         run: |
           test ! -e scripts/build_live_snapshot.py
