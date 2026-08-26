@@ -24,6 +24,28 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Diagnose PaddleGuru result markup
+        run: |
+          python - <<'PY'
+          import re, urllib.request
+          u='https://paddleguru.com/races/Malibudownwinder2026/results'
+          req=urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0 SkyFinder-Paddler-Prototype/1.0'})
+          with urllib.request.urlopen(req,timeout=20) as r:
+              text=r.read().decode('utf-8','replace')
+          print('bytes=', len(text), 'status=', r.status)
+          low=text.lower()
+          for token in ['candice','appleby','sup','prone','__next_data__','application/ld+json','application/json','results','tbody','<tr','datatable','data-table','angular','react']:
+              print(token, low.count(token))
+          print('script_srcs:')
+          for src in re.findall(r'<script[^>]+src=["\']([^"\']+)', text, flags=re.I)[:30]:
+              print(src)
+          for needle in ['candice','sup','prone']:
+              i=low.find(needle)
+              if i>=0:
+                  snippet=re.sub(r'\s+',' ',text[max(0,i-300):i+700])
+                  print('SNIP', needle, snippet[:1000])
+          PY
+
       - name: Discover public paddler rosters and results
         run: |
           python paddler-feed/discover_public_sources.py \
