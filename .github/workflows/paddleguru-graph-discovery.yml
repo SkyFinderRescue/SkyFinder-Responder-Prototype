@@ -24,6 +24,11 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Patch known prototype typo and compile-check
+        run: |
+          sed -i 's/args.max-athlete_pages/args.max_athlete_pages/g' paddler-feed/expand_paddleguru_graph.py
+          python -m py_compile paddler-feed/expand_paddleguru_graph.py paddler-feed/discover_public_sources.py
+
       - name: Crawl public PaddleGuru athlete-event graph
         run: |
           python paddler-feed/expand_paddleguru_graph.py \
