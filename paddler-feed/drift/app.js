@@ -1,0 +1,31 @@
+const OBJECTS = {
+  piw: {label:'Person in water', slope:0.011, intercept:0.07, divergence:30, std:0.35, match:'Direct USCG H-7'},
+  sea_kayak_person: {label:'Sea kayak + person', slope:0.011, intercept:0.24, divergence:15, std:0.10, match:'Direct USCG H-7'},
+  surfboard_person: {label:'Surf board + person', slope:0.020, intercept:0.00, divergence:15, std:0.25, match:'Direct USCG H-7'},
+  sup_person_proxy: {label:'SUP + person', slope:0.020, intercept:0.00, divergence:15, std:0.25, match:'Proxy: USCG surf board + person'},
+  prone_person_proxy: {label:'Prone board + person', slope:0.020, intercept:0.00, divergence:15, std:0.25, match:'Proxy: USCG surf board + person'}
+};
+const KNOT_TO_MPS=0.5144444444444445;
+const EARTH=6371008.8;
+const map=L.map('map',{zoomControl:true}).setView([34.25,-119.84],10);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap contributors'}).addTo(map);
+let env=null,layers=[];
+const $=id=>document.getElementById(id);
+
+function gaussian(){let u=0,v=0;while(u===0)u=Math.random();while(v===0)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+function vector(speed,bearing){const r=bearing*Math.PI/180;return {e:speed*Math.sin(r),n:speed*Math.cos(r)}}
+function displace(lat,lon,east,north){const lat2=lat+(north/EARTH)*180/Math.PI;const denom=EARTH*Math.max(1e-9,Math.cos(lat*Math.PI/180));const lon2=lon+(east/denom)*180/Math.PI;return [lat2,lon2]}
+function hull(points){points=[...new Set(points.map(p=>`${p[0].toFixed(7)},${p[1].toFixed(7)}`))].map(s=>s.split(',').map(Number)).sort((a,b)=>a[0]-b[0]||a[1]-b[1]);if(points.length<3)return points;const cross=(o,a,b)=>(a[0]-o[0])*(b[1]-o[1])-(a[1]-o[1])*(b[0]-o[0]);const lo=[];for(const p of points){while(lo.length>=2&&cross(lo[lo.length-2],lo[lo.length-1],p)<=0)lo.pop();lo.push(p)}const up=[];for(const p of [...points].reverse()){while(up.length>=2&&cross(up[up.length-2],up[up.length-1],p)<=0)up.pop();up.push(p)}return lo.slice(0,-1).concat(up.slice(0,-1))}
+function envelope(parts,fraction){const ml=parts.reduce((s,p)=>s+p[0],0)/parts.length,mo=parts.reduce((s,p)=>s+p[1],0)/parts.length;const ranked=[...parts].sort((a,b)=>((a[0]-ml)**2+(a[1]-mo)**2)-((b[0]-ml)**2+(b[1]-mo)**2));return hull(ranked.slice(0,Math.max(3,Math.ceil(ranked.length*fraction))).map(p=>[p[1],p[0]])).map(p=>[p[1],p[0]])}
+function simulate(lat,lon,obj,hours){const c=env.surface_current,w=env.wind_wave,steps=Math.max(1,Math.ceil(hours*60/20)),dt=hours*3600/steps,downwind=(w.wind_from_deg_true+180)%360,parts=[];for(let i=0;i<1800;i++){let p=[lat,lon],side=Math.random()<.5?-1:1;for(let s=0;s<steps;s++){const lk=Math.max(0,obj.slope*w.wind_speed_kts+obj.intercept+gaussian()*obj.std),lv=vector(lk*KNOT_TO_MPS,downwind+side*obj.divergence);p=displace(p[0],p[1],(c.u_mps+lv.e)*dt,(c.v_mps+lv.n)*dt)}parts.push(p)}const center=[parts.reduce((s,p)=>s+p[0],0)/parts.length,parts.reduce((s,p)=>s+p[1],0)/parts.length];return {parts,center,p50:envelope(parts,.5),p90:envelope(parts,.9)}}
+function row(label,value){return `<div><dt>${label}</dt><dd>${value}</dd></div>`}
+function fmtAge(h){if(h==null)return 'unknown';return h<1?`${Math.round(h*60)} min`:`${h.toFixed(1)} hr`}
+function clearLayers(){layers.forEach(x=>map.removeLayer(x));layers=[]}
+function render(){if(!env)return;const c=env.surface_current,w=env.wind_wave;if(!c.usable||!w.usable){$('recompute').disabled=true;$('environment').innerHTML=row('HF radar',`${c.quality||'unavailable'} (${fmtAge(c.age_hours)})`)+row('NDBC wind',`${w.quality||'unavailable'} (${fmtAge(w.age_hours)})`);return}
+  $('recompute').disabled=false;const key=$('objectType').value,obj=OBJECTS[key],hours=Number($('elapsed').value),lat=env.query_point.lat,lon=env.query_point.lon,r=simulate(lat,lon,obj,hours);clearLayers();
+  const p90=L.polygon(r.p90,{color:'#2d6ea3',weight:2,fillColor:'#5f91bd',fillOpacity:.22}).addTo(map);const p50=L.polygon(r.p50,{color:'#b56a00',weight:2,fillColor:'#ffad33',fillOpacity:.42}).addTo(map);const lkp=L.circleMarker([lat,lon],{radius:8,color:'#fff',weight:2,fillColor:'#d7263d',fillOpacity:1}).addTo(map).bindPopup('<strong>Last known GPS</strong><br>Drift estimate begins here.');const center=L.circleMarker(r.center,{radius:6,color:'#17324d',weight:2,fillColor:'#fff',fillOpacity:1}).addTo(map).bindPopup('<strong>Particle center</strong><br>Estimated, not confirmed GPS.');layers.push(p90,p50,lkp,center);for(const p of r.parts.filter((_,i)=>i%18===0)){const q=L.circleMarker(p,{radius:1.5,stroke:false,fillColor:'#264b6b',fillOpacity:.35}).addTo(map);layers.push(q)}map.fitBounds(p90.getBounds().pad(.18));
+  $('environment').innerHTML=row('HF radar age',fmtAge(c.age_hours))+row('Surface current',`${Number(c.speed_kts).toFixed(2)} kt toward ${Math.round(c.toward_deg_true)}°T`)+row('HF radar contributors',`${c.number_of_sites??'n/a'} sites / ${c.number_of_radials??'n/a'} radials`)+row('Wind',`${Number(w.wind_speed_kts).toFixed(1)} kt from ${Math.round(w.wind_from_deg_true)}°T`)+row('Wave height',w.wave_height_ft==null?'n/a':`${Number(w.wave_height_ft).toFixed(1)} ft`)+row('Wind source',`NDBC ${w.station}`);
+  $('model').innerHTML=row('Object',obj.label)+row('Coast Guard match',obj.match)+row('Elapsed',`${hours} hr`)+row('Particles','1,800')+row('Time step','20 min')+row('Leeway slope',String(obj.slope))+row('Divergence',`±${obj.divergence}°`)+row('Leeway std. error',`${obj.std} kt`);
+}
+async function init(){try{const res=await fetch('./environment-latest.json',{cache:'no-store'});if(!res.ok)throw new Error(`HTTP ${res.status}`);env=await res.json();$('generated').textContent=`Environmental snapshot: ${new Date(env.generated_at_utc).toLocaleString()}`;render()}catch(e){$('generated').textContent='Environmental snapshot unavailable';$('recompute').disabled=true;$('environment').innerHTML=row('Status',e.message)}}
+$('recompute').addEventListener('click',render);$('objectType').addEventListener('change',render);$('elapsed').addEventListener('change',render);init();

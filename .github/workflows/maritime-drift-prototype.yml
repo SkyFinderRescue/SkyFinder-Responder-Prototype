@@ -1,0 +1,100 @@
+name: Maritime Drift Prototype Snapshot
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "paddler-feed/drift/**"
+      - ".github/workflows/maritime-drift-prototype.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "17,47 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: maritime-drift-prototype-main
+  cancel-in-progress: false
+
+jobs:
+  validate-live-data-and-model:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[drift-env-bot]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile and unit test drift engine
+        working-directory: paddler-feed/drift
+        run: |
+          python -m py_compile engine.py fetch_environment.py test_engine.py
+          python -m unittest -v test_engine.py
+
+      - name: Fetch Santa Barbara prototype environmental snapshot
+        run: |
+          python paddler-feed/drift/fetch_environment.py \
+            --lat 34.246 --lon -119.842 \
+            --output paddler-feed/drift/environment-latest.json \
+            --timeout 30
+
+      - name: Validate source freshness
+        run: |
+          python - <<'PY'
+          import json
+          p='paddler-feed/drift/environment-latest.json'
+          d=json.load(open(p)); h=d['surface_current']; w=d['wind_wave']
+          assert h['usable'], h
+          assert w['usable'], w
+          assert h['age_hours'] <= 6, h
+          assert w['age_hours'] <= 3, w
+          print(json.dumps({'surface_current':h,'wind_wave':w},indent=2))
+          PY
+
+      - name: Run 2-hour Coast Guard leeway example
+        run: |
+          python paddler-feed/drift/engine.py \
+            --environment paddler-feed/drift/environment-latest.json \
+            --object sea_kayak_person \
+            --hours 2 --particles 3000 \
+            --output paddler-feed/drift/drift-example.json
+
+      - name: Validate drift output safety boundary
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('paddler-feed/drift/drift-example.json'))
+          assert d['operational_use'] is False
+          assert d['object']['source_match']=='direct'
+          assert d['method']['step_minutes']==20
+          assert len(d['estimate']['probability_50_polygon']) >= 4
+          assert len(d['estimate']['probability_90_polygon']) >= 4
+          PY
+
+      - name: Publish refreshed snapshot safely
+        run: |
+          git config user.name "skyfinder-drift-env-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add paddler-feed/drift/environment-latest.json paddler-feed/drift/drift-example.json
+          if git diff --cached --quiet; then
+            echo "No drift snapshot change."
+            exit 0
+          fi
+          git commit -m "Update maritime drift source snapshot [drift-env-bot]"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 3))
+          done
+          echo "Failed to publish drift snapshot after retries" >&2
+          exit 1
