@@ -1,0 +1,2370 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-26T01:36:09Z",
+  "purpose": "Public Catalina Classic historical result coverage index; not a live-location feed.",
+  "privacy": "Only public race-result identities/year/source metadata. Image-only historical documents are audited but not OCR'd or guessed.",
+  "summary": {
+    "documents_checked": 146,
+    "documents_http_200": 145,
+    "unique_candidate_paddlers": 65,
+    "parse_modes": {
+      "html-text": 32,
+      "image-only-unparsed": 26,
+      "pdf-image-or-unreadable": 9,
+      "pdf-text": 14,
+      "unparsed/error": 65
+    },
+    "years_seen": {
+      "1950": 1,
+      "1960": 1,
+      "1980": 1,
+      "1990": 1,
+      "2000": 4,
+      "2001": 1,
+      "2002": 1,
+      "2003": 1,
+      "2004": 1,
+      "2005": 1,
+      "2006": 1,
+      "2007": 1,
+      "2008": 2,
+      "2009": 2,
+      "2010": 2,
+      "2011": 2,
+      "2012": 2,
+      "2013": 2,
+      "2014": 3,
+      "2015": 3,
+      "2016": 1,
+      "2017": 1,
+      "2018": 19,
+      "2019": 1,
+      "2020": 3,
+      "2021": 2,
+      "2022": 1,
+      "2023": 1,
+      "2024": 5,
+      "2025": 3
+    },
+    "unparsed_or_image_docs": 100
+  },
+  "documents": [
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/classic-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/classic-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2025,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1532,
+      "candidate_names": 18
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2010s/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2010s/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2025,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1962,
+      "candidate_names": 17
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/results-2000-2009/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/results-2000-2009/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2000,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1889,
+      "candidate_names": 17
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/early-races/1990s/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/early-races/1990s/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 1990,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1299,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/early-races/1980s/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/early-races/1980s/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 1980,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1249,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/early-races/1960s/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/early-races/1960s/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 1960,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1299,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/early-races/1950s/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/early-races/1950s/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 1950,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1249,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2025-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2025-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2025,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1245,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2024-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2024-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2024,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1772,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2023-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2023-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2023,
+      "parse_mode": "html-text",
+      "machine_text_chars": 8680,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2022-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2022-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2022,
+      "parse_mode": "html-text",
+      "machine_text_chars": 5470,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2021-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2021-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2021,
+      "parse_mode": "html-text",
+      "machine_text_chars": 3633,
+      "candidate_names": 26
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2024/09/24-08-251287-300x200.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2024/09/24-08-251287-300x200.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2024,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fclassic-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fclassic-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2024/08/Catalina-Classic-Retina-Logo-300x189.png",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2024/08/Catalina-Classic-Retina-Logo-300x189.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "year": 2024,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2024/08/Catalina-Classic-Logo1-300x189.png",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2024/08/Catalina-Classic-Logo1-300x189.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "year": 2024,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2020/04/cropped-android-chrome-512x512-1-180x180.png",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2020/04/cropped-android-chrome-512x512-1-180x180.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "year": 2020,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2020/04/cropped-android-chrome-512x512-1-32x32.png",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2020/04/cropped-android-chrome-512x512-1-32x32.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "year": 2020,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2014/02/1982-300x199.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2014/02/1982-300x199.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2014,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fclassic-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fclassic-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2021/09/FirstFinisher21cropped-300x174.jpeg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2021/09/FirstFinisher21cropped-300x174.jpeg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2021,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2024/09/24-08-25844-300x200.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2024/09/24-08-25844-300x200.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2024,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2020/04/cropped-android-chrome-512x512-1-192x192.png",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2020/04/cropped-android-chrome-512x512-1-192x192.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "year": 2020,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2009-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2009-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2009,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1708,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2016ResultsOverall.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2016ResultsOverall.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 2985,
+      "candidate_names": 2
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2010s%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2010s%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2010-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2010-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2010,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1708,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2012-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2012-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2012,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1708,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2013Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2013Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": 2013,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 6281,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2002-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2002-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2002,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1719,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2013-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2013-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2013,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1708,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2015StockClassRaceResults.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2015StockClassRaceResults.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": 2015,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 1627,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2016ResultsWomen-Overall.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2016ResultsWomen-Overall.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 406,
+      "candidate_names": 1
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2015-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2015-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2015,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1780,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2011Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2011Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": 2011,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 3344,
+      "candidate_names": 3
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2014Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2014Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": 2014,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 3695,
+      "candidate_names": 1
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2019-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2019-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2019,
+      "parse_mode": "html-text",
+      "machine_text_chars": 8417,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2015Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2015Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": 2015,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 5780,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2004-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2004-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2004,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1711,
+      "candidate_names": 17
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2016ResultsMen-Unlimited.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2016ResultsMen-Unlimited.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 2049,
+      "candidate_names": 1
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2010s%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2010s%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2017-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2017-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2017,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1729,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2003-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2003-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2003,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1711,
+      "candidate_names": 17
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2001-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2001-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2001,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1711,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2012Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2012Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": 2012,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 2525,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2006-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2006-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2006,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1719,
+      "candidate_names": 17
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2016-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2016-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2016,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1805,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2014-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2014-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2014,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1729,
+      "candidate_names": 17
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2000-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2000-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2000,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1711,
+      "candidate_names": 17
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2007-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2007-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2007,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1719,
+      "candidate_names": 17
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2005-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2005-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2005,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1754,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2008-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2008-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2008,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1708,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2016ResultsMen-Stock.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2016ResultsMen-Stock.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 913,
+      "candidate_names": 25
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2011-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2011-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2011,
+      "parse_mode": "html-text",
+      "machine_text_chars": 1708,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2017Overall.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2017Overall.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 2781,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/2018-race-results/",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/2018-race-results/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "year": 2018,
+      "parse_mode": "html-text",
+      "machine_text_chars": 7559,
+      "candidate_names": 16
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2010Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2010Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": 2010,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 3225,
+      "candidate_names": 6
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2007Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2007Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-image-or-unreadable",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2006Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2006Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-image-or-unreadable",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fresults-2000-2009%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fresults-2000-2009%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": 2000,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2002Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2002Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-image-or-unreadable",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2005StockResults.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2005StockResults.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-image-or-unreadable",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2001Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2001Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-image-or-unreadable",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2000Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2000Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-image-or-unreadable",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2004Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2004Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-image-or-unreadable",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2003Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2003Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-image-or-unreadable",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2005Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2005Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": null,
+      "parse_mode": "pdf-image-or-unreadable",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2008Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2008Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": 2008,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 3957,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/pdf/2009Results.pdf",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/pdf/2009Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "year": 2009,
+      "parse_mode": "pdf-text",
+      "machine_text_chars": 3593,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fresults-2000-2009%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fresults-2000-2009%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": 2000,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1995-Race-Results-1.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1995-Race-Results-1.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1991-Race-Results.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1991-Race-Results.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/Race-Results-1998.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/Race-Results-1998.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1990s%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1990s%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.org/wp-content/uploads/2018/03/1990-Race-Results-1-scaled.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.org/wp-content/uploads/2018/03/1990-Race-Results-1-scaled.jpg",
+      "http_status": 404,
+      "content_type": null,
+      "year": 2018,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1997-Race-Results.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1997-Race-Results.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1996-Race-Results.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1996-Race-Results.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1990s%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1990s%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1990-Race-Results-1.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1990-Race-Results-1.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/Race-Results-1999.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/Race-Results-1999.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1993-Race-Results.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1993-Race-Results.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1994-Race-Results.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1994-Race-Results.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1992-Race-Results.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1992-Race-Results.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1984-85-Race-Results.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1984-85-Race-Results.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1982-83-Race-Results.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1982-83-Race-Results.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1980s%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1980s%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1986-87-Race-Results.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1986-87-Race-Results.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1988-89-Race-Results.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1988-89-Race-Results.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1980s%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1980s%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1960s%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1960s%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1960-Race-Results.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1960-Race-Results.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1960s%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1960s%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1955-56-race-results.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1955-56-race-results.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1957-58-race-results.jpg",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-content/uploads/2018/03/1957-58-race-results.jpg",
+      "http_status": 200,
+      "content_type": "image/jpeg",
+      "year": 2018,
+      "parse_mode": "image-only-unparsed",
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1950s%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1950s%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1950s%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2Fearly-races%2F1950s%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2025-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2025-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2025-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2025-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2024-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2024-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2024-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2024-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2023-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2023-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2023-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2023-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2022-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2022-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2022-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2022-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2021-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2021-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2021-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2021-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2009-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2009-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2009-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2009-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2010-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2010-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2010-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2010-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2012-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2012-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2012-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2012-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2002-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2002-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2002-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2002-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2013-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2013-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2013-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2013-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2015-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2015-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2015-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2015-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2019-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2019-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2019-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2019-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2004-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2004-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2004-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2004-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2017-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2017-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2017-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2017-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2003-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2003-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2003-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2003-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2001-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2001-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2001-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2001-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2006-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2006-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2006-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2006-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2016-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2016-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2016-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2016-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2014-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2014-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2014-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2014-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2000-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2000-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2000-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2000-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2007-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2007-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2007-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2007-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2005-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2005-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2005-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2005-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2008-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2008-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2008-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2008-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2011-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2011-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2011-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2011-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2018-race-results%2F",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2018-race-results%2F",
+      "http_status": 200,
+      "content_type": "application/json",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    },
+    {
+      "url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2018-race-results%2F&format=xml",
+      "final_url": "https://catalinaclassicpaddleboardrace.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcatalinaclassicpaddleboardrace.com%2F2018-race-results%2F&format=xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "year": null,
+      "parse_mode": null,
+      "machine_text_chars": 0,
+      "candidate_names": 0
+    }
+  ],
+  "paddlers": [
+    {
+      "name": "ALEXANDER CROSBY",
+      "years": [
+        2021
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "Bark Jack",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "BROOKE BILLMEYER",
+      "years": [
+        2021
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "CHARLIE NINEGAR",
+      "years": [
+        2021
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "Chevalier Mathieu",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Class GenderAge",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Classic Results",
+      "years": [
+        2025
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "Click Here",
+      "years": [
+        2000,
+        2003,
+        2004,
+        2006,
+        2007,
+        2014,
+        2025
+      ],
+      "source_count": 9
+    },
+    {
+      "name": "DEON LOURENS",
+      "years": [
+        2021
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "Diasparra Joseph",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "DNF BARNESON LEE",
+      "years": [
+        2011
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "DNF CONWAY JERRY",
+      "years": [
+        2011
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "DNF Karlsson Magnus",
+      "years": [
+        2010
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "DNF PULASI CASS",
+      "years": [
+        2011
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "DNF Tubbs Kathryn",
+      "years": [
+        2010
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "DNF Witter",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "DNS Anderson Tyler",
+      "years": [
+        2010
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "DNS Hinds Tom",
+      "years": [
+        2010
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "DSQ Bear Erik",
+      "years": [
+        2010
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "DSQ Burrows Tim",
+      "years": [
+        2010
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "Ehrhard Ron",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Ellis Rodney",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Emily Bark",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Fastest Paddler Over",
+      "years": [
+        2014
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "Fiero Dustin",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "First Name Class GenderAge",
+      "years": [],
+      "source_count": 3
+    },
+    {
+      "name": "Fox Nicholas",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Gene Rink",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Girault Damien",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Hansen Dallas",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Herman Blake",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Irvine Eric",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Jay Russell",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Jeff Horn",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "JOE SCATURRO",
+      "years": [
+        2021
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "JULIA ETTERER",
+      "years": [
+        2021
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "KEVIN CODY",
+      "years": [
+        2021
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "Lansdown Lachie",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Last Name First Name",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Marsolek Tuffer",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Matt Walls",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Meinhold Chris",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "MIKE AVERY",
+      "years": [
+        2021
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "Mike Murphy",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Miller Bryce",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Miller Jake",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Obrien Joe",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Paddling History",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "PAETYN PARMAN",
+      "years": [
+        2021
+      ],
+      "source_count": 1
+    },
+    {
+      "name": "Parry Ben",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Race Address",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Race Artwork",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Race Dedications",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Race Info Race Info",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Race Qualifying",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Race Rules",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Race Sponsors",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Scheckman Jay",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Schedule Of Events",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Schulback Mark",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Singley Matt",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Tim Gair",
+      "years": [
+        1950,
+        1960,
+        1980,
+        1990,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "source_count": 32
+    },
+    {
+      "name": "Williford Wade",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "Witter Ron",
+      "years": [],
+      "source_count": 1
+    },
+    {
+      "name": "ZACH KOEHN",
+      "years": [
+        2021
+      ],
+      "source_count": 1
+    }
+  ]
+}
