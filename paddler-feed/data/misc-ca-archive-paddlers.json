@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-26T03:04:27Z",
+  "generated_at_utc": "2026-08-26T21:26:47Z",
   "purpose": "Independent public California paddle result archive coverage index; not a live-location feed.",
   "privacy": "Public race-result identity/craft/source metadata only; no private contact information or exact live GPS.",
   "summary": {
-    "archives_configured": 24,
-    "documents_checked": 64,
-    "documents_http_200": 63,
-    "paddler_result_records": 691,
-    "unique_paddlers": 459,
+    "archives_configured": 26,
+    "documents_checked": 66,
+    "documents_http_200": 64,
+    "paddler_result_records": 785,
+    "unique_paddlers": 548,
     "craft_counts": {
       "KAYAK": 17,
       "OUTRIGGER": 11,
-      "PRONE/PADDLEBOARD": 114,
-      "SUP": 293,
+      "PRONE/PADDLEBOARD": 122,
+      "SUP": 377,
       "SURFSKI": 30
     }
   },
@@ -28,19 +28,11 @@
     },
     {
       "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "url": "https://www.sbyc.org/documents/10184/429461/2026_08_30_Biltmore_Cup_Race_Instructions_V3.pdf?t=1786055793927",
+      "url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Rally+Division.pdf",
       "http_status": 200,
       "content_type": "application/pdf",
       "parse_mode": "pdf-text",
-      "candidate_records": 1
-    },
-    {
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "url": "https://www.paddlesportsca.com/",
-      "http_status": 403,
-      "content_type": null,
-      "parse_mode": null,
-      "candidate_records": 0
+      "candidate_records": 26
     },
     {
       "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
@@ -52,19 +44,11 @@
     },
     {
       "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "url": "https://www.sbyc.org/documents/10184/117763/2018_08_26_BiltmoreCup_Results-RALLY_DIVISION.pdf",
+      "url": "https://www.sbyc.org/documents/10184/429461/2026_08_30_Biltmore_Cup_Race_Instructions_V3.pdf?t=1786055793927",
       "http_status": 200,
       "content_type": "application/pdf",
       "parse_mode": "pdf-text",
-      "candidate_records": 0
-    },
-    {
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Rally+Division.pdf",
-      "http_status": 200,
-      "content_type": "application/pdf",
-      "parse_mode": "pdf-text",
-      "candidate_records": 26
+      "candidate_records": 1
     },
     {
       "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
@@ -73,6 +57,70 @@
       "content_type": "application/pdf",
       "parse_mode": "pdf-text",
       "candidate_records": 3
+    },
+    {
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "parse_mode": "pdf-text",
+      "candidate_records": 17
+    },
+    {
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "url": "https://www.sbyc.org/documents/10184/117763/2018_08_26_BiltmoreCup_Results-RACE_DIVISION.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "parse_mode": "pdf-text",
+      "candidate_records": 0
+    },
+    {
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Overall+Winners.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "parse_mode": "pdf-text",
+      "candidate_records": 1
+    },
+    {
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "url": "https://www.sbyc.org/documents/10184/117763/2018_08_26_BiltmoreCup_Results-RALLY_DIVISION.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "parse_mode": "pdf-text",
+      "candidate_records": 0
+    },
+    {
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "url": "https://www.sbyc.org/web/pages/friendship-paddle",
+      "http_status": 200,
+      "content_type": "text/html",
+      "parse_mode": "html-text",
+      "candidate_records": 0
+    },
+    {
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "url": "https://www.sbyc.org/web/pages/out-of-town-results",
+      "http_status": 200,
+      "content_type": "text/html",
+      "parse_mode": "html-text",
+      "candidate_records": 0
+    },
+    {
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "parse_mode": "pdf-text",
+      "candidate_records": 22
+    },
+    {
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "parse_mode": "pdf-text",
+      "candidate_records": 15
     },
     {
       "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
@@ -92,58 +140,10 @@
     },
     {
       "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf",
-      "http_status": 200,
-      "content_type": "application/pdf",
-      "parse_mode": "pdf-text",
-      "candidate_records": 22
-    },
-    {
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "url": "https://www.sbyc.org/web/pages/out-of-town-results",
-      "http_status": 200,
-      "content_type": "text/html",
-      "parse_mode": "html-text",
-      "candidate_records": 0
-    },
-    {
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Overall+Winners.pdf",
-      "http_status": 200,
-      "content_type": "application/pdf",
-      "parse_mode": "pdf-text",
-      "candidate_records": 1
-    },
-    {
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576",
-      "http_status": 200,
-      "content_type": "application/pdf",
-      "parse_mode": "pdf-text",
-      "candidate_records": 17
-    },
-    {
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "url": "https://www.sbyc.org/web/pages/friendship-paddle",
-      "http_status": 200,
-      "content_type": "text/html",
-      "parse_mode": "html-text",
-      "candidate_records": 0
-    },
-    {
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf",
-      "http_status": 200,
-      "content_type": "application/pdf",
-      "parse_mode": "pdf-text",
-      "candidate_records": 15
-    },
-    {
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "url": "https://www.sbyc.org/documents/10184/117763/2018_08_26_BiltmoreCup_Results-RACE_DIVISION.pdf",
-      "http_status": 200,
-      "content_type": "application/pdf",
-      "parse_mode": "pdf-text",
+      "url": "https://www.paddlesportsca.com/",
+      "http_status": 403,
+      "content_type": null,
+      "parse_mode": null,
       "candidate_records": 0
     },
     {
@@ -164,6 +164,110 @@
     },
     {
       "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/about",
+      "http_status": 200,
+      "content_type": "text/html",
+      "parse_mode": "html-text",
+      "candidate_records": 3
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "parse_mode": "html-text",
+      "candidate_records": 2
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/raffle",
+      "http_status": 200,
+      "content_type": "text/html",
+      "parse_mode": "html-text",
+      "candidate_records": 1
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/results/2023",
+      "http_status": 200,
+      "content_type": "text/html",
+      "parse_mode": "html-text",
+      "candidate_records": 10
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/racer/blake-hacker",
+      "http_status": 200,
+      "content_type": "text/html",
+      "parse_mode": "html-text",
+      "candidate_records": 1
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/race",
+      "http_status": 200,
+      "content_type": "text/html",
+      "parse_mode": "html-text",
+      "candidate_records": 5
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/sponsors",
+      "http_status": 200,
+      "content_type": "text/html",
+      "parse_mode": "html-text",
+      "candidate_records": 2
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/racer/noah-pierre",
+      "http_status": 200,
+      "content_type": "text/html",
+      "parse_mode": "html-text",
+      "candidate_records": 2
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/store",
+      "http_status": 200,
+      "content_type": "text/html",
+      "parse_mode": "html-text",
+      "candidate_records": 1
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddleguru.com/races/PaddleLagunaBeach20264thAnnual",
+      "http_status": 200,
+      "content_type": "text/html",
+      "parse_mode": "html-text",
+      "candidate_records": 0
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/racer/andre-pierre",
+      "http_status": 200,
+      "content_type": "text/html",
+      "parse_mode": "html-text",
+      "candidate_records": 2
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/_next/static/chunks/0ppbkkqnpa6-g.js?dpl=dpl_DTC13rCNSfTY1RmVPpkLEyNKitgg",
+      "http_status": 200,
+      "content_type": "application/javascript",
+      "parse_mode": "html-text",
+      "candidate_records": 0
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2?dpl=dpl_DTC13rCNSfTY1RmVPpkLEyNKitgg",
+      "http_status": 200,
+      "content_type": "font/woff2",
+      "parse_mode": "html-text",
+      "candidate_records": 0
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
       "url": "https://paddlelagunabeach.com/icon.png",
       "http_status": 200,
       "content_type": "image/png",
@@ -172,9 +276,9 @@
     },
     {
       "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddleguru.com/races/PaddleLagunaBeach20264thAnnual",
+      "url": "https://paddlelagunabeach.com/_next/static/media/03bda585a99c6450-s.p.0zzh68k1~whtc.woff2?dpl=dpl_DTC13rCNSfTY1RmVPpkLEyNKitgg",
       "http_status": 200,
-      "content_type": "text/html",
+      "content_type": "font/woff2",
       "parse_mode": "html-text",
       "candidate_records": 0
     },
@@ -188,27 +292,35 @@
     },
     {
       "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/about",
+      "url": "https://paddlelagunabeach.com/favicon.ico",
+      "http_status": 200,
+      "content_type": "image/vnd.microsoft.icon",
+      "parse_mode": "html-text",
+      "candidate_records": 0
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/apple-touch-icon.png",
+      "http_status": 200,
+      "content_type": "image/png",
+      "parse_mode": "html-text",
+      "candidate_records": 0
+    },
+    {
+      "archive": "Paddle Laguna Beach results archive",
+      "url": "https://paddlelagunabeach.com/results/2024",
       "http_status": 200,
       "content_type": "text/html",
       "parse_mode": "html-text",
-      "candidate_records": 3
+      "candidate_records": 28
     },
     {
       "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/_next/static/chunks/0ppbkkqnpa6-g.js?dpl=dpl_DTC13rCNSfTY1RmVPpkLEyNKitgg",
+      "url": "https://paddlelagunabeach.com/results/2026",
       "http_status": 200,
-      "content_type": "application/javascript",
+      "content_type": "text/html",
       "parse_mode": "html-text",
-      "candidate_records": 0
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/_next/static/media/03bda585a99c6450-s.p.0zzh68k1~whtc.woff2?dpl=dpl_DTC13rCNSfTY1RmVPpkLEyNKitgg",
-      "http_status": 200,
-      "content_type": "font/woff2",
-      "parse_mode": "html-text",
-      "candidate_records": 0
+      "candidate_records": 24
     },
     {
       "archive": "Paddle Laguna Beach results archive",
@@ -228,62 +340,6 @@
     },
     {
       "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/raffle",
-      "http_status": 200,
-      "content_type": "text/html",
-      "parse_mode": "html-text",
-      "candidate_records": 1
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/apple-touch-icon.png",
-      "http_status": 200,
-      "content_type": "image/png",
-      "parse_mode": "html-text",
-      "candidate_records": 0
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/results/2025",
-      "http_status": 200,
-      "content_type": "text/html",
-      "parse_mode": "html-text",
-      "candidate_records": 37
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/race",
-      "http_status": 200,
-      "content_type": "text/html",
-      "parse_mode": "html-text",
-      "candidate_records": 5
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2?dpl=dpl_DTC13rCNSfTY1RmVPpkLEyNKitgg",
-      "http_status": 200,
-      "content_type": "font/woff2",
-      "parse_mode": "html-text",
-      "candidate_records": 0
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/results/2023",
-      "http_status": 200,
-      "content_type": "text/html",
-      "parse_mode": "html-text",
-      "candidate_records": 10
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/racer/andre-pierre",
-      "http_status": 200,
-      "content_type": "text/html",
-      "parse_mode": "html-text",
-      "candidate_records": 2
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
       "url": "https://paddlelagunabeach.com/racer/parker-russell",
       "http_status": 200,
       "content_type": "text/html",
@@ -292,67 +348,11 @@
     },
     {
       "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/results/2026",
+      "url": "https://paddlelagunabeach.com/results/2025",
       "http_status": 200,
       "content_type": "text/html",
       "parse_mode": "html-text",
-      "candidate_records": 24
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/results/2024",
-      "http_status": 200,
-      "content_type": "text/html",
-      "parse_mode": "html-text",
-      "candidate_records": 28
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/store",
-      "http_status": 200,
-      "content_type": "text/html",
-      "parse_mode": "html-text",
-      "candidate_records": 1
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/sponsors",
-      "http_status": 200,
-      "content_type": "text/html",
-      "parse_mode": "html-text",
-      "candidate_records": 2
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/favicon.ico",
-      "http_status": 200,
-      "content_type": "image/vnd.microsoft.icon",
-      "parse_mode": "html-text",
-      "candidate_records": 0
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/racer/blake-hacker",
-      "http_status": 200,
-      "content_type": "text/html",
-      "parse_mode": "html-text",
-      "candidate_records": 1
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/racer/noah-pierre",
-      "http_status": 200,
-      "content_type": "text/html",
-      "parse_mode": "html-text",
-      "candidate_records": 2
-    },
-    {
-      "archive": "Paddle Laguna Beach results archive",
-      "url": "https://paddlelagunabeach.com/",
-      "http_status": 200,
-      "content_type": "text/html",
-      "parse_mode": "html-text",
-      "candidate_records": 2
+      "candidate_records": 37
     },
     {
       "archive": "Capitola Beach Festival 2023 Paddleboard Results",
@@ -369,6 +369,22 @@
       "content_type": "application/pdf",
       "parse_mode": "pdf-text",
       "candidate_records": 0
+    },
+    {
+      "archive": "Tahoe Nalu 2011 Results",
+      "url": "https://www.tahoenalu.com/wp-content/uploads/2011/03/2011-Ta-Hoe-Nalu-Results-Aug-13-14.pdf",
+      "http_status": 0,
+      "content_type": null,
+      "parse_mode": null,
+      "candidate_records": 0
+    },
+    {
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "parse_mode": "pdf-text",
+      "candidate_records": 94
     },
     {
       "archive": "USA Surfing 2025 SUP and Prone Championship Results",
@@ -533,6 +549,16 @@
   ],
   "paddlers": [
     {
+      "name": "Aaron Stone",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "About Team River",
       "crafts": [
         "SUP"
@@ -540,6 +566,16 @@
       "source_count": 1,
       "archives": [
         "California River Quest 2019 Results"
+      ]
+    },
+    {
+      "name": "Agathe Bouis",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -620,6 +656,16 @@
       "source_count": 1,
       "archives": [
         "101 Surf Sports Redwood City Rain or Shine"
+      ]
+    },
+    {
+      "name": "Amy Marshall",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -714,6 +760,16 @@
       ]
     },
     {
+      "name": "Andrew Long",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Andrew Nahin Men's Prone",
       "crafts": [
         "PRONE/PADDLEBOARD"
@@ -781,6 +837,16 @@
       "source_count": 1,
       "archives": [
         "Santa Barbara Yacht Club Biltmore Cup archive"
+      ]
+    },
+    {
+      "name": "Barbara Rote",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -944,6 +1010,26 @@
       ]
     },
     {
+      "name": "Bob Long",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Bob Stulac",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Bojan Bernard SUP",
       "crafts": [
         "SUP"
@@ -954,6 +1040,46 @@
       ]
     },
     {
+      "name": "Brad Coburn",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Brady Flaherty",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Brandon Carter",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Brant Turner",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Brayton Miles Men's Prone",
       "crafts": [
         "PRONE/PADDLEBOARD"
@@ -961,6 +1087,16 @@
       "source_count": 1,
       "archives": [
         "Paddle Laguna Beach results archive"
+      ]
+    },
+    {
+      "name": "Brenda McGirr",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -994,13 +1130,25 @@
       ]
     },
     {
-      "name": "Brian Thomas",
+      "name": "Brian Hughes",
       "crafts": [
         "SUP"
       ],
       "source_count": 1,
       "archives": [
-        "California River Quest 2019 Results"
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Brian Thomas",
+      "crafts": [
+        "PRONE/PADDLEBOARD",
+        "SUP"
+      ],
+      "source_count": 2,
+      "archives": [
+        "California River Quest 2019 Results",
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -1011,6 +1159,16 @@
       "source_count": 1,
       "archives": [
         "101 Surf Sports San Quentin Breakout"
+      ]
+    },
+    {
+      "name": "Brie Moore",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -1061,6 +1219,16 @@
       "source_count": 1,
       "archives": [
         "Paddle Laguna Beach results archive"
+      ]
+    },
+    {
+      "name": "Calvin Hersey",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -1231,6 +1399,16 @@
       "source_count": 1,
       "archives": [
         "Paddle Laguna Beach results archive"
+      ]
+    },
+    {
+      "name": "Chip Smith",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -1444,6 +1622,16 @@
       ]
     },
     {
+      "name": "Cory Stead",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Coryat Brian",
       "crafts": [
         "SUP"
@@ -1504,6 +1692,16 @@
       ]
     },
     {
+      "name": "Danny Buchanan",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Dave Hook",
       "crafts": [
         "SUP"
@@ -1542,6 +1740,16 @@
       "source_count": 3,
       "archives": [
         "Paddle Laguna Beach results archive"
+      ]
+    },
+    {
+      "name": "David Defoe",
+      "crafts": [
+        "PRONE/PADDLEBOARD"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -1655,6 +1863,16 @@
       ]
     },
     {
+      "name": "Doug Greenwood",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Doug Johnstone Santa Barbara",
       "crafts": [
         "SUP"
@@ -1672,6 +1890,16 @@
       "source_count": 1,
       "archives": [
         "101 Surf Sports Long Strange Trip"
+      ]
+    },
+    {
+      "name": "Drea Perry",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -1742,6 +1970,17 @@
       "source_count": 1,
       "archives": [
         "101 Surf Sports Cancer Benefit Paddle Race"
+      ]
+    },
+    {
+      "name": "Elizabeth Comer",
+      "crafts": [
+        "PRONE/PADDLEBOARD",
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -1822,6 +2061,16 @@
       "source_count": 1,
       "archives": [
         "Santa Barbara Yacht Club Biltmore Cup archive"
+      ]
+    },
+    {
+      "name": "Evan Derdodski",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -1966,6 +2215,26 @@
       ]
     },
     {
+      "name": "Gary Mandy",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Geneva Stockdale",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Geoff James",
       "crafts": [
         "PRONE/PADDLEBOARD"
@@ -2026,6 +2295,16 @@
       ]
     },
     {
+      "name": "Greg Felsch",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Guilfoyle William",
       "crafts": [
         "SUP"
@@ -2033,6 +2312,16 @@
       "source_count": 1,
       "archives": [
         "Santa Barbara Yacht Club Biltmore Cup archive"
+      ]
+    },
+    {
+      "name": "Guylaine Reinbeault",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -2156,6 +2445,16 @@
       ]
     },
     {
+      "name": "Ian Light",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Ian Rice",
       "crafts": [
         "SUP"
@@ -2166,6 +2465,16 @@
       ]
     },
     {
+      "name": "Ivy Delaunay",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Jack Abernethy Men's Prone",
       "crafts": [
         "PRONE/PADDLEBOARD"
@@ -2173,6 +2482,16 @@
       "source_count": 1,
       "archives": [
         "Paddle Laguna Beach results archive"
+      ]
+    },
+    {
+      "name": "Jack Hanna",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -2307,6 +2626,16 @@
       ]
     },
     {
+      "name": "Janet Gavaldon",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Janet Stimson Rally",
       "crafts": [
         "SUP"
@@ -2354,6 +2683,16 @@
       "source_count": 1,
       "archives": [
         "101 Surf Sports Long Strange Trip"
+      ]
+    },
+    {
+      "name": "Jean-Marc Bouis",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -2467,6 +2806,16 @@
       ]
     },
     {
+      "name": "Jenna Granger",
+      "crafts": [
+        "PRONE/PADDLEBOARD"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Jennifer Lewis",
       "crafts": [
         "SUP"
@@ -2507,6 +2856,16 @@
       ]
     },
     {
+      "name": "Jessica Timmons",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Jitka Hiscox",
       "crafts": [
         "SUP"
@@ -2517,6 +2876,26 @@
       ]
     },
     {
+      "name": "Jody Souza",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "John Alexiou",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "John Alexiou SUP",
       "crafts": [
         "SUP"
@@ -2524,6 +2903,16 @@
       "source_count": 1,
       "archives": [
         "101 Surf Sports San Quentin Breakout"
+      ]
+    },
+    {
+      "name": "John Allen",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -2648,6 +3037,16 @@
       ]
     },
     {
+      "name": "Jordan Basile",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Joseph Gapuz",
       "crafts": [
         "OUTRIGGER"
@@ -2688,6 +3087,26 @@
       ]
     },
     {
+      "name": "Jude Markward",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Julie Garside",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Julie Hinkle RALLY",
       "crafts": [
         "SUP"
@@ -2712,9 +3131,10 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "archives": [
-        "California River Quest 2019 Results"
+        "California River Quest 2019 Results",
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -2768,6 +3188,16 @@
       ]
     },
     {
+      "name": "Kaila Pearson",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Kailen Stewart Women's Prone",
       "crafts": [
         "PRONE/PADDLEBOARD"
@@ -2775,6 +3205,16 @@
       "source_count": 1,
       "archives": [
         "Paddle Laguna Beach results archive"
+      ]
+    },
+    {
+      "name": "Kali'a Alexiou",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -2805,6 +3245,16 @@
       "source_count": 1,
       "archives": [
         "Santa Barbara Yacht Club Biltmore Cup archive"
+      ]
+    },
+    {
+      "name": "Karen Jarvis",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -2858,6 +3308,16 @@
       ]
     },
     {
+      "name": "Kelly Unruh",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Kelsie Cage Reiter Rally",
       "crafts": [
         "SUP"
@@ -2888,6 +3348,16 @@
       ]
     },
     {
+      "name": "Kerry Bennan",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Kieding Paige",
       "crafts": [
         "KAYAK"
@@ -2895,6 +3365,16 @@
       "source_count": 1,
       "archives": [
         "Santa Barbara Yacht Club Biltmore Cup archive"
+      ]
+    },
+    {
+      "name": "Kim McDermott",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -2925,6 +3405,17 @@
       "source_count": 1,
       "archives": [
         "Paddle Laguna Beach results archive"
+      ]
+    },
+    {
+      "name": "Kristine Hamrick",
+      "crafts": [
+        "PRONE/PADDLEBOARD",
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -2966,6 +3457,16 @@
       "source_count": 1,
       "archives": [
         "Paddle Laguna Beach results archive"
+      ]
+    },
+    {
+      "name": "Lakota Wright",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -3019,6 +3520,16 @@
       ]
     },
     {
+      "name": "Larry Froley",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Lauren Bell Santa Barbara",
       "crafts": [
         "OUTRIGGER"
@@ -3036,6 +3547,26 @@
       "source_count": 1,
       "archives": [
         "Santa Barbara Yacht Club Biltmore Cup archive"
+      ]
+    },
+    {
+      "name": "Lauren Robinnson",
+      "crafts": [
+        "PRONE/PADDLEBOARD"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Laurence Croter",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -3087,6 +3618,26 @@
       ]
     },
     {
+      "name": "Lee Novak",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Lel Tone",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Leo Montero",
       "crafts": [
         "SUP"
@@ -3104,6 +3655,16 @@
       "source_count": 1,
       "archives": [
         "Paddle Laguna Beach results archive"
+      ]
+    },
+    {
+      "name": "Linda Knutson",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -3137,6 +3698,16 @@
       ]
     },
     {
+      "name": "Lola Bouis",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Lori Drourr",
       "crafts": [
         "SUP"
@@ -3164,6 +3735,16 @@
       "source_count": 1,
       "archives": [
         "Santa Barbara Yacht Club Biltmore Cup archive"
+      ]
+    },
+    {
+      "name": "Lucija Kordic Hadzise",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -3204,6 +3785,16 @@
       "source_count": 1,
       "archives": [
         "Santa Barbara Yacht Club Biltmore Cup archive"
+      ]
+    },
+    {
+      "name": "Marcos Biddle",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -3269,6 +3860,16 @@
       ]
     },
     {
+      "name": "Mateja Lane",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Matt Brown Men's Prone",
       "crafts": [
         "PRONE/PADDLEBOARD"
@@ -3296,6 +3897,16 @@
       "source_count": 1,
       "archives": [
         "California River Quest 2019 Results"
+      ]
+    },
+    {
+      "name": "Maureen Zupan",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -3360,6 +3971,16 @@
       ]
     },
     {
+      "name": "Meredith Bean",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Michael Cage Rally",
       "crafts": [
         "SUP"
@@ -3367,6 +3988,16 @@
       "source_count": 1,
       "archives": [
         "Santa Barbara Yacht Club Biltmore Cup archive"
+      ]
+    },
+    {
+      "name": "Michael Dillon",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -3404,10 +4035,11 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 2,
+      "source_count": 3,
       "archives": [
         "101 Surf Sports Redwood City Rain or Shine",
-        "California River Quest 2019 Results"
+        "California River Quest 2019 Results",
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -3431,6 +4063,16 @@
       ]
     },
     {
+      "name": "Michelle Craig",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Mike Crimmins SUP",
       "crafts": [
         "SUP"
@@ -3448,6 +4090,16 @@
       "source_count": 1,
       "archives": [
         "101 Surf Sports Redwood City Rain or Shine"
+      ]
+    },
+    {
+      "name": "Mike McDaniel",
+      "crafts": [
+        "PRONE/PADDLEBOARD"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -3471,6 +4123,16 @@
       ]
     },
     {
+      "name": "Monique Semak Carter",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Muller Lauren",
       "crafts": [
         "PRONE/PADDLEBOARD"
@@ -3481,6 +4143,16 @@
       ]
     },
     {
+      "name": "Nancy Barna",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Nancy Myers",
       "crafts": [
         "SUP"
@@ -3488,6 +4160,16 @@
       "source_count": 1,
       "archives": [
         "California River Quest 2019 Results"
+      ]
+    },
+    {
+      "name": "Nancy Ryan",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -3528,6 +4210,16 @@
       "source_count": 1,
       "archives": [
         "Paddle Laguna Beach results archive"
+      ]
+    },
+    {
+      "name": "Nickie Misfeldt",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -3671,6 +4363,16 @@
       ]
     },
     {
+      "name": "Peggy Munoz",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Perla Bell SUP",
       "crafts": [
         "SUP"
@@ -3782,6 +4484,16 @@
       ]
     },
     {
+      "name": "Rachel Jones",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Randy Hill Men's Prone",
       "crafts": [
         "PRONE/PADDLEBOARD"
@@ -3819,6 +4531,16 @@
       "source_count": 1,
       "archives": [
         "Paddle Laguna Beach results archive"
+      ]
+    },
+    {
+      "name": "Rhianna Clark",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -3892,6 +4614,16 @@
       ]
     },
     {
+      "name": "Robert Galbraith",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Robert Macias SUP",
       "crafts": [
         "SUP"
@@ -3909,6 +4641,16 @@
       "source_count": 1,
       "archives": [
         "101 Surf Sports Cancer Benefit Paddle Race"
+      ]
+    },
+    {
+      "name": "Ronnie Ayers",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -3932,6 +4674,16 @@
       ]
     },
     {
+      "name": "Ryan Funk",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Ryan Richter Men's Prone",
       "crafts": [
         "SUP"
@@ -3952,6 +4704,26 @@
       ]
     },
     {
+      "name": "Sage Roebuck",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Sally Mello",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Sam Wells SBYC SUP",
       "crafts": [
         "SUP"
@@ -3959,6 +4731,26 @@
       "source_count": 1,
       "archives": [
         "Santa Barbara Yacht Club Biltmore Cup archive"
+      ]
+    },
+    {
+      "name": "Samir Hadziselimovic",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Sandy Capozzi",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -4263,6 +5055,16 @@
       ]
     },
     {
+      "name": "Sofia Sanchez",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Spaulding Quinn",
       "crafts": [
         "SUP"
@@ -4339,6 +5141,26 @@
       "source_count": 1,
       "archives": [
         "101 Surf Sports Long Strange Trip"
+      ]
+    },
+    {
+      "name": "Steve Funk",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Steve Kundich",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -4766,6 +5588,36 @@
       ]
     },
     {
+      "name": "Susan Czerwiec",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Tahoe Na'Lu",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Tami Word",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Tasha Hacker",
       "crafts": [
         "SUP"
@@ -5017,6 +5869,16 @@
       ]
     },
     {
+      "name": "Tim Rote",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Todd Bowers",
       "crafts": [
         "SURFSKI"
@@ -5044,6 +5906,16 @@
       "source_count": 1,
       "archives": [
         "101 Surf Sports San Quentin Breakout"
+      ]
+    },
+    {
+      "name": "Tom Holbrook",
+      "crafts": [
+        "PRONE/PADDLEBOARD"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -5077,6 +5949,16 @@
       ]
     },
     {
+      "name": "Travis Unruh",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Treiberg Debbie",
       "crafts": [
         "SUP"
@@ -5104,6 +5986,16 @@
       "source_count": 1,
       "archives": [
         "California River Quest 2019 Results"
+      ]
+    },
+    {
+      "name": "Trisha Carten",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
       ]
     },
     {
@@ -5307,6 +6199,26 @@
       ]
     },
     {
+      "name": "Zane Sanford",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
+      "name": "Zee Zee Matta",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "archives": [
+        "Tahoe Nalu 2012 4 Mile Results"
+      ]
+    },
+    {
       "name": "Zimmerman Brian",
       "crafts": [
         "KAYAK"
@@ -5334,83 +6246,6 @@
       "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
       "region": "Santa Barbara, California",
       "source_url": "https://www.sbyc.org/biltmore-cup"
-    },
-    {
-      "name": "Barbara Yacht",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/429461/2026_08_30_Biltmore_Cup_Race_Instructions_V3.pdf?t=1786055793927"
-    },
-    {
-      "name": "Jamie Deardorff SBYC SUP",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
-    },
-    {
-      "name": "Scott Deadorff SBYC SUP",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
-    },
-    {
-      "name": "Jack Underwood SBYC SUP",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
-    },
-    {
-      "name": "Jeff Vine SBYC",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
-    },
-    {
-      "name": "Taylor Escola",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
-    },
-    {
-      "name": "Cody Landstrom SBYC",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
-    },
-    {
-      "name": "Connie Vine SBYC",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
-    },
-    {
-      "name": "Rob Hazard SBYC",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
-    },
-    {
-      "name": "Julie Steele SBYC",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
-    },
-    {
-      "name": "Andra Wilson SBYC",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
     },
     {
       "name": "Follett Timothy",
@@ -5595,6 +6430,83 @@
       "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Rally+Division.pdf"
     },
     {
+      "name": "Jamie Deardorff SBYC SUP",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
+    },
+    {
+      "name": "Scott Deadorff SBYC SUP",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
+    },
+    {
+      "name": "Jack Underwood SBYC SUP",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
+    },
+    {
+      "name": "Jeff Vine SBYC",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
+    },
+    {
+      "name": "Taylor Escola",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
+    },
+    {
+      "name": "Cody Landstrom SBYC",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
+    },
+    {
+      "name": "Connie Vine SBYC",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
+    },
+    {
+      "name": "Rob Hazard SBYC",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
+    },
+    {
+      "name": "Julie Steele SBYC",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
+    },
+    {
+      "name": "Andra Wilson SBYC",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/305848/2023_08_27_Biltmore_Cup_Results.pdf?t=1723221759129"
+    },
+    {
+      "name": "Barbara Yacht",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/429461/2026_08_30_Biltmore_Cup_Race_Instructions_V3.pdf?t=1786055793927"
+    },
+    {
       "name": "Biltmore Cup Perpetual Winner",
       "craft": "OUTRIGGER",
       "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
@@ -5614,6 +6526,391 @@
       "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
       "region": "Santa Barbara, California",
       "source_url": "https://www.sbyc.org/documents/10184/114505/2019+Biltmore+Cup+Results.pdf"
+    },
+    {
+      "name": "Ruth Hellier",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Christy Condon",
+      "craft": "KAYAK",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Cynthia Frohling",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Steve Zahm",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Luann Caesar",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Michael Scatterday RALLY",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Derek Galkin",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Theodore Bliss RALLY",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Julie Hinkle RALLY",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Will Sofrin RALLY",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Kathy Spieler RALLY",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Liz Clark RALLY",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Clare Holehouse RALLY",
+      "craft": "KAYAK",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Gabriella Apollonio RALLY",
+      "craft": "KAYAK",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Christan Rudenko",
+      "craft": "KAYAK",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Tom Farr RALLY",
+      "craft": "KAYAK",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Celeste Short",
+      "craft": "KAYAK",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
+    },
+    {
+      "name": "Surf Ski",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Overall+Winners.pdf"
+    },
+    {
+      "name": "First Name",
+      "craft": "OUTRIGGER",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Lambert Chris",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Deardorff Jamie",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Treiberg Karl",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Pierce Matthew",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Ford Jonathan",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Maggio Craig",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Trow Peter",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Deardorff Tod",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Spaulding Quinn",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Coryat Brian",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Kemp Robert",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Lamb Richard",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Schwartje Scott",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Treiberg Debbie",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Deardorff Scott",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Taylor Lee",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Black Andrea",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Guilfoyle William",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Ford Madison",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Landon Sara",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Biltmore Cup",
+      "craft": "KAYAK",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
+    },
+    {
+      "name": "Jon Clark Coral Casino",
+      "craft": "SURFSKI",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Ken Radtkey Guest",
+      "craft": "SURFSKI",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Jeff Omdahl Guest",
+      "craft": "SURFSKI",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Lauren Bell Santa Barbara",
+      "craft": "OUTRIGGER",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Owen Bell",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Andra Wilson Guest",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Doug Johnstone Santa Barbara",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Dan George Guest",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Scott Deardorff Santa Barbara",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Beverly Burr Santa Barbara",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Michael Ghens Santa Barbara",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Anne Wells Guest",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Taylor Escola Santa Barbara",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Ole Eichhorn Santa Barbara",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
+    },
+    {
+      "name": "Emma Deardorff Guest",
+      "craft": "SUP",
+      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
+      "region": "Santa Barbara, California",
+      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
     },
     {
       "name": "Brian Condgon Rally",
@@ -5847,391 +7144,6 @@
       "source_url": "https://www.sbyc.org/documents/10184/211667/2021+Biltmore+Cup+Results.pdf"
     },
     {
-      "name": "First Name",
-      "craft": "OUTRIGGER",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Lambert Chris",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Deardorff Jamie",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Treiberg Karl",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Pierce Matthew",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Ford Jonathan",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Maggio Craig",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Trow Peter",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Deardorff Tod",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Spaulding Quinn",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Coryat Brian",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Kemp Robert",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Lamb Richard",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Schwartje Scott",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Treiberg Debbie",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Deardorff Scott",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Taylor Lee",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Black Andrea",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Guilfoyle William",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Ford Madison",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Landon Sara",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Biltmore Cup",
-      "craft": "KAYAK",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Race+Division.pdf"
-    },
-    {
-      "name": "Surf Ski",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/19416/2017+Biltmore+Results-Overall+Winners.pdf"
-    },
-    {
-      "name": "Ruth Hellier",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Christy Condon",
-      "craft": "KAYAK",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Cynthia Frohling",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Steve Zahm",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Luann Caesar",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Michael Scatterday RALLY",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Derek Galkin",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Theodore Bliss RALLY",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Julie Hinkle RALLY",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Will Sofrin RALLY",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Kathy Spieler RALLY",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Liz Clark RALLY",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Clare Holehouse RALLY",
-      "craft": "KAYAK",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Gabriella Apollonio RALLY",
-      "craft": "KAYAK",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Christan Rudenko",
-      "craft": "KAYAK",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Tom Farr RALLY",
-      "craft": "KAYAK",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Celeste Short",
-      "craft": "KAYAK",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/388838/2025_Biltmore_Cup+Results.pdf?t=1756062968576"
-    },
-    {
-      "name": "Jon Clark Coral Casino",
-      "craft": "SURFSKI",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Ken Radtkey Guest",
-      "craft": "SURFSKI",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Jeff Omdahl Guest",
-      "craft": "SURFSKI",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Lauren Bell Santa Barbara",
-      "craft": "OUTRIGGER",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Owen Bell",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Andra Wilson Guest",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Doug Johnstone Santa Barbara",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Dan George Guest",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Scott Deardorff Santa Barbara",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Beverly Burr Santa Barbara",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Michael Ghens Santa Barbara",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Anne Wells Guest",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Taylor Escola Santa Barbara",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Ole Eichhorn Santa Barbara",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
-      "name": "Emma Deardorff Guest",
-      "craft": "SUP",
-      "archive": "Santa Barbara Yacht Club Biltmore Cup archive",
-      "region": "Santa Barbara, California",
-      "source_url": "https://www.sbyc.org/documents/10184/261491/2022_08_28_Biltmore_Cup_Results.pdf"
-    },
-    {
       "name": "Andre Pierre",
       "craft": "SUP",
       "archive": "Paddle Laguna Beach results archive",
@@ -6244,6 +7156,209 @@
       "archive": "Paddle Laguna Beach results archive",
       "region": "Laguna Beach, California",
       "source_url": "https://paddlelagunabeach.com/results"
+    },
+    {
+      "name": "Paddle Laguna Beach",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/about"
+    },
+    {
+      "name": "Visit Lundquist Surfboards",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/about"
+    },
+    {
+      "name": "Paddle Laguna",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/about"
+    },
+    {
+      "name": "Paddle Laguna",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/"
+    },
+    {
+      "name": "Paddle Laguna Beach The",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/"
+    },
+    {
+      "name": "Paddle Laguna",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/raffle"
+    },
+    {
+      "name": "Sara Lundquist Women's",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2023"
+    },
+    {
+      "name": "Blake Lundquist Men's",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2023"
+    },
+    {
+      "name": "David Crandall Men's",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2023"
+    },
+    {
+      "name": "Alex Swanson Men's",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2023"
+    },
+    {
+      "name": "Erik Eilers Men's",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2023"
+    },
+    {
+      "name": "David Wagner Men's",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2023"
+    },
+    {
+      "name": "Shelby Craig Men's",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2023"
+    },
+    {
+      "name": "Tyler Colopy Men's",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2023"
+    },
+    {
+      "name": "Paul Davis Men's",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2023"
+    },
+    {
+      "name": "Paddle Laguna",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2023"
+    },
+    {
+      "name": "Paddle Laguna",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/racer/blake-hacker"
+    },
+    {
+      "name": "El Moro",
+      "craft": "SUP",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/race"
+    },
+    {
+      "name": "Unlimited Unlimited",
+      "craft": "SUP",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/race"
+    },
+    {
+      "name": "SUP Stand-up",
+      "craft": "SUP",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/race"
+    },
+    {
+      "name": "Ben Did",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/race"
+    },
+    {
+      "name": "Paddle Laguna",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/race"
+    },
+    {
+      "name": "Visit Lundquist Surfboards",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/sponsors"
+    },
+    {
+      "name": "Paddle Laguna",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/sponsors"
+    },
+    {
+      "name": "Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/racer/noah-pierre"
+    },
+    {
+      "name": "Paddle Laguna",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/racer/noah-pierre"
+    },
+    {
+      "name": "Paddle Laguna",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/store"
+    },
+    {
+      "name": "Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/racer/andre-pierre"
+    },
+    {
+      "name": "Paddle Laguna",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/racer/andre-pierre"
     },
     {
       "name": "Men's Prone",
@@ -6351,25 +7466,368 @@
       "source_url": "https://paddlelagunabeach.com/entries"
     },
     {
-      "name": "Paddle Laguna Beach",
-      "craft": "PRONE/PADDLEBOARD",
+      "name": "All SUP Men's Prone",
+      "craft": "SUP",
       "archive": "Paddle Laguna Beach results archive",
       "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/about"
+      "source_url": "https://paddlelagunabeach.com/results/2024"
     },
     {
-      "name": "Visit Lundquist Surfboards",
+      "name": "Blake Hacker SUP",
+      "craft": "SUP",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Parker Russell Men's Prone",
+      "craft": "SUP",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Jacob Reed Men's Prone",
       "craft": "PRONE/PADDLEBOARD",
       "archive": "Paddle Laguna Beach results archive",
       "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/about"
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Matt Brown Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Ian Ferrell Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Kailen Stewart Women's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Josh Stewart Safety",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Emilio Cavazos Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Dylan Montierth Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Jack Abernethy Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Chance Villari Men's Prone",
+      "craft": "SUP",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Kristin Thomas SUP",
+      "craft": "SUP",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Perla Bell SUP",
+      "craft": "SUP",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "David Crandall Men's Prone",
+      "craft": "SUP",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Bryson Gregory Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Camri Jenson Women's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Chloe Lewis Women's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Phillip Mansfield Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Nick Sanyal Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Rob Graham Men's Prone",
+      "craft": "SUP",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Shawn Tierney",
+      "craft": "SUP",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Ryan Richter Men's Prone",
+      "craft": "SUP",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Nick Sear Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Eric Papa Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Liam McCue Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "Nathan Crandall Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2024"
     },
     {
       "name": "Paddle Laguna",
       "craft": "PRONE/PADDLEBOARD",
       "archive": "Paddle Laguna Beach results archive",
       "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/about"
+      "source_url": "https://paddlelagunabeach.com/results/2024"
+    },
+    {
+      "name": "All Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Andre Pierre Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Noah Pierre Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Tyler Barnum Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Nathan Visagie Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Chad Papa Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Jacob Melendez Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Jensine Bugelli Women's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Jack O'Shaughnessy Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Clayton Templeton Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Reif Souder Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Steve Rossier Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Cheyne Andino Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Caleb Templeton Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Thomas Romesser Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Walker Carvalho Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Jack Hanson Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "David Crandall Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Pascal Schlee Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Jackson Bartlett Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Connor A'Hearn Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Kylie Ballew Women's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Jeffrey Cole Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
+    },
+    {
+      "name": "Paddle Laguna",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/results/2026"
     },
     {
       "name": "Paddle Laguna",
@@ -6393,11 +7851,18 @@
       "source_url": "https://paddlelagunabeach.com/prone"
     },
     {
+      "name": "Men's Prone",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Paddle Laguna Beach results archive",
+      "region": "Laguna Beach, California",
+      "source_url": "https://paddlelagunabeach.com/racer/parker-russell"
+    },
+    {
       "name": "Paddle Laguna",
       "craft": "PRONE/PADDLEBOARD",
       "archive": "Paddle Laguna Beach results archive",
       "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/raffle"
+      "source_url": "https://paddlelagunabeach.com/racer/parker-russell"
     },
     {
       "name": "All Men's Prone",
@@ -6659,564 +8124,669 @@
       "source_url": "https://paddlelagunabeach.com/results/2025"
     },
     {
-      "name": "El Moro",
-      "craft": "SUP",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/race"
-    },
-    {
-      "name": "Unlimited Unlimited",
-      "craft": "SUP",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/race"
-    },
-    {
-      "name": "SUP Stand-up",
-      "craft": "SUP",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/race"
-    },
-    {
-      "name": "Ben Did",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/race"
-    },
-    {
-      "name": "Paddle Laguna",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/race"
-    },
-    {
-      "name": "Sara Lundquist Women's",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2023"
-    },
-    {
-      "name": "Blake Lundquist Men's",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2023"
-    },
-    {
-      "name": "David Crandall Men's",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2023"
-    },
-    {
-      "name": "Alex Swanson Men's",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2023"
-    },
-    {
-      "name": "Erik Eilers Men's",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2023"
-    },
-    {
-      "name": "David Wagner Men's",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2023"
-    },
-    {
-      "name": "Shelby Craig Men's",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2023"
-    },
-    {
-      "name": "Tyler Colopy Men's",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2023"
-    },
-    {
-      "name": "Paul Davis Men's",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2023"
-    },
-    {
-      "name": "Paddle Laguna",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2023"
-    },
-    {
-      "name": "Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/racer/andre-pierre"
-    },
-    {
-      "name": "Paddle Laguna",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/racer/andre-pierre"
-    },
-    {
-      "name": "Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/racer/parker-russell"
-    },
-    {
-      "name": "Paddle Laguna",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/racer/parker-russell"
-    },
-    {
-      "name": "All Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Andre Pierre Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Noah Pierre Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Tyler Barnum Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Nathan Visagie Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Chad Papa Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Jacob Melendez Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Jensine Bugelli Women's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Jack O'Shaughnessy Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Clayton Templeton Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Reif Souder Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Steve Rossier Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Cheyne Andino Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Caleb Templeton Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Thomas Romesser Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Walker Carvalho Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Jack Hanson Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "David Crandall Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Pascal Schlee Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Jackson Bartlett Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Connor A'Hearn Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Kylie Ballew Women's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Jeffrey Cole Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "Paddle Laguna",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2026"
-    },
-    {
-      "name": "All SUP Men's Prone",
-      "craft": "SUP",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Blake Hacker SUP",
-      "craft": "SUP",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Parker Russell Men's Prone",
-      "craft": "SUP",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Jacob Reed Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Matt Brown Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Ian Ferrell Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Kailen Stewart Women's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Josh Stewart Safety",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Emilio Cavazos Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Dylan Montierth Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Jack Abernethy Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Chance Villari Men's Prone",
-      "craft": "SUP",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Kristin Thomas SUP",
-      "craft": "SUP",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Perla Bell SUP",
-      "craft": "SUP",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "David Crandall Men's Prone",
-      "craft": "SUP",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Bryson Gregory Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Camri Jenson Women's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Chloe Lewis Women's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Phillip Mansfield Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Nick Sanyal Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Rob Graham Men's Prone",
-      "craft": "SUP",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Shawn Tierney",
-      "craft": "SUP",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Ryan Richter Men's Prone",
-      "craft": "SUP",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Nick Sear Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Eric Papa Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Liam McCue Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Nathan Crandall Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Paddle Laguna",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/results/2024"
-    },
-    {
-      "name": "Paddle Laguna",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/store"
-    },
-    {
-      "name": "Visit Lundquist Surfboards",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/sponsors"
-    },
-    {
-      "name": "Paddle Laguna",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/sponsors"
-    },
-    {
-      "name": "Paddle Laguna",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/racer/blake-hacker"
-    },
-    {
-      "name": "Men's Prone",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/racer/noah-pierre"
-    },
-    {
-      "name": "Paddle Laguna",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/racer/noah-pierre"
-    },
-    {
-      "name": "Paddle Laguna",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/"
-    },
-    {
-      "name": "Paddle Laguna Beach The",
-      "craft": "PRONE/PADDLEBOARD",
-      "archive": "Paddle Laguna Beach results archive",
-      "region": "Laguna Beach, California",
-      "source_url": "https://paddlelagunabeach.com/"
-    },
-    {
       "name": "CAPITOLA BEACH",
       "craft": "PRONE/PADDLEBOARD",
       "archive": "Capitola Beach Festival 2023 Paddleboard Results",
       "region": "Capitola, California",
       "source_url": "https://capitolabeachfestival.com/wp-content/uploads/2023/10/CBF-Paddleboard-Race-Results.pdf"
+    },
+    {
+      "name": "Tahoe Na'Lu",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Sofia Sanchez",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Ryan Funk",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Sage Roebuck",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Lola Bouis",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Agathe Bouis",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Calvin Hersey",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Rachel Jones",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Evan Derdodski",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Kim McDermott",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Jessica Timmons",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Rhianna Clark",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Ivy Delaunay",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Travis Unruh",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Kristine Hamrick",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Sally Mello",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Amy Marshall",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Drea Perry",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Tami Word",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Kerry Bennan",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Guylaine Reinbeault",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Janet Gavaldon",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Michelle Craig",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Brad Coburn",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Marcos Biddle",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Brady Flaherty",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Chip Smith",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Aaron Stone",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Gary Mandy",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Susan Czerwiec",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Nancy Barna",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Linda Knutson",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Lucija Kordic Hadzise",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Brian Hughes",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Doug Greenwood",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Samir Hadziselimovic",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Peggy Munoz",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Nickie Misfeldt",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Brant Turner",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Geneva Stockdale",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Zane Sanford",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Andrew Long",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Kelly Unruh",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Lee Novak",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Meredith Bean",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Steve Kundich",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Barbara Rote",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Michael Melville",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Bob Stulac",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Tim Rote",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Ian Light",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Mateja Lane",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Jordan Basile",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Cory Stead",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Brandon Carter",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Sandy Capozzi",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "John Allen",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Robert Galbraith",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Michael Dillon",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Jack Hanna",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "David Defoe",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Elizabeth Comer",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Danny Buchanan",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Lel Tone",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Larry Froley",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Kristine Hamrick",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Brian Thomas",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Tom Holbrook",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "John Alexiou",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Jean-Marc Bouis",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Brie Moore",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Steve Funk",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Greg Felsch",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Brenda McGirr",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Nancy Ryan",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Kali'a Alexiou",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Bob Long",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Mike McDaniel",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Jenna Granger",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Julie Garside",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Jody Souza",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Zee Zee Matta",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Julie Stevens",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Karen Jarvis",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Kaila Pearson",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Laurence Croter",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Lauren Robinnson",
+      "craft": "PRONE/PADDLEBOARD",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Elizabeth Comer",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Trisha Carten",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Ronnie Ayers",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Jude Markward",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Monique Semak Carter",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Lakota Wright",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
+    },
+    {
+      "name": "Maureen Zupan",
+      "craft": "SUP",
+      "archive": "Tahoe Nalu 2012 4 Mile Results",
+      "region": "Lake Tahoe, California",
+      "source_url": "https://standuppaddletahoe.com/pdf/2012TahoeNalu4Mile.pdf"
     },
     {
       "name": "USA Surfing",
