@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """SkyFinder Garmin paddler-feed prototype collector.
 
-Reads a small registry of public Garmin MapShare identifiers, fetches their Raw
-KML feeds, and emits a privacy-minimized normalized JSON feed.
+Reads a registry of Garmin MapShare identifiers, fetches their Raw KML feeds,
+and emits a privacy-minimized normalized JSON feed.
 
 Prototype safety choices:
 - no Garmin IMEI/internal IDs/message text are retained
 - exact coordinates are only published when registry opt_in_exact is true
+- breadcrumb history requires the separate opt_in_breadcrumbs flag
 - otherwise positions are rounded to 3 decimals (~360 ft latitude)
 - Garmin SOS fields are intentionally not used as an emergency-alert source
 """
@@ -27,7 +28,10 @@ from typing import Any
 KPH_TO_MPH = 0.6213711922
 M_TO_FT = 3.280839895
 DEFAULT_FEED = "https://share.garmin.com/Feed/Share/{feed_id}"
-USER_AGENT = "SkyFinder-Paddler-Feed-Prototype/0.1 (+https://github.com/SkyFinderRescue/)"
+USER_AGENT = "SkyFinder-Paddler-Feed-Prototype/0.2 (+https://github.com/SkyFinderRescue/)"
+MAX_BREADCRUMBS = 120
+BREADCRUMB_WINDOW_HOURS = 12.0
+
 
 @dataclass
 class FetchResult:
@@ -36,11 +40,14 @@ class FetchResult:
     body: bytes | None
     error: str | None = None
 
+
 def utc_now() -> datetime:
     return datetime.now(timezone.utc)
 
+
 def iso_z(value: datetime) -> str:
     return value.astimezone(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
 
 def parse_time_utc(value: str | None) -> datetime | None:
     if not value:
@@ -59,11 +66,13 @@ def parse_time_utc(value: str | None) -> datetime | None:
             pass
     return None
 
+
 def number_prefix(value: str | None) -> float | None:
     if not value:
         return None
     match = re.search(r"[-+]?\d+(?:\.\d+)?", value)
     return float(match.group(0)) if match else None
+
 
 def boolish(value: str | None) -> bool | None:
     if value is None:
@@ -75,8 +84,10 @@ def boolish(value: str | None) -> bool | None:
         return False
     return None
 
+
 def _text(elem: ET.Element | None) -> str:
     return "" if elem is None or elem.text is None else elem.text.strip()
+
 
 def parse_kml(body: bytes) -> list[dict[str, Any]]:
     root = ET.fromstring(body)
@@ -112,6 +123,7 @@ def parse_kml(body: bytes) -> list[dict[str, Any]]:
         points.append(fields)
     return points
 
+
 def newest_point(points: list[dict[str, Any]]) -> dict[str, Any] | None:
     if not points:
         return None
@@ -120,6 +132,7 @@ def newest_point(points: list[dict[str, Any]]) -> dict[str, Any] | None:
         when = parse_time_utc(point.get("Time UTC"))
         ranked.append((when or datetime.min.replace(tzinfo=timezone.utc), idx, point))
     return max(ranked, key=lambda item: (item[0], item[1]))[2]
+
 
 def fetch_feed(url: str, timeout: float) -> FetchResult:
     req = urllib.request.Request(
@@ -140,6 +153,7 @@ def fetch_feed(url: str, timeout: float) -> FetchResult:
     except TimeoutError:
         return FetchResult("network_error", None, None, "timeout")
 
+
 def freshness_status(point: dict[str, Any], collected_at: datetime) -> tuple[str, float | None]:
     event = (point.get("Event") or "").strip().lower()
     when = parse_time_utc(point.get("Time UTC"))
@@ -159,6 +173,7 @@ def freshness_status(point: dict[str, Any], collected_at: datetime) -> tuple[str
         return "AGING", age_min
     return "STALE", age_min
 
+
 def public_position(point: dict[str, Any], exact: bool) -> tuple[float | None, float | None, str]:
     lat = number_prefix(point.get("Latitude"))
     lng = number_prefix(point.get("Longitude"))
@@ -167,6 +182,53 @@ def public_position(point: dict[str, Any], exact: bool) -> tuple[float | None, f
     if exact:
         return round(lat, 6), round(lng, 6), "exact-opt-in"
     return round(lat, 3), round(lng, 3), "coarse-prototype"
+
+
+def normalized_breadcrumbs(
+    entry: dict[str, Any],
+    points: list[dict[str, Any]],
+    collected_at: datetime,
+    max_points: int = MAX_BREADCRUMBS,
+    max_age_hours: float = BREADCRUMB_WINDOW_HOURS,
+) -> list[dict[str, Any]]:
+    """Return recent exact breadcrumb points only for explicit breadcrumb opt-in."""
+    if not (entry.get("opt_in_exact") is True and entry.get("opt_in_breadcrumbs") is True):
+        return []
+
+    candidates: list[tuple[datetime, dict[str, Any]]] = []
+    for point in points:
+        when = parse_time_utc(point.get("Time UTC"))
+        if when is None:
+            continue
+        if boolish(point.get("Valid GPS Fix")) is False:
+            continue
+        age_hours = max(0.0, (collected_at - when).total_seconds() / 3600.0)
+        if age_hours > max_age_hours:
+            continue
+        lat, lng, _ = public_position(point, True)
+        if lat is None or lng is None:
+            continue
+        speed_kph = number_prefix(point.get("Velocity"))
+        course = number_prefix(point.get("Course"))
+        candidates.append((when, {
+            "time_utc": iso_z(when),
+            "lat": lat,
+            "lng": lng,
+            "speed_mph": round(speed_kph * KPH_TO_MPH, 1) if speed_kph is not None else None,
+            "heading_deg_true": round(course, 1) if course is not None else None,
+        }))
+
+    candidates.sort(key=lambda item: item[0])
+    deduped: list[dict[str, Any]] = []
+    seen: set[tuple[str, float, float]] = set()
+    for _, item in candidates:
+        key = (item["time_utc"], item["lat"], item["lng"])
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(item)
+    return deduped[-max_points:]
+
 
 def normalize(entry: dict[str, Any], point: dict[str, Any], collected_at: datetime) -> dict[str, Any]:
     status, age_min = freshness_status(point, collected_at)
@@ -203,6 +265,7 @@ def normalize(entry: dict[str, Any], point: dict[str, Any], collected_at: dateti
         "mapshare_url": f"https://share.garmin.com/{entry['feed_id']}",
     }
 
+
 def collect_entry(entry: dict[str, Any], collected_at: datetime, timeout: float) -> dict[str, Any]:
     feed_url = entry.get("feed_url") or DEFAULT_FEED.format(feed_id=entry["feed_id"])
     result = fetch_feed(feed_url, timeout)
@@ -231,7 +294,16 @@ def collect_entry(entry: dict[str, Any], collected_at: datetime, timeout: float)
         return {**base, "status": "NO_DATA", "placemark_points": 0}
 
     normalized = normalize(entry, point, collected_at)
-    return {**normalized, "http_status": result.http_status, "placemark_points": len(points)}
+    breadcrumbs = normalized_breadcrumbs(entry, points, collected_at)
+    return {
+        **normalized,
+        "http_status": result.http_status,
+        "placemark_points": len(points),
+        "breadcrumbs_available": len(breadcrumbs) >= 2,
+        "breadcrumb_count": len(breadcrumbs),
+        "track_points": breadcrumbs,
+    }
+
 
 def build_output(registry: dict[str, Any], timeout: float = 15.0, collected_at: datetime | None = None) -> dict[str, Any]:
     collected_at = collected_at or utc_now()
@@ -242,18 +314,21 @@ def build_output(registry: dict[str, Any], timeout: float = 15.0, collected_at: 
         status = paddler.get("status", "UNKNOWN")
         counts[status] = counts.get(status, 0) + 1
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at_utc": iso_z(collected_at),
         "source": "Garmin MapShare Raw KML",
         "operational_use": False,
         "privacy_note": (
             "Prototype republishes only coarse positions for non-opted-in public test feeds. "
+            "Exact positions require opt_in_exact; breadcrumb history additionally requires opt_in_breadcrumbs. "
             "Garmin IMEI/internal identifiers/message text are discarded."
         ),
         "sos_note": "Garmin KML is treated as a location source, not as an SOS alert source.",
+        "breadcrumb_note": f"Opted-in breadcrumb history is limited to the most recent {MAX_BREADCRUMBS} points within {BREADCRUMB_WINDOW_HOURS:g} hours.",
         "counts": counts,
         "paddlers": paddlers,
     }
+
 
 def main() -> int:
     parser = argparse.ArgumentParser()
@@ -283,10 +358,12 @@ def main() -> int:
                     "device_type": p.get("device_type"),
                     "speed_mph": p.get("speed_mph"),
                     "position_precision": p.get("position_precision"),
+                    "breadcrumb_count": p.get("breadcrumb_count", 0),
                 } for p in output["paddlers"]
             ],
         }, indent=2))
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
