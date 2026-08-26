@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SkyFinder Maritime Drift Prototype</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <div>
+      <div class="eyebrow">ISOLATED RESEARCH BUILD</div>
+      <h1>SkyFinder Maritime Drift Prototype</h1>
+      <p>Estimated drift area after a paddler GPS feed stops. Not Coast Guard SAROPS. Not for operational rescue use.</p>
+    </div>
+    <div id="generated" class="generated">Waiting for environmental snapshot…</div>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Drift scenario controls">
+      <label>Scenario
+        <select id="objectType">
+          <option value="sea_kayak_person">Sea kayak + person</option>
+          <option value="piw">Person in water</option>
+          <option value="surfboard_person">Surf board + person</option>
+          <option value="sup_person_proxy">SUP + person — Coast Guard surfboard proxy</option>
+          <option value="prone_person_proxy">Prone board + person — Coast Guard surfboard proxy</option>
+        </select>
+      </label>
+      <label>Elapsed since last GPS
+        <select id="elapsed">
+          <option value="0.5">30 minutes</option>
+          <option value="1">1 hour</option>
+          <option value="2" selected>2 hours</option>
+          <option value="4">4 hours</option>
+          <option value="8">8 hours</option>
+        </select>
+      </label>
+      <button id="recompute" type="button">Recompute Estimate</button>
+    </section>
+
+    <section class="layout">
+      <div>
+        <div id="map" aria-label="Estimated maritime drift map"></div>
+        <div class="legend">
+          <span><i class="dot lkp"></i> Last known GPS</span>
+          <span><i class="box p50"></i> Approx. 50% particle envelope</span>
+          <span><i class="box p90"></i> Approx. 90% particle envelope</span>
+        </div>
+      </div>
+      <aside>
+        <div class="warning">
+          <strong>Estimated drift — not confirmed position</strong>
+          <p>The envelope expands from the last known GPS using public NOAA/IOOS current and NOAA NDBC wind data plus Coast Guard leeway coefficients where available.</p>
+        </div>
+        <div class="panel">
+          <h2>Environmental inputs</h2>
+          <dl id="environment"></dl>
+        </div>
+        <div class="panel">
+          <h2>Drift model</h2>
+          <dl id="model"></dl>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
