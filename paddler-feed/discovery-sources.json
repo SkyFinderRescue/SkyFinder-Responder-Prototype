@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "purpose": "Coverage-first discovery of publicly listed paddleboard/SUP/prone paddlers. This index discovers paddlers and public event pages; it does not republish precise live locations from non-opted-in individuals.",
+  "sources": [
+    {"provider":"PaddleGuru","event":"Malibu Downwinder 2026","url":"https://paddleguru.com/races/Malibudownwinder2026/results","region":"Malibu, California","california":true,"mode":"table","craft_filter":["sup","prone"]},
+    {"provider":"PaddleGuru","event":"The Lifeguard Lap 2026","url":"https://paddleguru.com/races/TheLifeguardLap2026/results","region":"Avila Beach, California","california":true,"mode":"table","craft_filter":["sup","prone","paddle"]},
+    {"provider":"PaddleGuru","event":"The Loop 2026","url":"https://paddleguru.com/races/THELOOP2026/results","region":"Coronado, California","california":true,"mode":"table","craft_filter":["sup","prone","paddle"]},
+    {"provider":"PaddleGuru","event":"R10 Paddleboard Race 2026","url":"https://paddleguru.com/races/TheR10PaddleboardRace2026/results","region":"Torrance, California","california":true,"mode":"table","craft_filter":["sup","prone","paddle"]},
+    {"provider":"PaddleGuru","event":"South Bay Paddle 2026","url":"https://paddleguru.com/races/TheSouthBayPaddle2026/results","region":"Hermosa Beach, California","california":true,"mode":"table","craft_filter":["sup","prone","paddle"]},
+    {"provider":"PaddleGuru","event":"USA Surfing SUP + Prone Nationals 2026","url":"https://paddleguru.com/races/USASurfingSUPProneNationalChampionshipsTeamTrials2026/startlist","region":"Oceanside, California","california":true,"mode":"table","craft_filter":["sup","prone"]},
+    {"provider":"PaddleGuru","event":"Santa Monica Pier 360 2026","url":"https://paddleguru.com/races/SantaMonicaPier360BeachFestival2026/startlist","region":"Santa Monica, California","california":true,"mode":"table","craft_filter":["sup","prone","paddle"]},
+    {"provider":"PaddleGuru","event":"Waterman Challenge 2026","url":"https://paddleguru.com/races/WatermanChallengePaddleboardRace2026/startlist","region":"Encinitas to Windansea, California","california":true,"mode":"table","craft_filter":["sup","prone","paddle"]},
+    {"provider":"PaddleGuru","event":"Rock 2 Rock 2026","url":"https://paddleguru.com/races/Rock2Rock2026/startlist","region":"Catalina Island to San Pedro, California","california":true,"mode":"table","craft_filter":["sup","prone","paddle","oc-1","oc1"]},
+    {"provider":"PaddleGuru","event":"Paddle Laguna Beach 2026","url":"https://paddleguru.com/races/PaddleLagunaBeach2026/startlist","region":"Orange County, California","california":true,"mode":"table","craft_filter":["sup","prone","paddle"]},
+    {"provider":"PaddleGuru","event":"NAC El Morro Classic 2026","url":"https://paddleguru.com/races/NACElMorroClassic2026/results","region":"Newport Beach, California","california":true,"mode":"table","craft_filter":["sup","prone","paddle"]},
+    {"provider":"PaddleGuru","event":"Hanohano Ocean Challenge 2026","url":"https://paddleguru.com/races/HanohanoOceanChallenge2026/results","region":"San Diego, California","california":true,"mode":"table","craft_filter":["sup","prone","paddle","surfski","oc-1","oc1"]},
+    {"provider":"PaddleGuru","event":"Lanakila Classic 2026","url":"https://paddleguru.com/races/LanakilaClassic2026/results","region":"Redondo Beach, California","california":true,"mode":"table","craft_filter":["sup","prone","paddle","surfski","oc-1","oc1"]},
+    {"provider":"PaddleGuru","event":"Catalina Classic Paddleboard Race 2026","url":"https://paddleguru.com/races/CatalinaClassicPaddleboardRace2026/startlist","region":"Catalina Island to Manhattan Beach, California","california":true,"mode":"table","craft_filter":["sup","prone","paddle"]},
+    {"provider":"RaceOwl","event":"MR340 2026","url":"https://www.raceowl.com/MR3402026/Roster","region":"Missouri","california":false,"mode":"table","craft_filter":["sup"]}
+  ],
+  "tracker_ecosystems": [
+    {"provider":"Garmin MapShare","role":"Direct public KML location feeds","access":"Raw KML when MapShare is public","priority":1},
+    {"provider":"DotVision Motion","role":"Event-wide GPS tracking; supports Garmin inReach and other trackers","access":"Public event pages / read-only event API when token is published or provided","priority":1},
+    {"provider":"RaceOwl","role":"Event-wide paddler tracking with downloadable KML/CSV; accepts Garmin inReach","access":"Public race pages and downloads","priority":1},
+    {"provider":"WaterTribe","role":"Public expedition-paddling tracking maps; accepts Garmin inReach","access":"Public event tracking maps and roster","priority":2},
+    {"provider":"PaddleGuru","role":"California race roster/results discovery; identifies SUP/prone paddlers","access":"Public race startlists/results; not a live GPS source by itself","priority":1},
+    {"provider":"Paddle Logger PaddleLIVE","role":"Large paddling activity ecosystem with live sharing","access":"No general public API confirmed; partnership/opt-in path needed","priority":2},
+    {"provider":"Trackleaders","role":"Endurance-event tracker aggregator accepting Garmin MapShare","access":"Event-specific public tracker maps; paddling coverage varies","priority":3},
+    {"provider":"Kattack","role":"Event tracking that can ingest Garmin MapShare","access":"Event-specific public maps; primarily sailing but useful for ocean events","priority":3}
+  ]
+}
