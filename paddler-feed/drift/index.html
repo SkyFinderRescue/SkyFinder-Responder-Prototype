@@ -28,7 +28,7 @@
           <option value="prone_person_proxy">Prone board + person — Coast Guard surfboard proxy</option>
         </select>
       </label>
-      <label>Elapsed since last GPS
+      <label>Time since last GPS
         <select id="elapsed">
           <option value="0.5">30 minutes</option>
           <option value="1">1 hour</option>
@@ -37,29 +37,29 @@
           <option value="8">8 hours</option>
         </select>
       </label>
-      <button id="recompute" type="button">Recompute Estimate</button>
+      <button id="recompute" type="button">Update Estimate</button>
     </section>
 
     <section class="layout">
       <div>
         <div id="map" aria-label="Estimated maritime drift map"></div>
         <div class="legend">
-          <span><i class="dot lkp"></i> Last known GPS</span>
-          <span><i class="box p50"></i> Approx. 50% particle envelope</span>
-          <span><i class="box p90"></i> Approx. 90% particle envelope</span>
+          <span><i class="dot lkp"></i> Last confirmed GPS position</span>
+          <span><i class="box p50"></i> Primary estimated drift area</span>
+          <span><i class="box p90"></i> Expanded estimated drift area</span>
         </div>
       </div>
       <aside>
         <div class="warning">
-          <strong>Estimated drift — not confirmed position</strong>
-          <p>The envelope expands from the last known GPS using public NOAA/IOOS current and NOAA NDBC wind data plus Coast Guard leeway coefficients where available.</p>
+          <strong>Estimated drift — not a confirmed position</strong>
+          <p>SkyFinder starts at the last confirmed GPS position and estimates where the paddler may have moved using ocean current, wind, time since GPS contact, and the selected person or craft type. The inner area is the best place to start; the outer area shows the wider possible drift area.</p>
         </div>
         <div class="panel">
-          <h2>Environmental inputs</h2>
+          <h2>Conditions used</h2>
           <dl id="environment"></dl>
         </div>
         <div class="panel">
-          <h2>Drift model</h2>
+          <h2>Estimate details</h2>
           <dl id="model"></dl>
         </div>
       </aside>
