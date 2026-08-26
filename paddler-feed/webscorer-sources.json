@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "purpose": "Public Webscorer paddling result sources used for California paddler coverage research.",
+  "organizers": [
+    {"name":"WaveChaser Paddle Series","url":"https://www.webscorer.com/wavechaser?pg=results","california":true},
+    {"name":"Northern California Outrigger Canoe Association","url":"https://www.webscorer.com/ncoca?pg=results","california":true}
+  ],
+  "direct_race_ids": [402717,363394,104020,104066],
+  "notes": [
+    "WaveChaser organizer page exposes 74 California paddling results across 2013-2020 and mixed craft categories including SUP.",
+    "NCOCA organizer page exposes 184 California paddling/outrigger results and some mixed small-craft events.",
+    "Direct race IDs include Catalina Classic 2024/2025 and 2017 Oceanside SUP technical races."
+  ]
+}
