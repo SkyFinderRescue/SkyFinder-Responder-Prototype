@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "purpose": "Public PaddleGuru graph seeds for broad California paddle-sport coverage research.",
+  "athlete_handles": [
+    "surfer65",
+    "joescaturro",
+    "fjbird",
+    "maxfirst",
+    "wally",
+    "robpoolrepair",
+    "glnsk8ter"
+  ],
+  "event_slugs": [
+    "ReturntoThePier2023",
+    "TheR10PaddleboardRace2025",
+    "TheSouthBayPaddle2025",
+    "SantaMonicaPier360BeachFestival2025",
+    "Rock2Rock2025",
+    "BeckyStuartRaceOceansideSanDiegoCalifornia2025",
+    "LanakilaClassic2024",
+    "USASurfingChampionshipsTrials2022",
+    "MarinaParkWINTERNATIONALSPronePaddleboardRace",
+    "TAHOEPADDLEJAMTahoeWatermanPaddleRacing2025",
+    "NACVaaCaliforniaSeriesIIIRace12025",
+    "NACElMorroClassic2025",
+    "nacoffdacouch2025",
+    "NACHalRosoffClassic2025",
+    "USASurfingSUPProneNationalChampionshipsTeamTrials2025",
+    "CaliforniaRiverQuest2025",
+    "TAHOECUPLakeCrossingTahoeWatermanPaddleRacing2025",
+    "CatalinaCupPaddleboardRace2025",
+    "SantaCruzPaddlefest2025",
+    "NACOPENWATERMemorialDayRace",
+    "2025CAPITOLABEACHFESTIVALBATTLEONTHEBAY",
+    "BattleOfTheBayPaddleRaceSausalito2025",
+    "WildBuffaloRacePresentedbyPuakeaDesigns2025",
+    "WatermanChallengePaddleboardRaceSwamistoWindansea2025",
+    "TheSouthBayPaddle2024",
+    "TheR10PaddleboardRace2024",
+    "BattleOfTheBayPaddleRaceSausalito2026",
+    "TAHOEPADDLEJAMTahoeWatermanPaddleRacing2024"
+  ]
+}
