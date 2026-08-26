@@ -1,0 +1,20 @@
+{
+  "id": "participant-short-id",
+  "name": "Participant Name",
+  "activity": "SUP",
+  "feed_id": "GarminMapShareIdentifier",
+  "california_relevance": "Voluntary SkyFinder field-test participant.",
+  "enabled": true,
+  "test_only": true,
+  "opt_in_exact": true,
+  "opt_in_breadcrumbs": true,
+  "consent": {
+    "version": "paddler-field-test-v1",
+    "consented_at_utc": "2026-08-26T00:00:00Z",
+    "voluntary": true,
+    "exact_location": true,
+    "breadcrumbs": true,
+    "purpose": "SkyFinder paddler field testing and rescue-location feature validation.",
+    "removal_requested": false
+  }
+}
