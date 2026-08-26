@@ -1,31 +1,27 @@
 {
-  "schema_version": 1,
-  "generated_at_utc": "2026-08-26T03:01:17Z",
+  "schema_version": 2,
+  "generated_at_utc": "2026-08-26T03:04:38Z",
   "scope": "California only",
   "purpose": "Deduplicated California public paddler identity/source coverage index for SkyFinder research. Not an operational live-location feed.",
-  "privacy": "Public race/event identity, craft, year, public handle/profile and source evidence only. No email, phone, street address, IMEI or exact live GPS.",
+  "privacy": "Public race/event identity, craft, year, public handle/profile and source evidence only. No private contact data or exact live GPS.",
   "summary": {
     "sources_configured": 8,
     "sources_available": 7,
-    "unique_california_paddlers": 9926,
+    "unique_california_paddlers": 10090,
     "craft_counts": {
-      "KAYAK": 38,
-      "OC-1": 106,
-      "OC-2": 86,
-      "OUTRIGGER": 4513,
-      "PRONE/PADDLEBOARD": 913,
-      "SS-1": 6,
-      "SUP": 3692,
-      "SURFSKI": 804,
-      "V-1": 4
+      "KAYAK": 40,
+      "OUTRIGGER": 4662,
+      "PRONE/PADDLEBOARD": 921,
+      "SUP": 3832,
+      "SURFSKI": 830
     },
     "source_overlap_counts": {
-      "1": 9619,
-      "2": 270,
-      "3": 33,
-      "4": 4
+      "1": 9753,
+      "2": 291,
+      "3": 41,
+      "4": 5
     },
-    "multi_source_confirmed": 307,
+    "multi_source_confirmed": 337,
     "public_handle_or_profile_count": 964
   },
   "source_audit": [
@@ -143,20 +139,20 @@
       "file": "misc-ca-archive-paddlers.json",
       "source": "Independent California archives",
       "status": "OK",
-      "included": 255,
+      "included": 459,
       "excluded_non_california": 0,
       "source_summary": {
-        "archives_configured": 6,
-        "documents_checked": 46,
-        "documents_http_200": 45,
-        "paddler_result_records": 288,
-        "unique_paddlers": 255,
+        "archives_configured": 24,
+        "documents_checked": 64,
+        "documents_http_200": 63,
+        "paddler_result_records": 691,
+        "unique_paddlers": 459,
         "craft_counts": {
-          "KAYAK": 15,
-          "OUTRIGGER": 4,
-          "PRONE/PADDLEBOARD": 103,
-          "SUP": 129,
-          "SURFSKI": 7
+          "KAYAK": 17,
+          "OUTRIGGER": 11,
+          "PRONE/PADDLEBOARD": 114,
+          "SUP": 293,
+          "SURFSKI": 30
         }
       }
     },
@@ -4969,6 +4965,21 @@
       ]
     },
     {
+      "name": "About Team River",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Abram, Clare",
       "crafts": [
         "SUP"
@@ -5440,7 +5451,7 @@
     {
       "name": "Adrian Hwang",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -6997,6 +7008,21 @@
       ]
     },
     {
+      "name": "Alex Leonard",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Alex LINNELL",
       "crafts": [
         "SUP"
@@ -7949,6 +7975,21 @@
       ]
     },
     {
+      "name": "Alison Rennie",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Alison Riddle",
       "crafts": [
         "SUP"
@@ -8239,7 +8280,7 @@
     {
       "name": "Allen Reitz",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -8363,6 +8404,21 @@
         {
           "source": "PaddleGuru graph",
           "california_event_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Allistair Swinsco",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -8640,7 +8696,7 @@
     {
       "name": "Alyssa Taylor",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -9008,6 +9064,21 @@
       ]
     },
     {
+      "name": "Amy Byers",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Amy Byers/John Dye Sausalito, CA - BPRC",
       "crafts": [
         "SURFSKI"
@@ -9096,7 +9167,7 @@
     {
       "name": "Amy Dosier",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -9217,6 +9288,21 @@
         {
           "source": "Webscorer California",
           "california_race_count": 2
+        }
+      ]
+    },
+    {
+      "name": "Amy Mosbey",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -9629,8 +9715,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -9639,6 +9726,9 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -10189,6 +10279,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Andrew Crisp SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -11155,7 +11260,7 @@
     {
       "name": "Ann Matteson",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -11387,7 +11492,6 @@
     {
       "name": "Anne Wells",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 3,
@@ -12063,10 +12167,12 @@
     {
       "name": "April Zilg",
       "crafts": [
+        "OUTRIGGER",
         "SUP"
       ],
-      "source_count": 2,
+      "source_count": 3,
       "sources": [
+        "Independent California archives",
         "SUP Racer California",
         "Webscorer California"
       ],
@@ -12084,6 +12190,9 @@
         },
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -12320,7 +12429,7 @@
     {
       "name": "Arlene Morimoto",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -12773,7 +12882,7 @@
     {
       "name": "Ashlee Gonzales",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -13110,6 +13219,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Austin Allen SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -14767,8 +14891,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -14777,6 +14902,9 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -15759,7 +15887,7 @@
     {
       "name": "Ben Fan",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -15812,6 +15940,21 @@
       ]
     },
     {
+      "name": "Ben Lawry",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Ben Lawry/Lise Oberth Fair Oaks, CA - Hui Waa",
       "crafts": [
         "SURFSKI"
@@ -15830,7 +15973,6 @@
     {
       "name": "Ben Lochtenberg",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -16980,8 +17122,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -16990,6 +17133,9 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -17065,6 +17211,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Bill Cheney SUP Under",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -17345,7 +17506,7 @@
     {
       "name": "Bill Prentice",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -18688,7 +18849,7 @@
     {
       "name": "Bob Ghiglieri",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -18980,7 +19141,6 @@
     {
       "name": "Bobbie Poppler",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -19159,6 +19319,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Bojan Bernard SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -19685,7 +19860,6 @@
     {
       "name": "Brad Gill",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -19812,7 +19986,7 @@
     {
       "name": "Brad Styron",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -20602,7 +20776,6 @@
     {
       "name": "Brendan Jew",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -20717,7 +20890,7 @@
     {
       "name": "Brendan Zotto",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -20820,7 +20993,7 @@
     {
       "name": "Brennan Hill",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -21160,6 +21333,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Brett Nelson",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -22071,8 +22259,9 @@
         "PRONE/PADDLEBOARD",
         "SUP"
       ],
-      "source_count": 2,
+      "source_count": 3,
       "sources": [
+        "Independent California archives",
         "SUP Racer California",
         "Webscorer California"
       ],
@@ -22087,6 +22276,24 @@
         },
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Brian Thomas Prone",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -22665,6 +22872,21 @@
       ]
     },
     {
+      "name": "Bruce Ahlbom SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Bruce Aldrich",
       "crafts": [
         "SUP"
@@ -22768,6 +22990,21 @@
       ]
     },
     {
+      "name": "Bruce Hales",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Bruce Neill Outrigger Santa Cruz",
       "crafts": [
         "OUTRIGGER"
@@ -22802,7 +23039,7 @@
     {
       "name": "Bruce Schwartz",
       "crafts": [
-        "SS-1"
+        "SURFSKI"
       ],
       "source_count": 1,
       "sources": [
@@ -22861,6 +23098,21 @@
         },
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Bruce Walters SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -24503,7 +24755,7 @@
     {
       "name": "Candice Loo",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -24806,6 +25058,21 @@
       ]
     },
     {
+      "name": "Carey Peabody",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Carina Lee Not NCOCA member",
       "crafts": [
         "OUTRIGGER"
@@ -24967,6 +25234,21 @@
       ]
     },
     {
+      "name": "Carlo Maravilla",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Carlo Marivilla",
       "crafts": [
         "SUP"
@@ -25118,7 +25400,7 @@
     {
       "name": "Carmen Cutter",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -25632,7 +25914,7 @@
     {
       "name": "Carter Teasdale",
       "crafts": [
-        "V-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -25706,8 +25988,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -25717,6 +26000,9 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -26270,6 +26556,21 @@
       ]
     },
     {
+      "name": "Cathy Huang SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Cathy O'Neil Rally",
       "crafts": [
         "SUP"
@@ -26419,14 +26720,18 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "PaddleGuru graph"
       ],
       "california_evidence": [
         {
           "source": "PaddleGuru graph",
           "california_event_count": 1
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -26978,7 +27283,7 @@
     {
       "name": "Channing Baker",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -27094,6 +27399,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Charles Locke",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -27296,6 +27616,21 @@
       ]
     },
     {
+      "name": "Charlie Banfield Prone Unlimited",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Charlie Bowman",
       "crafts": [
         "SUP"
@@ -27330,6 +27665,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Charlie Dresow SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -27436,7 +27786,7 @@
     {
       "name": "Charlotte Nurok",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -27475,7 +27825,7 @@
     {
       "name": "Chas Dutro",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -27889,7 +28239,7 @@
     {
       "name": "Cheryl Cooperrider",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -28635,7 +28985,6 @@
     {
       "name": "Chris Blank",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -28963,6 +29312,21 @@
       ]
     },
     {
+      "name": "Chris Farris",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Chris Ferreira",
       "crafts": [
         "SUP"
@@ -29068,6 +29432,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Chris Heisterkamp",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -29232,6 +29611,21 @@
       ]
     },
     {
+      "name": "Chris Matson",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Chris Moser",
       "crafts": [
         "SUP"
@@ -29326,6 +29720,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Chris Pope",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -29698,6 +30107,21 @@
       ]
     },
     {
+      "name": "Christian Johnson",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Christian Shubin",
       "crafts": [
         "SUP"
@@ -29839,7 +30263,7 @@
     {
       "name": "Christine Harris",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -30075,8 +30499,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -30086,13 +30511,16 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
     {
       "name": "Christopher Ekblad",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -30110,7 +30538,6 @@
     {
       "name": "Christopher Gee",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -30502,7 +30929,6 @@
     {
       "name": "Christy Smitheran",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -30976,6 +31402,21 @@
       ]
     },
     {
+      "name": "Claire Buchanan SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Claire Leung Not NCOCA member",
       "crafts": [
         "OUTRIGGER"
@@ -31177,7 +31618,7 @@
     {
       "name": "Claudio D'Amico",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -31780,6 +32221,21 @@
       ]
     },
     {
+      "name": "Cody Markhart",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Cody Raburn",
       "crafts": [
         "SUP"
@@ -31991,7 +32447,6 @@
     {
       "name": "COLE CROUCH",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -32493,6 +32948,21 @@
         {
           "source": "Webscorer California",
           "california_race_count": 2
+        }
+      ]
+    },
+    {
+      "name": "Complete Photos",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -34048,7 +34518,7 @@
     {
       "name": "Craig turner",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -34581,7 +35051,7 @@
     {
       "name": "Cynthia Mark",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -34863,7 +35333,7 @@
     {
       "name": "Daelen Purohit",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -36683,7 +37153,7 @@
     {
       "name": "Danielle Hamilton",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -36719,7 +37189,6 @@
     {
       "name": "Danny Ching",
       "crafts": [
-        "OC-1",
         "OUTRIGGER",
         "SUP"
       ],
@@ -37553,7 +38022,7 @@
     {
       "name": "Dave Brozowski",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -37734,11 +38203,41 @@
       ]
     },
     {
+      "name": "Dave Hook",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Dave Hook SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Dave Jensen",
       "crafts": [
         "OUTRIGGER",
-        "SS-1",
-        "SUP"
+        "SUP",
+        "SURFSKI"
       ],
       "source_count": 3,
       "sources": [
@@ -38968,6 +39467,21 @@
       ]
     },
     {
+      "name": "David Upchurch",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "David Vukadiwoutch",
       "crafts": [
         "SUP"
@@ -39174,6 +39688,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Davina Horstman",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -40133,7 +40662,6 @@
     {
       "name": "Debi Bober",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -40180,7 +40708,7 @@
     {
       "name": "Deborah A Politi",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -41314,7 +41842,7 @@
     {
       "name": "Diane Collier",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -42231,7 +42759,7 @@
     {
       "name": "Dolores Soto",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -42454,7 +42982,6 @@
     {
       "name": "Don Hart",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -42734,6 +43261,21 @@
       ]
     },
     {
+      "name": "Donna Hendrickson",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Donna's Ohana Ohana Wa'a",
       "crafts": [
         "OUTRIGGER"
@@ -42752,7 +43294,6 @@
     {
       "name": "Donna Schrag",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -43221,6 +43762,21 @@
       ]
     },
     {
+      "name": "Doug Kidder",
+      "crafts": [
+        "OUTRIGGER"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Doug Kidder Berkeley Paddling & Rowing - Doug Kidder",
       "crafts": [
         "OUTRIGGER"
@@ -43346,8 +43902,7 @@
     {
       "name": "Doug Vojtko",
       "crafts": [
-        "OC-1",
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -43729,7 +44284,7 @@
     {
       "name": "Drew Marsh",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -44219,8 +44774,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -44229,6 +44785,9 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -44771,9 +45330,24 @@
       ]
     },
     {
+      "name": "Eamonn McCarey",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Earl Almario",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -45502,6 +46076,21 @@
       ]
     },
     {
+      "name": "Elaine Baden",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Elaine Peat-Foster",
       "crafts": [
         "SUP"
@@ -45683,6 +46272,21 @@
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Eliece Horton",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -45958,7 +46562,7 @@
     {
       "name": "Elle Law",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -45970,6 +46574,21 @@
       "california_evidence": [
         {
           "source": "Outrigger World Southern California"
+        }
+      ]
+    },
+    {
+      "name": "Ellen Hoke Photo Gallery",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -46522,7 +47141,7 @@
     {
       "name": "Emily Turner",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -46809,7 +47428,7 @@
     {
       "name": "Enzo Calandra",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -47328,7 +47947,7 @@
     {
       "name": "Eric Holmberg",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -47545,7 +48164,7 @@
     {
       "name": "Eric Sjoberg",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -47883,6 +48502,21 @@
       ]
     },
     {
+      "name": "Erik Ford",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Erik Jackson",
       "crafts": [
         "PRONE/PADDLEBOARD"
@@ -48105,7 +48739,7 @@
     {
       "name": "Erin Kessler",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -48117,6 +48751,21 @@
       "california_evidence": [
         {
           "source": "Outrigger World Southern California"
+        }
+      ]
+    },
+    {
+      "name": "Erin McGehee",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -48877,7 +49526,7 @@
     {
       "name": "Evan Derdowski",
       "crafts": [
-        "OC-2",
+        "OUTRIGGER",
         "SUP",
         "SURFSKI"
       ],
@@ -49090,6 +49739,21 @@
       ]
     },
     {
+      "name": "Event Name",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Evian (137) Kilohana Outrigger Canoe Club",
       "crafts": [
         "OUTRIGGER"
@@ -49188,7 +49852,7 @@
     {
       "name": "Ezekiel Stevens",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -50061,7 +50725,7 @@
     {
       "name": "Finn Martin",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -51074,6 +51738,21 @@
       ]
     },
     {
+      "name": "Frank Peretto",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Frank Perna",
       "crafts": [
         "SUP"
@@ -51158,6 +51837,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Frank Perrott SUP Under",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -51288,6 +51982,21 @@
       ]
     },
     {
+      "name": "Fred Andersen SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Fred Anderson",
       "crafts": [
         "SUP"
@@ -51346,6 +52055,21 @@
       ]
     },
     {
+      "name": "Free Swap Meet San",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "#Freesteamies Ho'okahi Pu'uwai Outrigger Canoe Club",
       "crafts": [
         "OUTRIGGER"
@@ -51358,6 +52082,36 @@
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Friday December",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Friday March",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -51380,7 +52134,6 @@
     {
       "name": "Fritz Kunzel",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -53093,12 +53846,28 @@
       ]
     },
     {
-      "name": "Gary Leong",
+      "name": "Gary Leon",
       "crafts": [
         "SUP"
       ],
       "source_count": 1,
       "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Gary Leong",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 2,
+      "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -53109,6 +53878,9 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -53666,10 +54438,12 @@
       "name": "Geoff James",
       "crafts": [
         "OUTRIGGER",
+        "PRONE/PADDLEBOARD",
         "SUP"
       ],
-      "source_count": 2,
+      "source_count": 3,
       "sources": [
+        "Independent California archives",
         "SUP Racer California",
         "Webscorer California"
       ],
@@ -53686,6 +54460,9 @@
         },
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -53718,6 +54495,36 @@
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Geoff Schwarten SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Geoff Sears",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -55997,8 +56804,9 @@
         "OUTRIGGER",
         "SUP"
       ],
-      "source_count": 2,
+      "source_count": 3,
       "sources": [
+        "Independent California archives",
         "SUP Racer California",
         "Webscorer California"
       ],
@@ -56013,6 +56821,9 @@
         },
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -56078,6 +56889,21 @@
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Grant Mcfadyen SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -57642,7 +58468,7 @@
     {
       "name": "Guillaume Escarguel",
       "crafts": [
-        "OC-1",
+        "OUTRIGGER",
         "SUP"
       ],
       "source_count": 2,
@@ -57700,7 +58526,7 @@
     {
       "name": "Gunnar Apgar",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -57718,7 +58544,7 @@
     {
       "name": "Guppy Barbosa",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -57937,6 +58763,21 @@
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Haakon Hoyer",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -58791,7 +59632,7 @@
     {
       "name": "Harbulot Darren",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -59486,10 +60327,12 @@
     {
       "name": "Heather Davis",
       "crafts": [
-        "SUP"
+        "SUP",
+        "SURFSKI"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -59498,6 +60341,9 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -59620,7 +60466,7 @@
     {
       "name": "Heather McIsaac",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -59670,7 +60516,7 @@
     {
       "name": "Heather Paff",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -59825,7 +60671,7 @@
     {
       "name": "Heidi Alonzo",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -60127,8 +60973,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -60139,6 +60986,9 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -60710,6 +61560,21 @@
       ]
     },
     {
+      "name": "Hilary Andersen SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Hill, Steve Benicia, CA - Benicia",
       "crafts": [
         "OUTRIGGER"
@@ -60902,7 +61767,7 @@
     {
       "name": "Hiro Koh",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -63334,14 +64199,18 @@
       "crafts": [
         "OUTRIGGER"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "Webscorer California"
       ],
       "california_evidence": [
         {
           "source": "Webscorer California",
           "california_race_count": 3
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -63724,10 +64593,12 @@
     {
       "name": "Ian Rice",
       "crafts": [
+        "SUP",
         "SURFSKI"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "PaddleGuru graph"
       ],
       "public_handles": [
@@ -63737,6 +64608,9 @@
         {
           "source": "PaddleGuru graph",
           "california_event_count": 1
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -64528,7 +65402,7 @@
     {
       "name": "Irene Halderman",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -64546,7 +65420,7 @@
     {
       "name": "Irina Vulakh",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -65174,6 +66048,21 @@
       "name": "Jack O'Shaughnessy Men's Prone",
       "crafts": [
         "PRONE/PADDLEBOARD"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Jack Schmitz SUP",
+      "crafts": [
+        "SUP"
       ],
       "source_count": 1,
       "sources": [
@@ -65864,9 +66753,24 @@
       ]
     },
     {
+      "name": "Jaime Serrano",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Jaimee Drew",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -66113,7 +67017,7 @@
     {
       "name": "Jake Pham",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -66207,7 +67111,7 @@
     {
       "name": "James Anderson",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -66507,6 +67411,21 @@
       ]
     },
     {
+      "name": "James Robison SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "James Spithill",
       "crafts": [
         "SUP"
@@ -66722,8 +67641,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 2,
+      "source_count": 3,
       "sources": [
+        "Independent California archives",
         "SUP Racer California",
         "Webscorer California"
       ],
@@ -66737,6 +67657,24 @@
         },
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Jamie Willin SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -67024,6 +67962,36 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Janet Walp SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Janet Whittick",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -68557,10 +69525,12 @@
       "name": "Jay Wild",
       "crafts": [
         "OUTRIGGER",
-        "SUP"
+        "SUP",
+        "SURFSKI"
       ],
-      "source_count": 3,
+      "source_count": 4,
       "sources": [
+        "Independent California archives",
         "PaddleGuru graph",
         "SUP Racer California",
         "Webscorer California"
@@ -68589,6 +69559,9 @@
         },
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -69043,6 +70016,21 @@
       ]
     },
     {
+      "name": "Jeff Broffman",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Jeff Castleberry",
       "crafts": [
         "SURFSKI"
@@ -69066,8 +70054,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "PaddleGuru graph"
       ],
       "public_handles": [
@@ -69077,6 +70066,9 @@
         {
           "source": "PaddleGuru graph",
           "california_event_count": 2
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -69257,6 +70249,21 @@
       ]
     },
     {
+      "name": "Jeff Kay",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Jeff Koch",
       "crafts": [
         "SUP"
@@ -69322,6 +70329,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Jeff Locke",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -69423,6 +70445,21 @@
       "name": "Jeff Omdahl Guest",
       "crafts": [
         "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Jeff Patrick SUP",
+      "crafts": [
+        "SUP"
       ],
       "source_count": 1,
       "sources": [
@@ -69852,8 +70889,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 2,
+      "source_count": 3,
       "sources": [
+        "Independent California archives",
         "SUP Racer California",
         "Webscorer California"
       ],
@@ -69870,6 +70908,9 @@
         },
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -69980,7 +71021,7 @@
     {
       "name": "Jene Green",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -70546,6 +71587,21 @@
       ]
     },
     {
+      "name": "Jennifer Lewis",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Jennifer Ostner",
       "crafts": [
         "OUTRIGGER"
@@ -70735,7 +71791,7 @@
     {
       "name": "Jenny Ricks",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -71509,7 +72565,6 @@
     {
       "name": "Jerry Marcil",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -71790,6 +72845,21 @@
       ]
     },
     {
+      "name": "Jessica Fewless SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Jessica Gates",
       "crafts": [
         "SUP"
@@ -71883,7 +72953,7 @@
     {
       "name": "Jessica Wong",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -72217,7 +73287,7 @@
     {
       "name": "Jill Dorsey",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -72361,7 +73431,7 @@
     {
       "name": "Jim Baumann",
       "crafts": [
-        "OC-2",
+        "OUTRIGGER",
         "SUP"
       ],
       "source_count": 2,
@@ -73372,6 +74442,21 @@
       ]
     },
     {
+      "name": "Jitka Hiscox",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Jo Ambrosi",
       "crafts": [
         "SUP"
@@ -73723,7 +74808,7 @@
     {
       "name": "Joe Bober",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -74366,6 +75451,21 @@
       ]
     },
     {
+      "name": "John Alexiou SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "John Allen",
       "crafts": [
         "SUP"
@@ -74383,6 +75483,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "John Allen SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -74829,6 +75944,21 @@
       ]
     },
     {
+      "name": "John Dye",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "John Dye/Elaine Baden Richmond, CA - BPRC",
       "crafts": [
         "SURFSKI"
@@ -75208,6 +76338,21 @@
       ]
     },
     {
+      "name": "John Green",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "John Griffith",
       "crafts": [
         "SUP"
@@ -75250,8 +76395,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -75260,6 +76406,9 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -76017,10 +77166,12 @@
     {
       "name": "John Walsh",
       "crafts": [
+        "PRONE/PADDLEBOARD",
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -76032,6 +77183,39 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "John Walsh SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "John Weed",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -76202,7 +77386,6 @@
     {
       "name": "Johnny Vieira",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 3,
@@ -76971,7 +78154,7 @@
     {
       "name": "Jonathan Mason",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -77211,8 +78394,9 @@
       "crafts": [
         "SURFSKI"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "PaddleGuru graph"
       ],
       "public_handles": [
@@ -77222,6 +78406,9 @@
         {
           "source": "PaddleGuru graph",
           "california_event_count": 1
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -77542,14 +78729,18 @@
       "crafts": [
         "OUTRIGGER"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "Webscorer California"
       ],
       "california_evidence": [
         {
           "source": "Webscorer California",
           "california_race_count": 4
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -77622,7 +78813,7 @@
     {
       "name": "Joseph Hsia",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -77833,7 +79024,6 @@
     {
       "name": "Josette Badeaux",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -78078,7 +79268,7 @@
     {
       "name": "Joshua Hwung",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -78164,6 +79354,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Joshua Sims",
+      "crafts": [
+        "PRONE/PADDLEBOARD"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -78565,7 +79770,7 @@
     {
       "name": "Judson grey",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -78931,7 +80136,7 @@
     {
       "name": "Julie Cornejo",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -79086,7 +80291,7 @@
     {
       "name": "Julie Rogers",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -79137,8 +80342,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -79150,6 +80356,24 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Julie Stevens SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -79279,6 +80503,21 @@
       ]
     },
     {
+      "name": "Julieta Gismondi",
+      "crafts": [
+        "PRONE/PADDLEBOARD"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Juliette Clark",
       "crafts": [
         "SUP"
@@ -79351,7 +80590,7 @@
     {
       "name": "Junette Mccarthy",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -79369,7 +80608,7 @@
     {
       "name": "Juni Banico",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -79882,6 +81121,21 @@
       ]
     },
     {
+      "name": "Justin Banfield SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Justin Beutel",
       "crafts": [
         "OUTRIGGER"
@@ -79955,7 +81209,6 @@
     {
       "name": "Justin Chi",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -80235,6 +81488,21 @@
       ]
     },
     {
+      "name": "Justin Paulson",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Justin & Sally Chi",
       "crafts": [
         "OUTRIGGER"
@@ -80342,7 +81610,7 @@
     {
       "name": "Justus Timmerman",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -81613,7 +82881,7 @@
     {
       "name": "Kainoa Lee",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -81745,7 +83013,7 @@
     {
       "name": "KAISEI IKEDA",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -81987,6 +83255,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Kalia Alexiou SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -82303,7 +83586,7 @@
     {
       "name": "Karan Chen",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -82472,9 +83755,23 @@
       ]
     },
     {
+      "name": "Karen Jeffrey SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Karen Jewel",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -82662,7 +83959,7 @@
     {
       "name": "Karl Fjoslien",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -82825,7 +84122,6 @@
     {
       "name": "Kas Metzler",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -82870,7 +84166,6 @@
     {
       "name": "Kasey Kunstmanas",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -83238,7 +84533,7 @@
     {
       "name": "Kathy Lynch",
       "crafts": [
-        "OC-1",
+        "OUTRIGGER",
         "SUP"
       ],
       "source_count": 2,
@@ -83266,7 +84561,7 @@
     {
       "name": "Kathy Sheets",
       "crafts": [
-        "V-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -83435,7 +84730,7 @@
     {
       "name": "Katy Nicholls-Rivera",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -84608,6 +85903,21 @@
       ]
     },
     {
+      "name": "Keith Mcconnaughay SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Keith Mcnulty",
       "crafts": [
         "SUP"
@@ -84710,7 +86020,6 @@
     {
       "name": "Kel Schwartz",
       "crafts": [
-        "OC-2",
         "OUTRIGGER",
         "PRONE/PADDLEBOARD",
         "SUP"
@@ -84758,6 +86067,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Kellee Adams",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -85173,7 +86497,7 @@
     {
       "name": "Kelton Durham",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -85720,7 +87044,7 @@
     {
       "name": "Kenny KANEKO",
       "crafts": [
-        "OC-1",
+        "OUTRIGGER",
         "SUP"
       ],
       "source_count": 2,
@@ -86144,7 +87468,7 @@
     {
       "name": "Kerry Thompson",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -86908,7 +88232,6 @@
     {
       "name": "Khanh Nguyen",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -89827,7 +91150,7 @@
     {
       "name": "Krista Marsh",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -91326,8 +92649,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "PaddleGuru graph"
       ],
       "public_handles": [
@@ -91337,6 +92661,9 @@
         {
           "source": "PaddleGuru graph",
           "california_event_count": 1
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -93383,6 +94710,21 @@
       ]
     },
     {
+      "name": "Lawrence Moss",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Lawrence Wong Not NCOCA club member",
       "crafts": [
         "OUTRIGGER"
@@ -93547,7 +94889,6 @@
     {
       "name": "Leah Ching",
       "crafts": [
-        "OC-1",
         "OUTRIGGER",
         "PRONE/PADDLEBOARD",
         "SUP",
@@ -93653,7 +94994,7 @@
     {
       "name": "Leanne Stanley",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -94489,6 +95830,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Leo Montero",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -95402,7 +96758,6 @@
     {
       "name": "Liam Kelly",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 3,
@@ -96007,6 +97362,21 @@
       ]
     },
     {
+      "name": "Linda Willyard",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Lindley Hill",
       "crafts": [
         "SUP"
@@ -96138,7 +97508,6 @@
     {
       "name": "Lindsey Richman",
       "crafts": [
-        "OC-1",
         "OUTRIGGER",
         "SURFSKI"
       ],
@@ -96490,10 +97859,12 @@
     {
       "name": "Lise Oberth",
       "crafts": [
+        "SUP",
         "SURFSKI"
       ],
-      "source_count": 2,
+      "source_count": 3,
       "sources": [
+        "Independent California archives",
         "PaddleGuru graph",
         "Webscorer California"
       ],
@@ -96508,6 +97879,9 @@
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -96864,7 +98238,7 @@
     {
       "name": "Liz Scoles",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -96964,7 +98338,7 @@
     {
       "name": "Lochlan Hughes",
       "crafts": [
-        "V-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -97729,7 +99103,7 @@
     {
       "name": "Loren Wolverton",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -97785,8 +99159,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -97795,6 +99170,24 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Lori Drourr SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -97849,7 +99242,6 @@
     {
       "name": "Lori Musico",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -98724,6 +100116,21 @@
       ]
     },
     {
+      "name": "Luke Allen SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Luke Erickson",
       "crafts": [
         "SUP"
@@ -99123,7 +100530,7 @@
     {
       "name": "Lynn Milosz",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -99657,6 +101064,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Madeleine King SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -100813,7 +102235,7 @@
     {
       "name": "Marc Nemeth",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -100947,7 +102369,7 @@
     {
       "name": "Marcus Goncalves",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -101187,7 +102609,7 @@
     {
       "name": "Maria Cacho",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -101827,6 +103249,21 @@
       ]
     },
     {
+      "name": "Mark Cappa",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Mark Carlisle",
       "crafts": [
         "SUP"
@@ -101861,6 +103298,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Mark Claar",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -102249,6 +103701,21 @@
       ]
     },
     {
+      "name": "Mark Preece",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Mark Quest",
       "crafts": [
         "SUP"
@@ -102630,10 +104097,12 @@
     {
       "name": "Marsha Arnold",
       "crafts": [
+        "KAYAK",
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "PaddleGuru graph"
       ],
       "public_handles": [
@@ -102643,6 +104112,9 @@
         {
           "source": "PaddleGuru graph",
           "california_event_count": 1
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -104508,7 +105980,7 @@
     {
       "name": "Matt Ka'ainoni",
       "crafts": [
-        "OC-1",
+        "OUTRIGGER",
         "SUP"
       ],
       "source_count": 2,
@@ -105476,7 +106948,7 @@
     {
       "name": "Matthew Schubert",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -105541,6 +107013,21 @@
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Matthew Vosti",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -105695,7 +107182,7 @@
     {
       "name": "Maureen Taylor",
       "crafts": [
-        "OC-1",
+        "OUTRIGGER",
         "SUP"
       ],
       "source_count": 2,
@@ -106028,7 +107515,7 @@
     {
       "name": "Max Mironov",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -106048,8 +107535,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -106058,6 +107546,9 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -107433,6 +108924,21 @@
       ]
     },
     {
+      "name": "Mel Selvidge",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Mel Wygal",
       "crafts": [
         "SUP"
@@ -107785,7 +109291,7 @@
     {
       "name": "Mellisa Davis",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -108548,7 +110054,6 @@
     {
       "name": "Michael D'Angelo",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -108762,7 +110267,7 @@
     {
       "name": "Michael Gabor",
       "crafts": [
-        "OC-2",
+        "OUTRIGGER",
         "SUP",
         "SURFSKI"
       ],
@@ -108918,6 +110423,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Michael Irete SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -109287,8 +110807,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -109301,6 +110822,9 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -110343,7 +111867,7 @@
     {
       "name": "Michele Pomroy",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -110524,7 +112048,6 @@
     {
       "name": "Michelle Jenkin",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -110819,7 +112342,7 @@
     {
       "name": "Micki Karrer",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -111155,7 +112678,6 @@
     {
       "name": "Mike Caputo",
       "crafts": [
-        "OC-1",
         "OUTRIGGER",
         "SUP"
       ],
@@ -111238,6 +112760,21 @@
       ]
     },
     {
+      "name": "Mike Crimmins SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Mike, Cyril, & Joel Sausalito, CA - Wavechaser",
       "crafts": [
         "SURFSKI"
@@ -111289,6 +112826,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Mike Degrosso",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -112130,6 +113682,21 @@
         {
           "source": "PaddleGuru graph",
           "california_event_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Mike O’Donnell",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -115221,7 +116788,7 @@
     {
       "name": "Nancy Jang",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -115233,6 +116800,21 @@
       "california_evidence": [
         {
           "source": "Outrigger World Southern California"
+        }
+      ]
+    },
+    {
+      "name": "Nancy Myers",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -115442,7 +117024,7 @@
     {
       "name": "Natalie Rigolet",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -115555,7 +117137,7 @@
     {
       "name": "Nate Steiger",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -115814,7 +117396,7 @@
     {
       "name": "Natsumi Baba",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -116146,7 +117728,7 @@
     {
       "name": "Nella Fronti",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -116279,7 +117861,7 @@
     {
       "name": "Netpheel Wang",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -117126,7 +118708,7 @@
     {
       "name": "Nick Pasquarella",
       "crafts": [
-        "OC-1",
+        "OUTRIGGER",
         "PRONE/PADDLEBOARD"
       ],
       "source_count": 2,
@@ -117316,7 +118898,7 @@
     {
       "name": "Nicole Cavanagh",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -118061,6 +119643,21 @@
       ]
     },
     {
+      "name": "Noa Rubin",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Noah Defaii Kilohana - Noah",
       "crafts": [
         "OUTRIGGER"
@@ -118329,7 +119926,7 @@
     {
       "name": "Noele Maguire",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -120438,7 +122035,7 @@
     {
       "name": "Olaf Pippel",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -124557,7 +126154,7 @@
     {
       "name": "Pamela Gerk-Rivas",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -125385,7 +126982,7 @@
     {
       "name": "Patrick Reeder",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -125691,6 +127288,21 @@
       ]
     },
     {
+      "name": "Paul Foxx",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Paul Gagnon",
       "crafts": [
         "SUP"
@@ -125810,7 +127422,6 @@
     {
       "name": "Paul Jacob",
       "crafts": [
-        "OC-2",
         "OUTRIGGER",
         "SURFSKI"
       ],
@@ -125880,16 +127491,21 @@
     {
       "name": "Paul MacIntyre",
       "crafts": [
+        "PRONE/PADDLEBOARD",
         "SURFSKI"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "Webscorer California"
       ],
       "california_evidence": [
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -126258,16 +127874,21 @@
     {
       "name": "Pe'a Laupati",
       "crafts": [
-        "OUTRIGGER"
+        "OUTRIGGER",
+        "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "Webscorer California"
       ],
       "california_evidence": [
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -126754,7 +128375,7 @@
     {
       "name": "Pete Bagoye",
       "crafts": [
-        "OC-1",
+        "OUTRIGGER",
         "SUP"
       ],
       "source_count": 2,
@@ -126834,8 +128455,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -126844,6 +128466,9 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -127321,6 +128946,21 @@
       ]
     },
     {
+      "name": "Phil Barow",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Phil Coffman",
       "crafts": [
         "SUP"
@@ -127413,6 +129053,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Phil Ruttenburg",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -127956,7 +129611,7 @@
     {
       "name": "Pilar Cayton",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -130791,7 +132446,6 @@
     {
       "name": "Rachel Alvarez",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -131599,7 +133253,7 @@
     {
       "name": "Ray Zhao",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -132549,7 +134203,7 @@
     {
       "name": "Reni Kupke",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -133101,8 +134755,8 @@
     {
       "name": "Rich Long",
       "crafts": [
-        "SS-1",
-        "SUP"
+        "SUP",
+        "SURFSKI"
       ],
       "source_count": 2,
       "sources": [
@@ -133800,6 +135454,21 @@
       ]
     },
     {
+      "name": "Rick Coven",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Rick Fitzpatrick",
       "crafts": [
         "SUP"
@@ -133955,6 +135624,21 @@
       ]
     },
     {
+      "name": "Rick Simonsen",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Rick Stinson",
       "crafts": [
         "SUP"
@@ -134003,7 +135687,6 @@
     {
       "name": "Ricky Ikeda",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -134122,6 +135805,21 @@
           "event": "Rock 2 Rock 2026",
           "region": "Catalina Island to San Pedro, California",
           "url": "https://paddleguru.com/races/Rock2Rock2026/startlist"
+        }
+      ]
+    },
+    {
+      "name": "Riley Hurd SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -134492,6 +136190,21 @@
       ]
     },
     {
+      "name": "Rob Glatthaar",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Rob Graham",
       "crafts": [
         "SUP"
@@ -134661,7 +136374,6 @@
     {
       "name": "Rob Pelkey",
       "crafts": [
-        "SS-1",
         "SUP",
         "SURFSKI"
       ],
@@ -134892,7 +136604,6 @@
     {
       "name": "Robby Gibbs",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -134952,7 +136663,7 @@
     {
       "name": "Robert Cassidy",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -135236,6 +136947,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Robert Macias SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -135718,7 +137444,7 @@
     {
       "name": "Robin Maclean",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -136276,6 +138002,21 @@
       ]
     },
     {
+      "name": "Rod De La",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Rod De La Rosa",
       "crafts": [
         "SUP"
@@ -136427,7 +138168,6 @@
     {
       "name": "Rogelio Zamora",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 3,
@@ -137173,7 +138913,6 @@
     {
       "name": "Rory McGuire",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 3,
@@ -137458,7 +139197,7 @@
     {
       "name": "Ross Flemer",
       "crafts": [
-        "OC-1",
+        "OUTRIGGER",
         "SUP"
       ],
       "source_count": 2,
@@ -137974,6 +139713,21 @@
       ]
     },
     {
+      "name": "Rune Hoyer",
+      "crafts": [
+        "OUTRIGGER"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Rune Hoyer-Nielsen",
       "crafts": [
         "SUP"
@@ -138348,7 +140102,7 @@
     {
       "name": "Ryan Clary",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -138921,8 +140675,7 @@
     {
       "name": "Ryland Hart",
       "crafts": [
-        "OC-1",
-        "OC-2",
+        "OUTRIGGER",
         "SUP"
       ],
       "source_count": 2,
@@ -139563,7 +141316,6 @@
     {
       "name": "Sam Sloves",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -140256,7 +142008,6 @@
     {
       "name": "sarah donovan",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -140538,6 +142289,66 @@
       ]
     },
     {
+      "name": "Saturday April",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Saturday February",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Saturday January",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Saturday March",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Saturn - Kilohana Kilohana Outrigger Canoe Club",
       "crafts": [
         "OUTRIGGER"
@@ -140572,7 +142383,7 @@
     {
       "name": "Saul Dobson",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -140620,6 +142431,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Savion Saint",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -141072,6 +142898,21 @@
       ]
     },
     {
+      "name": "Scott Amos SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Scott Boyles",
       "crafts": [
         "SUP"
@@ -141395,7 +143236,7 @@
     {
       "name": "Scott Granger",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -142419,8 +144260,9 @@
       "crafts": [
         "PRONE/PADDLEBOARD"
       ],
-      "source_count": 2,
+      "source_count": 3,
       "sources": [
+        "Independent California archives",
         "PaddleGuru graph",
         "PaddleGuru seed crawl"
       ],
@@ -142437,6 +144279,9 @@
         {
           "source": "PaddleGuru graph",
           "california_event_count": 1
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -142482,8 +144327,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -142493,6 +144339,9 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -143262,6 +145111,21 @@
       ]
     },
     {
+      "name": "Seth Besse SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Seth Springer",
       "crafts": [
         "SUP"
@@ -143848,6 +145712,21 @@
       ]
     },
     {
+      "name": "Shane Mccan",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Shane Premer Men's Prone",
       "crafts": [
         "PRONE/PADDLEBOARD"
@@ -143949,8 +145828,9 @@
       "crafts": [
         "SUP"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "SUP Racer California"
       ],
       "years": [
@@ -143959,6 +145839,24 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        },
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Shanna Upton SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -144294,6 +146192,36 @@
       ]
     },
     {
+      "name": "Shawn Callahan",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Shawn Callahan SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Shawn Fejerang",
       "crafts": [
         "SUP"
@@ -144533,6 +146461,21 @@
       ]
     },
     {
+      "name": "Sheila Anderson- Troy",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Sheila Flores",
       "crafts": [
         "SUP"
@@ -144553,7 +146496,7 @@
     {
       "name": "Sheila Morris",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -145368,7 +147311,7 @@
     {
       "name": "Sienna Ploeger",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -145843,9 +147786,23 @@
       ]
     },
     {
+      "name": "Skye Davies",
+      "crafts": [
+        "PRONE/PADDLEBOARD"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Skyler Mak",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -147248,7 +149205,6 @@
     {
       "name": "Spencer Allen",
       "crafts": [
-        "OC-1",
         "OUTRIGGER",
         "SURFSKI"
       ],
@@ -147403,8 +149359,8 @@
     {
       "name": "Spencer YORK",
       "crafts": [
-        "SS-1",
-        "SUP"
+        "SUP",
+        "SURFSKI"
       ],
       "source_count": 2,
       "sources": [
@@ -147746,6 +149702,22 @@
       ]
     },
     {
+      "name": "Sr. Masters",
+      "crafts": [
+        "OUTRIGGER",
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Sr Mixed Bag (54 Avg) #103 NCOCA",
       "crafts": [
         "OUTRIGGER"
@@ -147937,7 +149909,7 @@
     {
       "name": "Stacy Mason",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -148255,7 +150227,7 @@
     {
       "name": "Steeve Teihotaata",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -149007,7 +150979,6 @@
     {
       "name": "Stephen Rodi",
       "crafts": [
-        "OC-1",
         "OUTRIGGER",
         "SUP"
       ],
@@ -149044,7 +151015,7 @@
     {
       "name": "Stephen Sinkus",
       "crafts": [
-        "OC-1",
+        "OUTRIGGER",
         "PRONE/PADDLEBOARD",
         "SUP"
       ],
@@ -149294,6 +151265,21 @@
       ]
     },
     {
+      "name": "Steve Davies",
+      "crafts": [
+        "PRONE/PADDLEBOARD"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Steve Drottar",
       "crafts": [
         "SUP"
@@ -149392,7 +151378,7 @@
     {
       "name": "Steve Haltom",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -149482,7 +151468,7 @@
     {
       "name": "Steve Jewel",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -149693,6 +151679,21 @@
       ]
     },
     {
+      "name": "Steve Smith SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Steve Tarantino",
       "crafts": [
         "SUP"
@@ -149830,6 +151831,21 @@
         {
           "source": "PaddleGuru graph",
           "california_event_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Steven Juliani SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -149987,6 +152003,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Stewart Brant",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -150601,6 +152632,21 @@
       ]
     },
     {
+      "name": "Sue Baker",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Sue Barrett",
       "crafts": [
         "SUP"
@@ -150939,6 +152985,51 @@
       ]
     },
     {
+      "name": "Sunday February",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Sunday January",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Sunday March",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Sunny Cove (Spec Osc) Outrigger Santa Cruz",
       "crafts": [
         "OUTRIGGER"
@@ -151035,6 +153126,21 @@
       ]
     },
     {
+      "name": "Sunshine Smith",
+      "crafts": [
+        "OUTRIGGER"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "SUP All Around",
       "crafts": [
         "SUP"
@@ -151110,6 +153216,21 @@
       ]
     },
     {
+      "name": "SUP Inflatable",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "SUP Paddles",
       "crafts": [
         "SUP"
@@ -151144,6 +153265,21 @@
     },
     {
       "name": "SUP Stand-up",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "SUP Stock",
       "crafts": [
         "SUP"
       ],
@@ -151234,6 +153370,21 @@
     },
     {
       "name": "SUP Under",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Super Dave",
       "crafts": [
         "SUP"
       ],
@@ -151428,7 +153579,7 @@
     {
       "name": "Susan Wynn",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -151467,7 +153618,6 @@
     {
       "name": "Susanna Ieng",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -151622,7 +153772,7 @@
     {
       "name": "Suzanne Serafin",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -154243,7 +156393,6 @@
     {
       "name": "Tara Zamora",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 3,
@@ -154324,6 +156473,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Tasha Hacker",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -154409,7 +156573,7 @@
     {
       "name": "Taylor Doherty",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -154581,7 +156745,6 @@
     {
       "name": "Taylor Mar",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -154738,7 +156901,7 @@
     {
       "name": "Taz Lee",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -154896,6 +157059,51 @@
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Team Accel David",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Team Accel Jack",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Team Accel Steph",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -155764,6 +157972,21 @@
       ]
     },
     {
+      "name": "Team Fundraisers",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Team Glazed O Kalani Outrigger Canoe Club",
       "crafts": [
         "OUTRIGGER"
@@ -156052,6 +158275,81 @@
       ]
     },
     {
+      "name": "Team Lob Daniel",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Team Lob Dominic",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Team Lob Michelle",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Team Lob Raphael",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Team LOB Tony",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Team Maknut Dublin, CA - Kilohana OCC",
       "crafts": [
         "OUTRIGGER"
@@ -156144,6 +158442,21 @@
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Team Marin",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -156592,6 +158905,21 @@
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Team River Runner",
+      "crafts": [
+        "KAYAK"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -157510,9 +159838,23 @@
       ]
     },
     {
+      "name": "Teresa Rogerson",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Teresa Wilson",
       "crafts": [
-        "OC-2",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -157710,7 +160052,7 @@
     {
       "name": "Terrence Leong",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -159511,7 +161853,7 @@
     {
       "name": "Theresa Mulder",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -159561,7 +161903,6 @@
     {
       "name": "Thiago Giacomellii",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -159776,6 +162117,21 @@
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Thomas Crackel",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -160428,6 +162784,37 @@
       ]
     },
     {
+      "name": "Thursday December",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Thursday March",
+      "crafts": [
+        "SUP",
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Tiago CAMPOS",
       "crafts": [
         "SUP"
@@ -160694,10 +163081,12 @@
     {
       "name": "Tiffney Ottoboni",
       "crafts": [
-        "KAYAK"
+        "KAYAK",
+        "SURFSKI"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
+        "Independent California archives",
         "PaddleGuru graph"
       ],
       "public_handles": [
@@ -160707,6 +163096,9 @@
         {
           "source": "PaddleGuru graph",
           "california_event_count": 1
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -160777,7 +163169,6 @@
     {
       "name": "Tim Albright",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -160954,6 +163345,36 @@
       ]
     },
     {
+      "name": "Tim Cogliandro",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
+      "name": "Tim Cornwell",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Tim CYPRIEN",
       "crafts": [
         "SUP"
@@ -160974,7 +163395,7 @@
     {
       "name": "Tim Dougherty",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -162038,6 +164459,21 @@
       ]
     },
     {
+      "name": "Todd Bowers",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Todd Caranto",
       "crafts": [
         "SUP"
@@ -162299,7 +164735,7 @@
     {
       "name": "Tom Balcom",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -162413,6 +164849,21 @@
       "california_evidence": [
         {
           "source": "SUP Racer California"
+        }
+      ]
+    },
+    {
+      "name": "Tom Funke",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -162765,6 +165216,21 @@
       ]
     },
     {
+      "name": "Tom Sher SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Tom Stephenson",
       "crafts": [
         "SUP"
@@ -162965,6 +165431,21 @@
           "event": "Malibu Downwinder 2026",
           "region": "Malibu, California",
           "url": "https://paddleguru.com/races/Malibudownwinder2026/results"
+        }
+      ]
+    },
+    {
+      "name": "Tommy Durkin SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -163214,7 +165695,7 @@
     {
       "name": "Tony Hart",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -163478,7 +165959,7 @@
     {
       "name": "Tori Hennessy",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -164704,6 +167185,21 @@
       ]
     },
     {
+      "name": "Tripp Harrison",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Trish MILLER",
       "crafts": [
         "SUP"
@@ -165138,6 +167634,21 @@
         {
           "source": "Webscorer California",
           "california_race_count": 1
+        }
+      ]
+    },
+    {
+      "name": "Tuesday February",
+      "crafts": [
+        "SURFSKI"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
         }
       ]
     },
@@ -165779,7 +168290,6 @@
     {
       "name": "Tyler Wong",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -165842,7 +168352,6 @@
     {
       "name": "Tyson Poppler",
       "crafts": [
-        "SS-1",
         "SUP",
         "SURFSKI"
       ],
@@ -166733,6 +169242,21 @@
       ]
     },
     {
+      "name": "Van Halbach SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Vania Bernatsky",
       "crafts": [
         "SUP"
@@ -167067,7 +169591,7 @@
     {
       "name": "Victor Rosenthal",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -167171,7 +169695,6 @@
     {
       "name": "Viet Hoang",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -167326,9 +169849,24 @@
       ]
     },
     {
+      "name": "Vincent Huang SUP",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Vincent Omahen",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -167562,7 +170100,6 @@
     {
       "name": "Vinny Rosato",
       "crafts": [
-        "OC-1",
         "OUTRIGGER"
       ],
       "source_count": 2,
@@ -168049,8 +170586,8 @@
     {
       "name": "Wade Williford",
       "crafts": [
-        "SUP",
-        "V-1"
+        "OUTRIGGER",
+        "SUP"
       ],
       "source_count": 2,
       "sources": [
@@ -169745,6 +172282,21 @@
       ]
     },
     {
+      "name": "Wes Bochner",
+      "crafts": [
+        "PRONE/PADDLEBOARD"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Wes Huston",
       "crafts": [
         "SUP"
@@ -170811,9 +173363,24 @@
       ]
     },
     {
+      "name": "Will Loftin",
+      "crafts": [
+        "SUP"
+      ],
+      "source_count": 1,
+      "sources": [
+        "Independent California archives"
+      ],
+      "california_evidence": [
+        {
+          "source": "Independent California archives"
+        }
+      ]
+    },
+    {
       "name": "Will Reichenstein",
       "crafts": [
-        "OC-1",
+        "OUTRIGGER",
         "SUP"
       ],
       "source_count": 2,
@@ -172405,7 +174972,7 @@
     {
       "name": "Yoko DeWeese",
       "crafts": [
-        "OC-1"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -172683,7 +175250,7 @@
     {
       "name": "Yuko Sako",
       "crafts": [
-        "OC-2"
+        "OUTRIGGER"
       ],
       "source_count": 1,
       "sources": [
@@ -172926,8 +175493,9 @@
       "crafts": [
         "PRONE/PADDLEBOARD"
       ],
-      "source_count": 2,
+      "source_count": 3,
       "sources": [
+        "Independent California archives",
         "PaddleGuru graph",
         "PaddleGuru seed crawl"
       ],
@@ -172944,22 +175512,29 @@
         {
           "source": "PaddleGuru graph",
           "california_event_count": 4
+        },
+        {
+          "source": "Independent California archives"
         }
       ]
     },
     {
-      "name": "ZACH KOEHN",
+      "name": "Zach Koehn",
       "crafts": [
         "PRONE/PADDLEBOARD"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "sources": [
-        "Catalina Classic archive"
+        "Catalina Classic archive",
+        "Independent California archives"
       ],
       "years": [
         2021
       ],
       "california_evidence": [
+        {
+          "source": "Independent California archives"
+        },
         {
           "source": "Catalina Classic archive"
         }
