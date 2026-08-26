@@ -6,6 +6,14 @@ on:
       - prototype/paddler-source-discovery-v2
     paths:
       - "paddler-feed/build_california_master.py"
+      - "paddler-feed/data/discovered-paddlers.json"
+      - "paddler-feed/data/paddleguru-graph.json"
+      - "paddler-feed/data/webscorer-paddlers.json"
+      - "paddler-feed/data/supracer-ca-paddlers.json"
+      - "paddler-feed/data/outrigger-world-paddlers.json"
+      - "paddler-feed/data/misc-ca-archive-paddlers.json"
+      - "paddler-feed/data/catalina-classic-archive.json"
+      - "paddler-feed/data/paddlesplash-paddlers.json"
       - ".github/workflows/california-master-index.yml"
   workflow_dispatch:
   schedule:
@@ -20,6 +28,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[ca-index-bot]')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
