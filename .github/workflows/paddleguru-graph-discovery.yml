@@ -17,7 +17,7 @@ jobs:
   graph-discovery:
     if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[paddleguru-graph-bot]')
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -29,6 +29,23 @@ jobs:
           sed -i 's/args.max-athlete_pages/args.max_athlete_pages/g' paddler-feed/expand_paddleguru_graph.py
           python -m py_compile paddler-feed/expand_paddleguru_graph.py paddler-feed/discover_public_sources.py
 
+      - name: Diagnose athlete-history event encoding
+        run: |
+          python - <<'PY'
+          import re, urllib.request
+          u='https://paddleguru.com/athletes/surfer65/races/past'
+          req=urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0 SkyFinder-Paddler-Prototype/1.0'})
+          text=urllib.request.urlopen(req,timeout=20).read().decode('utf-8','replace')
+          low=text.lower()
+          print('ATHLETE_HISTORY_BYTES',len(text))
+          print('HREF_RACES',len(re.findall(r'href=["\'](?:https?://(?:www\.)?paddleguru\.com)?/races/',text,re.I)))
+          for needle in ['Santa Cruz Paddlefest 2026','USA Surfing Championships & Trials 2024','Waterman Challenge Paddleboard Race']:
+              i=low.find(needle.lower())
+              print('NEEDLE',needle,'FOUND',i)
+              if i>=0:
+                  print(re.sub(r'\s+',' ',text[max(0,i-900):i+1600])[:2500])
+          PY
+
       - name: Crawl public PaddleGuru athlete-event graph
         run: |
           python paddler-feed/expand_paddleguru_graph.py \
@@ -36,10 +53,10 @@ jobs:
             --prior-index paddler-feed/data/discovered-paddlers.json \
             --output paddler-feed/data/paddleguru-graph.json \
             --timeout 20 \
-            --sleep 0.03 \
-            --max-athlete-pages 250 \
-            --max-events 600 \
-            --rounds 3
+            --sleep 0.015 \
+            --max-athlete-pages 1200 \
+            --max-events 1200 \
+            --rounds 5
 
       - name: Validate privacy and useful coverage
         run: |
@@ -48,13 +65,14 @@ jobs:
           p='paddler-feed/data/paddleguru-graph.json'
           d=json.load(open(p))
           s=d['summary']
-          assert s['athlete_history_handles_crawled'] >= 7, s
+          assert s['athlete_history_handles_crawled'] >= 250, s
           assert s['event_slugs_discovered'] >= 20, s
           assert s['unique_paddlers_with_california_event'] >= 1, s
           raw=open(p,encoding='utf-8').read().lower()
           for forbidden in ['"lat"', '"lng"', 'imei', 'email', 'phone']:
               assert forbidden not in raw, forbidden
           print(json.dumps(s, indent=2))
+          print(json.dumps({'rounds':d.get('rounds',[])}, indent=2))
           PY
 
       - name: Publish graph index on prototype branch
