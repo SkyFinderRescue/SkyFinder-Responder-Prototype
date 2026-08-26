@@ -1,0 +1,74 @@
+name: California Paddler Master Index
+
+on:
+  push:
+    branches:
+      - prototype/paddler-source-discovery-v2
+    paths:
+      - "paddler-feed/build_california_master.py"
+      - ".github/workflows/california-master-index.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: california-paddler-master-index
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: prototype/paddler-source-discovery-v2
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build California-only deduplicated index
+        run: |
+          python -m py_compile paddler-feed/build_california_master.py
+          python paddler-feed/build_california_master.py \
+            --data-dir paddler-feed/data \
+            --output paddler-feed/data/california-paddlers-master.json
+
+      - name: Validate California-only privacy boundary
+        run: |
+          python - <<'PY'
+          import json
+          p='paddler-feed/data/california-paddlers-master.json'
+          d=json.load(open(p,encoding='utf-8')); s=d['summary']
+          assert d['scope']=='California only', d.get('scope')
+          assert s['unique_california_paddlers'] >= 500, s
+          raw=open(p,encoding='utf-8').read().lower()
+          for forbidden in ['"email"','"phone"','"street"','imei','"lat"','"lng"','"latitude"','"longitude"']:
+              assert forbidden not in raw, forbidden
+          print(json.dumps(s,indent=2))
+          PY
+
+      - name: Publish master index safely
+        run: |
+          git config user.name "skyfinder-california-index-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add paddler-feed/data/california-paddlers-master.json
+          if git diff --cached --quiet; then
+            echo "No California master-index change."
+            exit 0
+          fi
+          git commit -m "Update California-only paddler master index [ca-index-bot]"
+          for attempt in 1 2 3; do
+            git fetch origin prototype/paddler-source-discovery-v2
+            if git rebase origin/prototype/paddler-source-discovery-v2 && git push origin HEAD:prototype/paddler-source-discovery-v2; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 3))
+          done
+          echo "Failed to publish California master index after retries" >&2
+          exit 1
