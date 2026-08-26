@@ -1,0 +1,36 @@
+name: Outrigger World Diagnostic
+
+on:
+  push:
+    branches:
+      - prototype/paddler-source-discovery-v2
+    paths:
+      - ".github/workflows/outrigger-diagnostic.yml"
+  workflow_dispatch:
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Inspect Southern California listing and race links
+        run: |
+          python - <<'PY'
+          import re, urllib.request
+          u='https://outrigger.world/race-results?location=Southern+California'
+          req=urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0 SkyFinder-Paddler-Prototype/1.0'})
+          text=urllib.request.urlopen(req,timeout=20).read().decode('utf-8','replace')
+          print('BYTES',len(text))
+          hrefs=[]
+          for href in re.findall(r'href=["\']([^"\']+)',text,re.I):
+              if 'race' in href.lower() or 'paddler' in href.lower():
+                  hrefs.append(href)
+          print('HREFS')
+          for h in sorted(set(hrefs))[:200]: print(h)
+          i=text.lower().find('wild buffalo')
+          print('SNIP',re.sub(r'\s+',' ',text[max(0,i-1200):i+2500]) if i>=0 else 'NOT FOUND')
+          PY
