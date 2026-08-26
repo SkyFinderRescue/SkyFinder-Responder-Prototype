@@ -17,20 +17,26 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Inspect Southern California listing and race links
+      - name: Inspect Southern California race result markup
         run: |
           python - <<'PY'
           import re, urllib.request
-          u='https://outrigger.world/race-results?location=Southern+California'
-          req=urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0 SkyFinder-Paddler-Prototype/1.0'})
-          text=urllib.request.urlopen(req,timeout=20).read().decode('utf-8','replace')
-          print('BYTES',len(text))
-          hrefs=[]
-          for href in re.findall(r'href=["\']([^"\']+)',text,re.I):
-              if 'race' in href.lower() or 'paddler' in href.lower():
-                  hrefs.append(href)
-          print('HREFS')
-          for h in sorted(set(hrefs))[:200]: print(h)
-          i=text.lower().find('wild buffalo')
-          print('SNIP',re.sub(r'\s+',' ',text[max(0,i-1200):i+2500]) if i>=0 else 'NOT FOUND')
+          urls=[
+            'https://outrigger.world/race-results?location=Southern+California',
+            'https://outrigger.world/race-results/2026/southern-california/wild-buffalo'
+          ]
+          for u in urls:
+              print('\nURL',u)
+              req=urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0 SkyFinder-Paddler-Prototype/1.0'})
+              text=urllib.request.urlopen(req,timeout=20).read().decode('utf-8','replace')
+              print('BYTES',len(text),'TR',text.lower().count('<tr'),'TD',text.lower().count('<td'))
+              hrefs=[]
+              for href in re.findall(r'href=["\']([^"\']+)',text,re.I):
+                  if 'race' in href.lower() or 'paddler' in href.lower(): hrefs.append(href)
+              print('HREFS')
+              for h in sorted(set(hrefs))[:200]: print(h)
+              for needle in ['wild buffalo','overall','paddler','ryland hart','results']:
+                  i=text.lower().find(needle)
+                  print('NEEDLE',needle,'AT',i)
+                  if i>=0: print(re.sub(r'\s+',' ',text[max(0,i-1000):i+2600])[:3600])
           PY
