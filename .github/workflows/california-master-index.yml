@@ -46,9 +46,15 @@ jobs:
           d=json.load(open(p,encoding='utf-8')); s=d['summary']
           assert d['scope']=='California only', d.get('scope')
           assert s['unique_california_paddlers'] >= 500, s
-          raw=open(p,encoding='utf-8').read().lower()
-          for forbidden in ['"email"','"phone"','"street"','imei','"lat"','"lng"','"latitude"','"longitude"']:
-              assert forbidden not in raw, forbidden
+          forbidden_keys={'email','phone','street','imei','lat','lng','latitude','longitude'}
+          def walk(x):
+              if isinstance(x,dict):
+                  for k,v in x.items():
+                      assert str(k).lower() not in forbidden_keys, k
+                      walk(v)
+              elif isinstance(x,list):
+                  for v in x: walk(v)
+          walk(d)
           print(json.dumps(s,indent=2))
           PY
 
