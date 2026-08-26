@@ -77,8 +77,6 @@ def fetch_hfr(lat: float, lon: float, timeout: int) -> dict:
     }
     try:
         text = fetch_text(url, timeout)
-        # ERDDAP .csv responses include a units row immediately after the header.
-        # Select the first row with a parseable timestamp and numeric current vector.
         row = None
         t = None
         u = v = None
@@ -98,7 +96,6 @@ def fetch_hfr(lat: float, lon: float, timeout: int) -> dict:
         speed_mps = math.hypot(u, v)
         bearing = (math.degrees(math.atan2(u, v)) + 360.0) % 360.0
         age = age_hours(t)
-        # Hourly near-real-time product: >6h is not accepted as current for this prototype.
         usable = age is not None and age <= 6.0
         return {
             **base,
@@ -145,6 +142,17 @@ def parse_ndbc_datetime(row: dict) -> datetime | None:
         return None
 
 
+def numeric(row: dict, name: str):
+    x = row.get(name)
+    if x in (None, "", "MM"):
+        return None
+    try:
+        y = float(x)
+        return y if math.isfinite(y) else None
+    except Exception:
+        return None
+
+
 def fetch_ndbc(lat: float, lon: float, timeout: int) -> dict:
     station, meta = nearest_ndbc(lat, lon)
     url = NDBC_REALTIME.format(station=station)
@@ -162,7 +170,7 @@ def fetch_ndbc(lat: float, lon: float, timeout: int) -> dict:
         text = fetch_text(url, timeout)
         lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
         header = None
-        values = None
+        rows = []
         for ln in lines:
             if ln.startswith("#YY"):
                 header = ln.lstrip("#").split()
@@ -171,40 +179,39 @@ def fetch_ndbc(lat: float, lon: float, timeout: int) -> dict:
                 continue
             if header:
                 values = ln.split()
-                break
-        if not header or not values:
-            return {**base, "quality": "NO_DATA", "error": "NDBC real-time file had no parsable observation."}
-        row = dict(zip(header, values))
-        t = parse_ndbc_datetime(row)
-        age = age_hours(t)
+                if len(values) >= len(header):
+                    rows.append(dict(zip(header, values)))
+        if not rows:
+            return {**base, "quality": "NO_DATA", "error": "NDBC real-time file had no parsable observations."}
 
-        def val(name):
-            x = row.get(name)
-            if x in (None, "", "MM"):
-                return None
-            try:
-                y = float(x)
-                return y if math.isfinite(y) else None
-            except Exception:
-                return None
+        wind_row = next((r for r in rows if numeric(r, "WDIR") is not None and numeric(r, "WSPD") is not None), None)
+        wave_row = next((r for r in rows if numeric(r, "WVHT") is not None), None)
+        if not wind_row:
+            return {**base, "quality": "NO_WIND", "error": "No recent row contained both wind direction and speed."}
 
-        wind_dir = val("WDIR")
-        wind_mps = val("WSPD")
-        wave_m = val("WVHT")
-        dpd = val("DPD")
-        apd = val("APD")
-        mwd = val("MWD")
-        usable = age is not None and age <= 3.0 and wind_dir is not None and wind_mps is not None
+        wind_time = parse_ndbc_datetime(wind_row)
+        wind_age = age_hours(wind_time)
+        wave_time = parse_ndbc_datetime(wave_row) if wave_row else None
+        wave_age = age_hours(wave_time)
+        wind_dir = numeric(wind_row, "WDIR")
+        wind_mps = numeric(wind_row, "WSPD")
+        wave_m = numeric(wave_row, "WVHT") if wave_row else None
+        dpd = numeric(wave_row, "DPD") if wave_row else None
+        apd = numeric(wave_row, "APD") if wave_row else None
+        mwd = numeric(wave_row, "MWD") if wave_row else None
+        usable = wind_age is not None and wind_age <= 3.0 and wind_dir is not None and wind_mps is not None
         return {
             **base,
             "usable": usable,
             "quality": "CURRENT" if usable else "STALE_OR_INCOMPLETE",
-            "observation_time_utc": iso(t),
-            "age_hours": age,
+            "observation_time_utc": iso(wind_time),
+            "age_hours": wind_age,
             "wind_from_deg_true": wind_dir,
             "wind_speed_mps": wind_mps,
             "wind_speed_kts": wind_mps * 1.9438444924406048 if wind_mps is not None else None,
             "wind_speed_mph": wind_mps * 2.2369362920544 if wind_mps is not None else None,
+            "wave_observation_time_utc": iso(wave_time),
+            "wave_age_hours": wave_age,
             "wave_height_ft": wave_m * 3.2808398950131 if wave_m is not None else None,
             "dominant_period_sec": dpd,
             "average_period_sec": apd,
@@ -260,6 +267,7 @@ def main():
         "ndbc_quality": ndbc.get("quality"),
         "ndbc_usable": ndbc.get("usable"),
         "ndbc_age_hours": ndbc.get("age_hours"),
+        "ndbc_wave_age_hours": ndbc.get("wave_age_hours"),
     }, indent=2))
 
 
