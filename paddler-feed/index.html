@@ -10,9 +10,9 @@
 <body>
   <header>
     <div>
-      <div class="eyebrow">ISOLATED TEST BUILD</div>
-      <h1>SkyFinder Paddler Feed Prototype</h1>
-      <p>Garmin MapShare KML ingestion test. Public test feeds only. Not for operational rescue use.</p>
+      <div class="eyebrow">ISOLATED FIELD-TEST BUILD</div>
+      <h1>SkyFinder Paddler / Kayak Prototype</h1>
+      <p>Garmin MapShare location, freshness and opt-in breadcrumb testing. Not yet approved for operational rescue use.</p>
     </div>
     <div id="generated" class="generated">Waiting for feed…</div>
   </header>
@@ -26,12 +26,25 @@
       <div><strong id="other">0</strong><span>no data/protected</span></div>
     </section>
 
+    <section id="selection" class="selection" aria-live="polite">
+      <strong>No paddler selected</strong>
+      <span>Tap a paddler marker or choose Select on Map. Only the selected paddler's breadcrumb trail will be shown.</span>
+    </section>
+
     <section class="layout">
-      <div id="map" aria-label="Paddler test map"></div>
+      <div>
+        <div id="map" aria-label="Paddler test map"></div>
+        <div class="map-legend">
+          <span><i class="marker-key live"></i> Live</span>
+          <span><i class="marker-key aging"></i> Aging</span>
+          <span><i class="marker-key stale"></i> Stale / stopped</span>
+          <span><i class="track-key"></i> Selected paddler recent track</span>
+        </div>
+      </div>
       <aside>
         <div class="notice">
-          <strong>Prototype privacy guard</strong>
-          <p>Non-opted-in public feeds are rounded to roughly 3 decimal places. Garmin IMEI, internal IDs and message text are discarded.</p>
+          <strong>Field-test privacy guard</strong>
+          <p>Exact location requires participant opt-in. Breadcrumb history has its own separate opt-in and is shown only for the selected paddler. Public research feeds without consent remain coarse and do not expose breadcrumb history.</p>
         </div>
         <div id="cards"></div>
       </aside>
@@ -47,11 +60,16 @@
       <p class="activity"></p>
       <dl>
         <div><dt>Last update</dt><dd class="updated"></dd></div>
+        <div><dt>Position</dt><dd class="position"></dd></div>
         <div><dt>Speed</dt><dd class="speed"></dd></div>
         <div><dt>Heading</dt><dd class="heading"></dd></div>
+        <div><dt>Recent track</dt><dd class="track-status"></dd></div>
         <div><dt>Device</dt><dd class="device"></dd></div>
       </dl>
-      <a class="mapshare" target="_blank" rel="noopener noreferrer">Open Garmin MapShare</a>
+      <div class="card-actions">
+        <button class="select-paddler" type="button">Select on Map</button>
+        <a class="mapshare" target="_blank" rel="noopener noreferrer">Garmin MapShare</a>
+      </div>
     </article>
   </template>
 
