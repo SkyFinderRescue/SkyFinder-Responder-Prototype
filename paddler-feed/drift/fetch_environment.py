@@ -77,15 +77,24 @@ def fetch_hfr(lat: float, lon: float, timeout: int) -> dict:
     }
     try:
         text = fetch_text(url, timeout)
-        rows = list(csv.DictReader(io.StringIO(text)))
-        if not rows:
-            return {**base, "quality": "NO_DATA", "error": "HF-radar query returned no rows."}
-        row = rows[0]
-        t = parse_iso(row.get("time"))
-        u = float(row["water_u"])
-        v = float(row["water_v"])
-        if not (math.isfinite(u) and math.isfinite(v)):
-            raise ValueError("non-finite current vector")
+        # ERDDAP .csv responses include a units row immediately after the header.
+        # Select the first row with a parseable timestamp and numeric current vector.
+        row = None
+        t = None
+        u = v = None
+        for candidate in csv.DictReader(io.StringIO(text)):
+            ct = parse_iso(candidate.get("time"))
+            try:
+                cu = float(candidate["water_u"])
+                cv = float(candidate["water_v"])
+            except Exception:
+                continue
+            if ct is None or not (math.isfinite(cu) and math.isfinite(cv)):
+                continue
+            row, t, u, v = candidate, ct, cu, cv
+            break
+        if row is None:
+            return {**base, "quality": "NO_DATA", "error": "HF-radar query returned no numeric observation row."}
         speed_mps = math.hypot(u, v)
         bearing = (math.degrees(math.atan2(u, v)) + 360.0) % 360.0
         age = age_hours(t)
