@@ -45,20 +45,34 @@ jobs:
             --output paddler-feed/drift/environment-latest.json \
             --timeout 30
 
-      - name: Validate source freshness
+      - name: Validate source freshness without fabricating missing current data
+        id: envcheck
         run: |
           python - <<'PY'
-          import json
+          import json, os
           p='paddler-feed/drift/environment-latest.json'
           d=json.load(open(p)); h=d['surface_current']; w=d['wind_wave']
-          assert h['usable'], h
-          assert w['usable'], w
-          assert h['age_hours'] <= 6, h
-          assert w['age_hours'] <= 3, w
-          print(json.dumps({'surface_current':h,'wind_wave':w},indent=2))
+          wind_ok=bool(w.get('usable')) and float(w.get('age_hours',999)) <= 3
+          current_ok=bool(h.get('usable')) and float(h.get('age_hours',999)) <= 6
+          can_run=wind_ok and current_ok
+          d['drift_model_ready']=can_run
+          d['drift_model_status']='READY' if can_run else 'DEGRADED_ENVIRONMENT_SOURCE'
+          if not current_ok:
+              d['drift_model_block_reason']='Fresh usable surface-current vector unavailable; no new drift estimate generated.'
+          elif not wind_ok:
+              d['drift_model_block_reason']='Fresh usable wind observation unavailable; no new drift estimate generated.'
+          else:
+              d.pop('drift_model_block_reason',None)
+          with open(p,'w') as f: json.dump(d,f,indent=2); f.write('\n')
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write(f"can_run={'true' if can_run else 'false'}\n")
+          print(json.dumps({'surface_current':h,'wind_wave':w,'drift_model_ready':can_run},indent=2))
+          if not can_run:
+              print('Environmental snapshot is degraded. Publishing source status, but intentionally skipping the drift estimate rather than using stale or invented current data.')
           PY
 
       - name: Run 2-hour Coast Guard leeway example
+        if: steps.envcheck.outputs.can_run == 'true'
         run: |
           python paddler-feed/drift/engine.py \
             --environment paddler-feed/drift/environment-latest.json \
@@ -67,6 +81,7 @@ jobs:
             --output paddler-feed/drift/drift-example.json
 
       - name: Validate drift output safety boundary
+        if: steps.envcheck.outputs.can_run == 'true'
         run: |
           python - <<'PY'
           import json
@@ -79,10 +94,15 @@ jobs:
           PY
 
       - name: Publish refreshed snapshot safely
+        env:
+          CAN_RUN: ${{ steps.envcheck.outputs.can_run }}
         run: |
           git config user.name "skyfinder-drift-env-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add paddler-feed/drift/environment-latest.json paddler-feed/drift/drift-example.json
+          git add paddler-feed/drift/environment-latest.json
+          if [ "$CAN_RUN" = "true" ]; then
+            git add paddler-feed/drift/drift-example.json
+          fi
           if git diff --cached --quiet; then
             echo "No drift snapshot change."
             exit 0
