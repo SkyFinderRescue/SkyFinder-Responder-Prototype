@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-08-30T17:46:32Z",
+  "generated_at_utc": "2026-08-30T20:04:51Z",
   "operational_use": false,
   "scope": "Santa Barbara / U.S. West Coast research prototype",
   "query_point": {
@@ -25,18 +25,18 @@
     "query_url": "https://www.ndbc.noaa.gov/data/realtime2/46053.txt",
     "usable": true,
     "quality": "CURRENT",
-    "observation_time_utc": "2026-08-30T17:10:00Z",
-    "age_hours": 0.6089312897222222,
-    "wind_from_deg_true": 310.0,
-    "wind_speed_mps": 1.0,
-    "wind_speed_kts": 1.9438444924406049,
-    "wind_speed_mph": 2.2369362920544,
-    "wave_observation_time_utc": "2026-08-30T16:50:00Z",
-    "wave_age_hours": 0.9422646272222223,
-    "wave_height_ft": 4.26509186351703,
-    "dominant_period_sec": 7.0,
-    "average_period_sec": 5.9,
-    "mean_wave_direction_deg_true": 264.0
+    "observation_time_utc": "2026-08-30T19:00:00Z",
+    "age_hours": 1.0809430922222223,
+    "wind_from_deg_true": 270.0,
+    "wind_speed_mps": 5.0,
+    "wind_speed_kts": 9.719222462203025,
+    "wind_speed_mph": 11.184681460272,
+    "wave_observation_time_utc": "2026-08-30T18:50:00Z",
+    "wave_age_hours": 1.2476097625000002,
+    "wave_height_ft": 3.60892388451441,
+    "dominant_period_sec": null,
+    "average_period_sec": 5.4,
+    "mean_wave_direction_deg_true": 268.0
   },
   "sources": {
     "hf_radar": {
