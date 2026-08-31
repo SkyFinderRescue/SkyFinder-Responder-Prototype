@@ -1,10 +1,11 @@
 {
-  "schema_version": 1,
-  "generated_at_utc": "2026-08-26T19:12:25Z",
+  "schema_version": 2,
+  "generated_at_utc": "2026-08-31T13:47:27Z",
   "source": "Garmin MapShare Raw KML",
   "operational_use": false,
-  "privacy_note": "Prototype republishes only coarse positions for non-opted-in public test feeds. Garmin IMEI/internal identifiers/message text are discarded.",
+  "privacy_note": "Prototype republishes only coarse positions for non-opted-in public test feeds. Exact positions require opt_in_exact; breadcrumb history additionally requires opt_in_breadcrumbs. Garmin IMEI/internal identifiers/message text are discarded.",
   "sos_note": "Garmin KML is treated as a location source, not as an SOS alert source.",
+  "breadcrumb_note": "Opted-in breadcrumb history is limited to the most recent 120 points within 12 hours.",
   "counts": {
     "STOPPED": 1,
     "NO_DATA": 1,
@@ -21,7 +22,7 @@
       "test_only": true,
       "status": "STOPPED",
       "last_update_utc": "2025-10-03T23:46:45Z",
-      "age_minutes": 470605.7,
+      "age_minutes": 477480.7,
       "lat": 41.057,
       "lng": -124.147,
       "position_precision": "coarse-prototype",
@@ -33,7 +34,10 @@
       "last_event": "Tracking turned off from device.",
       "mapshare_url": "https://share.garmin.com/calipaddler",
       "http_status": 200,
-      "placemark_points": 1
+      "placemark_points": 1,
+      "breadcrumbs_available": false,
+      "breadcrumb_count": 0,
+      "track_points": []
     },
     {
       "id": "teamoceanlive",
@@ -55,7 +59,7 @@
       "test_only": true,
       "status": "STALE",
       "last_update_utc": "2025-02-28T05:28:30Z",
-      "age_minutes": 784183.9,
+      "age_minutes": 791059.0,
       "lat": -20.391,
       "lng": 156.872,
       "position_precision": "coarse-prototype",
@@ -67,7 +71,10 @@
       "last_event": "Tracking turned on from device.",
       "mapshare_url": "https://share.garmin.com/KURSIS",
       "http_status": 200,
-      "placemark_points": 1
+      "placemark_points": 1,
+      "breadcrumbs_available": false,
+      "breadcrumb_count": 0,
+      "track_points": []
     },
     {
       "id": "mike-ward-sup",
@@ -78,7 +85,7 @@
       "test_only": true,
       "status": "STALE",
       "last_update_utc": "2024-08-10T20:57:00Z",
-      "age_minutes": 1074135.4,
+      "age_minutes": 1081010.5,
       "lat": 44.569,
       "lng": -92.543,
       "position_precision": "coarse-prototype",
@@ -90,7 +97,10 @@
       "last_event": "Tracking interval received.",
       "mapshare_url": "https://share.garmin.com/YCMPS",
       "http_status": 200,
-      "placemark_points": 1
+      "placemark_points": 1,
+      "breadcrumbs_available": false,
+      "breadcrumb_count": 0,
+      "track_points": []
     },
     {
       "id": "bart-de-zwart-sup",
@@ -101,7 +111,7 @@
       "test_only": true,
       "status": "STALE",
       "last_update_utc": "2019-03-17T02:08:00Z",
-      "age_minutes": 3916384.4,
+      "age_minutes": 3923259.5,
       "lat": -15.86,
       "lng": 168.17,
       "position_precision": "coarse-prototype",
@@ -113,7 +123,10 @@
       "last_event": "Tracking message received.",
       "mapshare_url": "https://share.garmin.com/BartdeZwartSUPCrossing",
       "http_status": 200,
-      "placemark_points": 1
+      "placemark_points": 1,
+      "breadcrumbs_available": false,
+      "breadcrumb_count": 0,
+      "track_points": []
     },
     {
       "id": "louanne-harris",
