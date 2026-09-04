@@ -10,6 +10,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 const paragliderLayer = L.layerGroup().addTo(map);
 const paddlerLayer = L.layerGroup().addTo(map);
 const targetLayer = L.layerGroup().addTo(map);
+const breadcrumbLayer = L.layerGroup().addTo(map);
 const results = document.querySelector("#results");
 const template = document.querySelector("#result-template");
 const searchInput = document.querySelector("#search");
@@ -60,6 +61,15 @@ function iconFor(kind) {
   });
 }
 
+function coordinateDigits(item) {
+  return item.kind === "PADDLER" && !item.targetEligible ? 3 : 6;
+}
+
+function coordinateLabel(item) {
+  const digits = coordinateDigits(item);
+  return `${item.lat.toFixed(digits)}, ${item.lng.toFixed(digits)}`;
+}
+
 function normalizedParagliders(data) {
   return (data.pilots || []).flatMap(p => {
     if (!Number.isFinite(Number(p.lat)) || !Number.isFinite(Number(p.lng))) return [];
@@ -76,7 +86,8 @@ function normalizedParagliders(data) {
       status: paragliderStatus(p),
       altitudeFt: Number.isFinite(Number(p.alt_ft)) ? Number(p.alt_ft) : null,
       targetEligible: true,
-      precision: "confirmed GPS"
+      precision: "confirmed GPS",
+      breadcrumbs: []
     }];
   });
 }
@@ -85,6 +96,16 @@ function normalizedPaddlers(data) {
   return (data.paddlers || []).flatMap(p => {
     if (!Number.isFinite(Number(p.lat)) || !Number.isFinite(Number(p.lng))) return [];
     const exact = p.position_precision === "exact-opt-in";
+    const rawTrack = exact && p.breadcrumbs_available && Array.isArray(p.track_points) ? p.track_points : [];
+    const breadcrumbs = rawTrack.flatMap(q => {
+      if (!Number.isFinite(Number(q.lat)) || !Number.isFinite(Number(q.lng))) return [];
+      return [{
+        lat: Number(q.lat),
+        lng: Number(q.lng),
+        timeUtc: q.time_utc || null,
+        speedMph: Number.isFinite(Number(q.speed_mph)) ? Number(q.speed_mph) : null
+      }];
+    });
     return [{
       id: `paddle:${p.id}`,
       kind: "PADDLER",
@@ -99,20 +120,43 @@ function normalizedPaddlers(data) {
       speedMph: Number.isFinite(Number(p.speed_mph)) ? Number(p.speed_mph) : null,
       heading: Number.isFinite(Number(p.heading_deg_true)) ? Number(p.heading_deg_true) : null,
       targetEligible: exact,
-      precision: exact ? "confirmed opt-in GPS" : "coarse research position"
+      precision: exact ? "confirmed opt-in GPS" : "coarse research position",
+      breadcrumbs
     }];
   });
 }
 
 function targetMetaText(item) {
-  const coordinate = `${item.lat.toFixed(6)}, ${item.lng.toFixed(6)}`;
-  return `${item.kind === "PARAGLIDER" ? "Paraglider" : "Paddler / kayak"} • ${coordinate} • ${ageLabel(item.ageMinutes)} • ${item.source}`;
+  const breadcrumbText = item.kind === "PADDLER" && item.breadcrumbs.length >= 2
+    ? ` • ${item.breadcrumbs.length} selected-only breadcrumb points`
+    : "";
+  return `${item.kind === "PARAGLIDER" ? "Paraglider" : "Paddler / kayak"} • ${coordinateLabel(item)} • ${ageLabel(item.ageMinutes)} • ${item.source}${breadcrumbText}`;
+}
+
+function drawSelectedBreadcrumbs(item) {
+  breadcrumbLayer.clearLayers();
+  if (item.kind !== "PADDLER" || !item.targetEligible || item.breadcrumbs.length < 2) return;
+  const latlngs = item.breadcrumbs.map(q => [q.lat, q.lng]);
+  L.polyline(latlngs, {color: "#1769aa", weight: 4, opacity: 0.82}).addTo(breadcrumbLayer);
+  item.breadcrumbs.forEach((q, index) => {
+    const latest = index === item.breadcrumbs.length - 1;
+    const when = q.timeUtc ? new Date(q.timeUtc).toLocaleString() : "time unknown";
+    const speed = q.speedMph == null ? "" : `<br>Speed ${q.speedMph.toFixed(1)} mph`;
+    L.circleMarker([q.lat, q.lng], {
+      radius: latest ? 5 : 3,
+      color: "#ffffff",
+      weight: 1,
+      fillColor: "#1769aa",
+      fillOpacity: latest ? 1 : 0.62
+    }).bindPopup(`<strong>${escapeHtml(item.name)} breadcrumb</strong><br>${escapeHtml(when)}${speed}`).addTo(breadcrumbLayer);
+  });
 }
 
 function setActiveTarget(item) {
   if (!item?.targetEligible) return;
   activeTarget = {...item, rescueTargetVersion: 1, confirmed: true};
   targetLayer.clearLayers();
+  drawSelectedBreadcrumbs(item);
   const ring = L.divIcon({
     className: "",
     html: '<div class="target-ring" aria-hidden="true"></div>',
@@ -123,13 +167,21 @@ function setActiveTarget(item) {
   targetName.textContent = `${item.kind === "PARAGLIDER" ? "🪂" : "🛶"} ${item.name}`;
   targetMeta.textContent = targetMetaText(item);
   clearTargetButton.disabled = false;
-  map.setView([item.lat, item.lng], Math.max(map.getZoom(), 13));
+
+  if (item.kind === "PADDLER" && item.breadcrumbs.length >= 2) {
+    const bounds = item.breadcrumbs.map(q => [q.lat, q.lng]);
+    bounds.push([item.lat, item.lng]);
+    map.fitBounds(bounds, {padding: [35, 35], maxZoom: 14});
+  } else {
+    map.setView([item.lat, item.lng], Math.max(map.getZoom(), 13));
+  }
   renderResults();
 }
 
 function clearActiveTarget() {
   activeTarget = null;
   targetLayer.clearLayers();
+  breadcrumbLayer.clearLayers();
   targetName.textContent = "None selected";
   targetMeta.textContent = "Tap a marker or choose a search result.";
   clearTargetButton.disabled = true;
@@ -140,10 +192,10 @@ function popupHtml(item) {
   const canTarget = item.targetEligible;
   const extra = item.kind === "PARAGLIDER"
     ? (item.altitudeFt == null ? "" : `<br>Altitude ${Math.round(item.altitudeFt).toLocaleString()} ft`)
-    : `${item.speedMph == null ? "" : `<br>Speed ${item.speedMph.toFixed(1)} mph`}${item.heading == null ? "" : `<br>Heading ${Math.round(item.heading)}° true`}`;
+    : `${item.speedMph == null ? "" : `<br>Speed ${item.speedMph.toFixed(1)} mph`}${item.heading == null ? "" : `<br>Heading ${Math.round(item.heading)}° true`}${item.breadcrumbs.length >= 2 ? `<br>${item.breadcrumbs.length} opted-in breadcrumb points available` : ""}`;
   return `<strong>${escapeHtml(item.name)}</strong><br>${escapeHtml(item.kind === "PARAGLIDER" ? "Paraglider" : item.activity)}` +
     `<br>${escapeHtml(item.status)} • ${escapeHtml(ageLabel(item.ageMinutes))}` +
-    `<br>${item.lat.toFixed(6)}, ${item.lng.toFixed(6)}${extra}` +
+    `<br>${escapeHtml(coordinateLabel(item))}${extra}` +
     `<br><em>${escapeHtml(item.precision)}</em>` +
     (canTarget ? "<br><strong>Tap the matching card to set as rescue target.</strong>" : "<br>Research-only coarse position; rescue targeting disabled.");
 }
@@ -191,13 +243,14 @@ function renderResults() {
       ageLabel(item.ageMinutes),
       item.precision
     ];
+    if (item.kind === "PADDLER" && item.breadcrumbs.length >= 2) details.push(`${item.breadcrumbs.length} breadcrumbs`);
     node.querySelector(".detail").textContent = details.join(" • ");
     const button = node.querySelector(".select-target");
     if (!item.targetEligible) {
       button.disabled = true;
       button.textContent = "Coarse Research Position Only";
     } else if (activeTarget?.id === item.id) {
-      button.textContent = "Active Rescue Target";
+      button.textContent = item.kind === "PADDLER" && item.breadcrumbs.length >= 2 ? "Active Target + Track Shown" : "Active Rescue Target";
     } else {
       button.addEventListener("click", () => setActiveTarget(item));
     }
@@ -261,9 +314,16 @@ async function load() {
   paragliderLayer.clearLayers();
   paddlerLayer.clearLayers();
   objects.forEach(addMarker);
+
+  if (activeTarget) {
+    const refreshed = objects.find(x => x.id === activeTarget.id && x.targetEligible);
+    if (refreshed) setActiveTarget(refreshed);
+    else clearActiveTarget();
+  }
+
   document.querySelector("#updated").textContent = `Loaded ${notes.join(" • ")}`;
   renderResults();
-  fitAll();
+  if (!activeTarget) fitAll();
 }
 
 searchInput.addEventListener("input", renderResults);
@@ -279,3 +339,4 @@ clearTargetButton.addEventListener("click", clearActiveTarget);
 load().catch(error => {
   document.querySelector("#updated").textContent = `Feed load error: ${error.message}`;
 });
+setInterval(load, 60_000);
