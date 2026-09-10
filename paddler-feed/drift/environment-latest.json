@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-10T00:36:23Z",
+  "generated_at_utc": "2026-09-10T05:19:31Z",
   "operational_use": false,
   "scope": "Santa Barbara / U.S. West Coast research prototype",
   "query_point": {
@@ -13,7 +13,7 @@
     "catalog_url": "https://dods.ndbc.noaa.gov/thredds/catalog/hfradar.html?dataset=hfradar_uswc_2km",
     "usable": false,
     "quality": "ERROR",
-    "error": "NOAA/NDBC THREDDS NCSS: HTTPError: HTTP Error 400: 400 | NOAA CoastWatch ERDDAP fallback: HTTPError: HTTP Error 403: "
+    "error": "NOAA/NDBC THREDDS NCSS: HTTPError: HTTP Error 400: 400 | NOAA CoastWatch ERDDAP fallback: ValueError: No numeric HF-radar row in CoastWatch response"
   },
   "wind_wave": {
     "provider": "NOAA National Data Buoy Center",
@@ -25,18 +25,18 @@
     "query_url": "https://www.ndbc.noaa.gov/data/realtime2/46053.txt",
     "usable": true,
     "quality": "CURRENT",
-    "observation_time_utc": "2026-09-09T23:00:00Z",
-    "age_hours": 1.6064900052777777,
-    "wind_from_deg_true": 260.0,
-    "wind_speed_mps": 3.0,
-    "wind_speed_kts": 5.831533477321814,
-    "wind_speed_mph": 6.710808876163199,
-    "wave_observation_time_utc": "2026-09-09T15:50:00Z",
-    "wave_age_hours": 8.773156674722223,
-    "wave_height_ft": 2.29658792650917,
+    "observation_time_utc": "2026-09-10T04:50:00Z",
+    "age_hours": 0.49213776944444443,
+    "wind_from_deg_true": 250.0,
+    "wind_speed_mps": 5.0,
+    "wind_speed_kts": 9.719222462203025,
+    "wind_speed_mph": 11.184681460272,
+    "wave_observation_time_utc": "2026-09-10T04:50:00Z",
+    "wave_age_hours": 0.4921377736111111,
+    "wave_height_ft": 1.9685039370078599,
     "dominant_period_sec": 8.0,
-    "average_period_sec": 5.9,
-    "mean_wave_direction_deg_true": 275.0
+    "average_period_sec": 4.3,
+    "mean_wave_direction_deg_true": 265.0
   },
   "sources": {
     "hf_radar": {
