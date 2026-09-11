@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at_utc": "2026-09-11T15:05:21Z",
+  "generated_at_utc": "2026-09-11T18:28:16Z",
   "source": "Garmin MapShare Raw KML",
   "operational_use": false,
   "privacy_note": "Prototype republishes only coarse positions for non-opted-in public test feeds. Exact positions require opt_in_exact; breadcrumb history additionally requires opt_in_breadcrumbs. Garmin IMEI/internal identifiers/message text are discarded.",
@@ -8,8 +8,9 @@
   "breadcrumb_note": "Opted-in breadcrumb history is limited to the most recent 120 points within 12 hours.",
   "counts": {
     "STOPPED": 1,
-    "UNAVAILABLE": 3,
-    "STALE": 2
+    "NO_DATA": 1,
+    "STALE": 3,
+    "PROTECTED": 1
   },
   "paddlers": [
     {
@@ -21,7 +22,7 @@
       "test_only": true,
       "status": "STOPPED",
       "last_update_utc": "2025-10-03T23:46:45Z",
-      "age_minutes": 493398.6,
+      "age_minutes": 493601.5,
       "lat": 41.057,
       "lng": -124.147,
       "position_precision": "coarse-prototype",
@@ -45,20 +46,35 @@
       "california_relevance": "Departed Monterey, California for Kauai.",
       "test_only": true,
       "mapshare_url": "https://share.garmin.com/teamoceanlive",
-      "http_status": null,
-      "status": "UNAVAILABLE",
-      "error": "timeout"
+      "http_status": 200,
+      "status": "NO_DATA",
+      "placemark_points": 0
     },
     {
       "id": "kursis",
       "name": "KURSIS / Aurimas Mockus",
+      "garmin_display_name": "Aurimas Mockus",
       "activity": "human-powered ocean row",
       "california_relevance": "Departed San Diego, California on a Pacific crossing.",
       "test_only": true,
+      "status": "STALE",
+      "last_update_utc": "2025-02-28T05:28:30Z",
+      "age_minutes": 807179.8,
+      "lat": -20.391,
+      "lng": 156.872,
+      "position_precision": "coarse-prototype",
+      "elevation_ft": 8,
+      "speed_mph": 5.0,
+      "heading_deg_true": 202.5,
+      "gps_fix_valid": true,
+      "device_type": "GPSMAP 86i",
+      "last_event": "Tracking turned on from device.",
       "mapshare_url": "https://share.garmin.com/KURSIS",
-      "http_status": null,
-      "status": "UNAVAILABLE",
-      "error": "timeout"
+      "http_status": 200,
+      "placemark_points": 1,
+      "breadcrumbs_available": false,
+      "breadcrumb_count": 0,
+      "track_points": []
     },
     {
       "id": "mike-ward-sup",
@@ -69,7 +85,7 @@
       "test_only": true,
       "status": "STALE",
       "last_update_utc": "2024-08-10T20:57:00Z",
-      "age_minutes": 1096928.4,
+      "age_minutes": 1097131.3,
       "lat": 44.569,
       "lng": -92.543,
       "position_precision": "coarse-prototype",
@@ -95,7 +111,7 @@
       "test_only": true,
       "status": "STALE",
       "last_update_utc": "2019-03-17T02:08:00Z",
-      "age_minutes": 3939177.4,
+      "age_minutes": 3939380.3,
       "lat": -15.86,
       "lng": 168.17,
       "position_precision": "coarse-prototype",
@@ -119,9 +135,9 @@
       "california_relevance": "SUP endurance paddler with California River Quest history; protected feed control.",
       "test_only": true,
       "mapshare_url": "https://share.garmin.com/LouAnneHarris",
-      "http_status": null,
-      "status": "UNAVAILABLE",
-      "error": "timeout"
+      "http_status": 401,
+      "status": "PROTECTED",
+      "error": "MapShare feed requires authorization."
     }
   ]
 }
