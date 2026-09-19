@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-19T05:05:43Z",
+  "generated_at_utc": "2026-09-19T09:31:20Z",
   "operational_use": false,
   "scope": "Santa Barbara / U.S. West Coast research prototype",
   "query_point": {
@@ -8,12 +8,23 @@
     "lon": -119.842
   },
   "surface_current": {
-    "provider": "NOAA/IOOS HF Radar Network",
+    "provider": "NOAA CoastWatch ERDDAP fallback",
     "dataset": "US West Coast hourly 2 km near-real-time HF-radar surface currents",
+    "query_url": "https://coastwatch.pfeg.noaa.gov/erddap/griddap/ucsdHfrW2.csv?water_u[(last)][(34.24600)][(-119.84200)],water_v[(last)][(34.24600)][(-119.84200)],number_of_sites[(last)][(34.24600)][(-119.84200)],number_of_radials[(last)][(34.24600)][(-119.84200)],hdop[(last)][(34.24600)][(-119.84200)]",
     "catalog_url": "https://dods.ndbc.noaa.gov/thredds/catalog/hfradar.html?dataset=hfradar_uswc_2km",
-    "usable": false,
-    "quality": "ERROR",
-    "error": "NOAA/NDBC THREDDS NCSS: HTTPError: HTTP Error 400: 400 | NOAA CoastWatch ERDDAP fallback: HTTPError: HTTP Error 403: "
+    "usable": true,
+    "quality": "CURRENT",
+    "observation_time_utc": "2026-09-19T04:00:00Z",
+    "age_hours": 5.5222911275,
+    "grid_lat": 34.24156,
+    "grid_lon": -119.84499,
+    "u_mps": -0.05,
+    "v_mps": -0.02,
+    "speed_kts": 0.10467922951233379,
+    "toward_deg_true": 248.19859051364818,
+    "number_of_sites": 4,
+    "number_of_radials": 16,
+    "hdop": 0.75
   },
   "wind_wave": {
     "provider": "NOAA National Data Buoy Center",
@@ -25,18 +36,18 @@
     "query_url": "https://www.ndbc.noaa.gov/data/realtime2/46053.txt",
     "usable": true,
     "quality": "CURRENT",
-    "observation_time_utc": "2026-09-19T04:30:00Z",
-    "age_hours": 0.5953912813888889,
-    "wind_from_deg_true": 290.0,
-    "wind_speed_mps": 7.0,
-    "wind_speed_kts": 13.606911447084235,
-    "wind_speed_mph": 15.658554044380798,
-    "wave_observation_time_utc": "2026-09-19T04:20:00Z",
-    "wave_age_hours": 0.7620579508333333,
-    "wave_height_ft": 3.60892388451441,
-    "dominant_period_sec": 6.0,
-    "average_period_sec": 4.5,
-    "mean_wave_direction_deg_true": 246.0
+    "observation_time_utc": "2026-09-19T08:50:00Z",
+    "age_hours": 0.6890033391666667,
+    "wind_from_deg_true": 10.0,
+    "wind_speed_mps": 2.0,
+    "wind_speed_kts": 3.8876889848812097,
+    "wind_speed_mph": 4.4738725841088,
+    "wave_observation_time_utc": "2026-09-19T08:50:00Z",
+    "wave_age_hours": 0.6890033405555556,
+    "wave_height_ft": 2.62467191601048,
+    "dominant_period_sec": 7.0,
+    "average_period_sec": 5.0,
+    "mean_wave_direction_deg_true": 250.0
   },
   "sources": {
     "hf_radar": {
@@ -49,7 +60,6 @@
     }
   },
   "warning": "Environmental source ages must be checked. This prototype is not Coast Guard SAROPS and is not approved for operational SAR decisions.",
-  "drift_model_ready": false,
-  "drift_model_status": "DEGRADED_ENVIRONMENT_SOURCE",
-  "drift_model_block_reason": "Fresh usable surface-current vector unavailable; no new drift estimate generated."
+  "drift_model_ready": true,
+  "drift_model_status": "READY"
 }
