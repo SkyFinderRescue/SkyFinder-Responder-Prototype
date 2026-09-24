@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-24T06:46:04Z",
+  "generated_at_utc": "2026-09-24T12:17:51Z",
   "operational_use": false,
   "scope": "Santa Barbara / U.S. West Coast research prototype",
   "query_point": {
@@ -14,17 +14,17 @@
     "catalog_url": "https://dods.ndbc.noaa.gov/thredds/catalog/hfradar.html?dataset=hfradar_uswc_2km",
     "usable": true,
     "quality": "CURRENT",
-    "observation_time_utc": "2026-09-24T03:00:00Z",
-    "age_hours": 3.767740298611111,
+    "observation_time_utc": "2026-09-24T10:00:00Z",
+    "age_hours": 2.2975743108333337,
     "grid_lat": 34.24156,
     "grid_lon": -119.84499,
-    "u_mps": -0.09,
-    "v_mps": -0.22,
-    "speed_kts": 0.46204656119240783,
-    "toward_deg_true": 202.24902365721235,
-    "number_of_sites": 5,
+    "u_mps": -0.03,
+    "v_mps": 0.14,
+    "speed_kts": 0.27831617617599824,
+    "toward_deg_true": 347.9052429229879,
+    "number_of_sites": 4,
     "number_of_radials": 14,
-    "hdop": 0.65
+    "hdop": 0.74
   },
   "wind_wave": {
     "provider": "NOAA National Data Buoy Center",
@@ -36,18 +36,18 @@
     "query_url": "https://www.ndbc.noaa.gov/data/realtime2/46053.txt",
     "usable": true,
     "quality": "CURRENT",
-    "observation_time_utc": "2026-09-24T06:00:00Z",
-    "age_hours": 0.7677795525000001,
-    "wind_from_deg_true": 230.0,
-    "wind_speed_mps": 3.0,
-    "wind_speed_kts": 5.831533477321814,
-    "wind_speed_mph": 6.710808876163199,
-    "wave_observation_time_utc": "2026-09-24T05:50:00Z",
-    "wave_age_hours": 0.9344462208333333,
-    "wave_height_ft": 3.2808398950131,
+    "observation_time_utc": "2026-09-24T12:00:00Z",
+    "age_hours": 0.2977087341666667,
+    "wind_from_deg_true": 120.0,
+    "wind_speed_mps": 4.0,
+    "wind_speed_kts": 7.7753779697624195,
+    "wind_speed_mph": 8.9477451682176,
+    "wave_observation_time_utc": "2026-09-24T11:50:00Z",
+    "wave_age_hours": 0.46437540388888887,
+    "wave_height_ft": 2.95275590551179,
     "dominant_period_sec": 8.0,
-    "average_period_sec": 5.3,
-    "mean_wave_direction_deg_true": 263.0
+    "average_period_sec": 4.8,
+    "mean_wave_direction_deg_true": 260.0
   },
   "sources": {
     "hf_radar": {
