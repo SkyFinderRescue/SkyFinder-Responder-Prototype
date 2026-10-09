@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-08T20:49:04Z",
+  "generated_at_utc": "2026-10-09T01:13:13Z",
   "operational_use": false,
   "scope": "Santa Barbara / U.S. West Coast research prototype",
   "query_point": {
@@ -26,13 +26,13 @@
     "usable": false,
     "quality": "STALE_OR_INCOMPLETE",
     "observation_time_utc": "2026-10-06T05:50:00Z",
-    "age_hours": 62.98453749055555,
+    "age_hours": 67.38708349583334,
     "wind_from_deg_true": 240.0,
     "wind_speed_mps": 6.0,
     "wind_speed_kts": 11.663066954643629,
     "wind_speed_mph": 13.421617752326398,
     "wave_observation_time_utc": "2026-10-06T05:50:00Z",
-    "wave_age_hours": 62.984537494444446,
+    "wave_age_hours": 67.38708350027778,
     "wave_height_ft": 2.62467191601048,
     "dominant_period_sec": null,
     "average_period_sec": 4.4,
