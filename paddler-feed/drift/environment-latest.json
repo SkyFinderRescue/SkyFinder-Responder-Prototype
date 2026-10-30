@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-30T11:41:28Z",
+  "generated_at_utc": "2026-10-30T17:12:01Z",
   "operational_use": false,
   "scope": "Santa Barbara / U.S. West Coast research prototype",
   "query_point": {
@@ -8,23 +8,12 @@
     "lon": -119.842
   },
   "surface_current": {
-    "provider": "NOAA CoastWatch ERDDAP fallback",
+    "provider": "NOAA/IOOS HF Radar Network",
     "dataset": "US West Coast hourly 2 km near-real-time HF-radar surface currents",
-    "query_url": "https://coastwatch.pfeg.noaa.gov/erddap/griddap/ucsdHfrW2.csv?water_u[(last)][(34.24600)][(-119.84200)],water_v[(last)][(34.24600)][(-119.84200)],number_of_sites[(last)][(34.24600)][(-119.84200)],number_of_radials[(last)][(34.24600)][(-119.84200)],hdop[(last)][(34.24600)][(-119.84200)]",
     "catalog_url": "https://dods.ndbc.noaa.gov/thredds/catalog/hfradar.html?dataset=hfradar_uswc_2km",
     "usable": false,
-    "quality": "STALE",
-    "observation_time_utc": "2026-10-30T05:00:00Z",
-    "age_hours": 6.6911618144444445,
-    "grid_lat": 34.24156,
-    "grid_lon": -119.84499,
-    "u_mps": -0.28,
-    "v_mps": 0.06,
-    "speed_kts": 0.5566323523519965,
-    "toward_deg_true": 282.0947570770121,
-    "number_of_sites": 6,
-    "number_of_radials": 92,
-    "hdop": 0.22
+    "quality": "ERROR",
+    "error": "NOAA/NDBC THREDDS NCSS: HTTPError: HTTP Error 400: 400 | NOAA CoastWatch ERDDAP fallback: HTTPError: HTTP Error 404: "
   },
   "wind_wave": {
     "provider": "NOAA National Data Buoy Center",
@@ -36,18 +25,18 @@
     "query_url": "https://www.ndbc.noaa.gov/data/realtime2/46053.txt",
     "usable": true,
     "quality": "CURRENT",
-    "observation_time_utc": "2026-10-30T11:10:00Z",
-    "age_hours": 0.5246381672222222,
-    "wind_from_deg_true": 250.0,
-    "wind_speed_mps": 2.0,
-    "wind_speed_kts": 3.8876889848812097,
-    "wind_speed_mph": 4.4738725841088,
-    "wave_observation_time_utc": "2026-10-30T11:10:00Z",
-    "wave_age_hours": 0.5246381702777778,
+    "observation_time_utc": "2026-10-30T16:50:00Z",
+    "age_hours": 0.3671742327777778,
+    "wind_from_deg_true": 150.0,
+    "wind_speed_mps": 4.0,
+    "wind_speed_kts": 7.7753779697624195,
+    "wind_speed_mph": 8.9477451682176,
+    "wave_observation_time_utc": "2026-10-30T16:50:00Z",
+    "wave_age_hours": 0.36717423722222226,
     "wave_height_ft": 1.9685039370078599,
-    "dominant_period_sec": null,
-    "average_period_sec": 6.7,
-    "mean_wave_direction_deg_true": 252.0
+    "dominant_period_sec": 14.0,
+    "average_period_sec": 6.9,
+    "mean_wave_direction_deg_true": 255.0
   },
   "sources": {
     "hf_radar": {
